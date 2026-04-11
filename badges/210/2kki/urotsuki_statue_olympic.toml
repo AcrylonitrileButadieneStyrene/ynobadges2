@@ -4,7 +4,7 @@ map = 3885
 art = "thatdolphin"
 
 [conditions]
-default = "M3885 X=79:80 Y=87:93"
+default = "M3885 X=79:87 Y=80:93"
 
 [lang.en]
 name = "Marble Urotsuki Statue"

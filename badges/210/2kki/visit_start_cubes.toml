@@ -6,10 +6,10 @@ animated = true
 [badge.map]
 id = 3154
 x = 17
-y = 28
+y = 218
 
 [conditions]
-default = "M3154 X=17:218 Y=28:220"
+default = "M3154 X=17:28 Y=218:220"
 
 [lang.en]
 name = "Where the starlight rest"

@@ -6,7 +6,7 @@ animated = true
 
 [conditions]
 secret = true
-default = "M3368 X=0:250 Y=299:364"
+default = "M3368 X=0:299 Y=250:364"
 
 [lang.en]
 name = "Virulent Remedies"

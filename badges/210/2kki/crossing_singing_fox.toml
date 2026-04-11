@@ -5,7 +5,7 @@ art = "Aurora"
 animated = true
 
 [conditions]
-default = "M1555 X=34:72 Y=50:83 S196=ON"
+default = "M1555 X=34:50 Y=72:83 S196=ON"
 
 [lang.en]
 name = "Rap Fox"
