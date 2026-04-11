@@ -1,13 +1,13 @@
 use std::collections::HashMap;
 
-#[derive(serde::Deserialize)]
+#[derive(Debug, serde::Deserialize)]
 pub struct Bundle {
     pub badge: Badge,
     pub conditions: Conditions,
     pub lang: HashMap<String, Locale>,
 }
 
-#[derive(serde::Deserialize)]
+#[derive(Debug, serde::Deserialize)]
 pub struct Badge {
     pub group: Option<String>,
     #[serde(default)]
@@ -20,7 +20,7 @@ pub struct Badge {
     pub secret: bool,
 }
 
-#[derive(serde::Deserialize)]
+#[derive(Debug, serde::Deserialize)]
 #[serde(untagged)]
 pub enum Map {
     Plain(u16),
@@ -35,7 +35,7 @@ pub enum Map {
     },
 }
 
-#[derive(serde::Deserialize)]
+#[derive(Debug, serde::Deserialize)]
 pub struct Conditions {
     #[serde(default)]
     pub secret: bool,
@@ -45,7 +45,7 @@ pub struct Conditions {
     pub rest: HashMap<String, String>,
 }
 
-#[derive(serde::Deserialize)]
+#[derive(Debug, serde::Deserialize)]
 pub struct Locale {
     pub name: Option<String>,
     pub description: Option<String>,
