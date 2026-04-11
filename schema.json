@@ -16,7 +16,8 @@
                 "id": { "type": "number" },
                 "x": { "type": "number" },
                 "y": { "type": "number" },
-                "secret": { "type": "boolean" }
+                "secret": { "type": "boolean" },
+                "additionalProperties": false
               },
               "required": ["id"]
             }
@@ -26,7 +27,8 @@
         "animated": { "type": "boolean" },
         "secret": { "type": "boolean" }
       },
-      "required": ["points", "map", "art"]
+      "required": ["points", "map", "art"],
+      "additionalProperties": false
     },
     "conditions": {
       "type": "object",
@@ -44,7 +46,14 @@
         "properties": {
           "name": { "type": "string" },
           "description": { "type": "string" },
-          "condition": { "type": "string" }
+          "condition": { "type": "string" },
+          "checkbox": { 
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
         }
       }
     }

@@ -1,4 +1,3 @@
-exclude = [".taplo.toml"]
-
-[schema]
-path = "./schema.json"
+[[rule]]
+include = ["badges/**/*.toml"]
+schema.path = "./schema.json"
