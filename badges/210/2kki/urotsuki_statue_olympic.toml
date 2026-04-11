@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 3885
+art = "thatdolphin"
+
+[conditions]
+default = "M3885 X=79:80 Y=87:93"
+
+[lang.en]
+name = "Marble Urotsuki Statue"
+description = "Not so tiny are you now, huh Uro?"
+condition = "Find the Urotsuki statue in Olympus Ruins"

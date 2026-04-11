@@ -1,0 +1,12 @@
+[badge]
+points = 20
+map = 2289
+art = "vena" 
+
+[conditions]
+default = "M2289"
+
+[lang.en]
+name = "Meowing Forest"
+description = "Home is where the cats are."
+condition = "Visit Calico Forest"

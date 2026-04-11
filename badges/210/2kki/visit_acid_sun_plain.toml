@@ -1,0 +1,13 @@
+[badge]
+points = 10
+map = 1456
+art = "Aurora"
+animated = true
+
+[conditions]
+default = "M1456"
+
+[lang.en]
+name = "The Sun is a Deadly Acid"
+description = "Stare at it long enough, and your eyes will dissolve. Don't stare at the sun! Don't stare at the sun."
+condition = "Visit Acid Sun Plain"

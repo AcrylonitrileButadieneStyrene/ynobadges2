@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 2493
+art = "dawnchorrus"
+
+[conditions]
+default = "M2493"
+
+[lang.en]
+name = "Soothing Melancholy"
+description = "Beyond the dream lies a beautiful foggy land waiting to be discovered."
+condition = "Visit Beyond"

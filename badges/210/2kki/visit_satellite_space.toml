@@ -1,0 +1,13 @@
+[badge]
+points = 15
+map = 3426
+art = "HenryAutumn"
+animated = true
+
+[conditions]
+default = "M3426"
+
+[lang.en]
+name = "Wanderer of The Cosmos"
+description = "It must be nice to be a satellite, no worries, no responsibilities, just you and the stars."
+condition = "Visit Satellite Space-way"
