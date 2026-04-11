@@ -2,6 +2,7 @@
 group = "4_ch"
 points = 50
 art = "HenryAutumn & Komaki"
+animated = true
 
 [badge.map]
 id = 56

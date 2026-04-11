@@ -2,6 +2,7 @@
 points = 20
 map = 65
 art = "Paraverdant"
+animated = true
 
 [conditions]
 default = "M65 X=0:105 Y=19:119 S671=ON"

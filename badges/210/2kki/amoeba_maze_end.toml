@@ -2,6 +2,7 @@
 points = 15
 map = 2391
 art = "HenryAutumn"
+animated = true
 
 [conditions]
 default = "M2391 X=69:167 Y=77:174"

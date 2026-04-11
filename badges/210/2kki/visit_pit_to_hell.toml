@@ -2,6 +2,7 @@
 points = 20
 map = 3600
 art = "HenryAutumn"
+animated = true
 
 [conditions]
 default = "M3600"

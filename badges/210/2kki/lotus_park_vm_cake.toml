@@ -2,6 +2,7 @@
 points = 10
 map = 1632
 art = "vena"
+animated = true
 
 [conditions]
 default = "M1632 E16 V67=157"

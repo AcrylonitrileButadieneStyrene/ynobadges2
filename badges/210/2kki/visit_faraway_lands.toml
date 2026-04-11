@@ -2,6 +2,7 @@
 points = 15
 map = 2633
 art = "Sheanicc"
+animated = true
 
 [conditions]
 default = "M2633"

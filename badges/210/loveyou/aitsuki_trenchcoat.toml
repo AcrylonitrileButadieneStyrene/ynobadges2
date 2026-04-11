@@ -2,6 +2,7 @@
 points = 15
 map = 110
 art = "thatdolphin"
+animated = true
 
 [conditions]
 default = "M99 S33=ON"

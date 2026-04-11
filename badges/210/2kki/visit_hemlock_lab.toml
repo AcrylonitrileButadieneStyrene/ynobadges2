@@ -2,6 +2,7 @@
 points = 20
 map = 3368
 art = "Paraverdant"
+animated = true
 
 [conditions]
 secret = true

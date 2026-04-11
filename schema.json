@@ -23,6 +23,7 @@
           ]
         },
         "art": { "type": "string" },
+        "animated": { "type": "boolean" },
         "secret": { "type": "boolean" }
       },
       "required": ["points", "map", "art"]

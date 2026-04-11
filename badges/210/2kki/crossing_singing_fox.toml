@@ -2,6 +2,7 @@
 points = 15
 map = 1555
 art = "Aurora"
+animated = true
 
 [conditions]
 default = "M1555 X=34:72 Y=50:83 S196=ON"

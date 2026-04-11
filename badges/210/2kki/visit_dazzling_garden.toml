@@ -2,6 +2,7 @@
 points = 20
 map = 3154
 art = "Aurora"
+animated = true
 
 [conditions]
 default = "M3154 S6=ON"

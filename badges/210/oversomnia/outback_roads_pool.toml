@@ -2,6 +2,7 @@
 points = 10
 map = 71
 art = "Paraverdant"
+animated = true
 
 [conditions]
 default = "M71 E34"

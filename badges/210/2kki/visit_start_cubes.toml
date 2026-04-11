@@ -1,6 +1,7 @@
 [badge]
 points = 20
 art = "Staghouse33"
+animated = true
 
 [badge.map]
 id = 3154

@@ -2,6 +2,7 @@
 points = 15
 map = 3368
 art = "Tanjunebi"
+animated = true
 
 [conditions]
 default = "M3368 S6=ON"
