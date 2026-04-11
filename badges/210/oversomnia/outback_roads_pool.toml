@@ -1,0 +1,12 @@
+[badge]
+points = 10
+map = 71
+art = "Paraverdant"
+
+[conditions]
+default = "M71 E34"
+
+[lang.en]
+name = "Hydrated Radiance"
+description = "Let there be water!"
+condition = "Fill the pool with water in Outback Roads"

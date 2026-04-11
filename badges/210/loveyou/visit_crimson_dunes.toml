@@ -1,0 +1,12 @@
+[badge]
+points = 10
+map = 25
+art = "Michi"
+
+[conditions]
+default = "M25"
+
+[lang.en]
+name = "Crimson Red Prairie"
+description = "Traversing the vast scarlet dunes"
+condition = "Visit Crimson Dunes"

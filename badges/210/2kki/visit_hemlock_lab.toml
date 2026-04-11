@@ -1,0 +1,13 @@
+[badge]
+points = 20
+map = 3368
+art = "Paraverdant"
+
+[conditions]
+secret = true
+default = "M3368 X=0:250 Y=299:364"
+
+[lang.en]
+name = "Virulent Remedies"
+description = "Seek the cure with sickness."
+condition = "Visit Hemlock Lab"

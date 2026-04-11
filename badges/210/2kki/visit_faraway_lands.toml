@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 2633
+art = "Sheanicc"
+
+[conditions]
+default = "M2633"
+
+[lang.en]
+name = "Gray Scent"
+description = "Memories of youth manifest itself, though only in fragments. A long time has passed, and they may have forgotten you. Even so, you find peace in the same familiar scent of the field you remember."
+condition = "Enter Faraway Lands"

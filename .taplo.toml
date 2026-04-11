@@ -1,0 +1,4 @@
+exclude = [".taplo.toml"]
+
+[schema]
+path = "./schema.json"

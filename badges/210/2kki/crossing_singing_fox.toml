@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 1555
+art = "Aurora"
+
+[conditions]
+default = "M1555 X=34:72 Y=50:83 S196=ON"
+
+[lang.en]
+name = "Rap Fox"
+description = "What I gotta get it through to you I'm supervixen?"
+condition = "Use the Crossing effect near the singing fox in Celestial Night"

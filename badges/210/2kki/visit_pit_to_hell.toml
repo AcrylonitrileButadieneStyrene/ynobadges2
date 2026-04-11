@@ -1,0 +1,12 @@
+[badge]
+points = 20
+map = 3600
+art = "HenryAutumn"
+
+[conditions]
+default = "M3600"
+
+[lang.en]
+name = "\"Hot\" Tub"
+description = "Here Lies Urotsuki, You Can Tell It's Her Because She's Having so Much Fun Swimming She Doesn't Even Realize She's in Hell."
+condition = "Visit Pit to Hell"

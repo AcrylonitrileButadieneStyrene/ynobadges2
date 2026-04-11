@@ -1,0 +1,16 @@
+[badge]
+points = 20
+art = "Staghouse33"
+
+[badge.map]
+id = 3154
+x = 17
+y = 28
+
+[conditions]
+default = "M3154 X=17:218 Y=28:220"
+
+[lang.en]
+name = "Where the starlight rest"
+description = "A small, cozy haven, glimpsed through the graveyard of fossilized stars reached by a long journey."
+condition = "Visit the shack in Star Cubes World"

@@ -1,0 +1,12 @@
+[badge]
+points = 10
+map = 1632
+art = "vena"
+
+[conditions]
+default = "M1632 E16 V67=157"
+
+[lang.en]
+name = "Rain Cake"
+description = "the rain is falling down, drip drop, drip drop, splashing all around"
+condition = "Get a raindrop cake from the vending machine in Lotus Park"

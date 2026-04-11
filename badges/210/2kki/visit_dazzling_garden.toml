@@ -1,0 +1,12 @@
+[badge]
+points = 20
+map = 3154
+art = "Aurora"
+
+[conditions]
+default = "M3154 S6=ON"
+
+[lang.en]
+name = "Glitter Bombed Stone"
+description = "That isn't going to wash out of your clothes any time soon. Beauty truly is pain..."
+condition = "Visit Dazzling Garden"

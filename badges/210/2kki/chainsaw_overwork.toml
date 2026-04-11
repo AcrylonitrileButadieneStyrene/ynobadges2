@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 3368
+art = "Tanjunebi"
+
+[conditions]
+default = "M3368 S6=ON"
+
+[lang.en]
+name = "Neil The Seal"
+description = "Violence is not the answer."
+condition = "Chainsaw the seal in Overwork Office"

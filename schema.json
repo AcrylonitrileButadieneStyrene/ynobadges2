@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "badge": {
+      "type": "object",
+      "properties": {
+        "group": { "type": "string" },
+        "points": { "type": "number" },
+        "map": {
+          "oneOf": [
+            { "type": "number" },
+            {
+              "type": "object",
+              "properties": {
+                "id": { "type": "number" },
+                "x": { "type": "number" },
+                "y": { "type": "number" },
+                "secret": { "type": "boolean" }
+              },
+              "required": ["id"]
+            }
+          ]
+        },
+        "art": { "type": "string" },
+        "secret": { "type": "boolean" }
+      },
+      "required": ["points", "map", "art"]
+    },
+    "conditions": {
+      "type": "object",
+      "properties": {
+        "secret": { "type": "boolean" },
+        "default": { "type": "string", "description": "This requirement will have the same ID as the badge ID" },
+        "requirements": { "type": "string", "description": "Instructions for how requirements are used" }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+    "lang": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "condition": { "type": "string" }
+        }
+      }
+    }
+  },
+  "required": ["badge", "conditions", "lang"],
+  "additionalProperties": false
+}

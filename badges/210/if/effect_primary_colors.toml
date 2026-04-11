@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 146
+art = "laura"
+
+[conditions]
+default = "M146 S224=ON"
+
+[lang.en]
+name = "CMYKRGB"
+description = "My eyes hurt whenever I see you like this."
+condition = "Obtain the Primary Colors effect. If you have already unlocked it, return to where it can be found in Monochrome City."

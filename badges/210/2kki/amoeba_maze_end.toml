@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 2391
+art = "HenryAutumn"
+
+[conditions]
+default = "M2391 X=69:167 Y=77:174"
+
+[lang.en]
+name = "Exiting The Forest is Super Simple"
+description = "Super Yume 2kki RPG, it is the only one just for me..."
+condition = "Reach the end of the teleport maze in Amoeba Woods"

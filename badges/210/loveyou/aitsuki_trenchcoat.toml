@@ -1,0 +1,12 @@
+[badge]
+points = 15
+map = 110
+art = "thatdolphin"
+
+[conditions]
+default = "M99 S33=ON"
+
+[lang.en]
+name = "Elementary, my dear Aitsuki."
+description = "\"You see, but you do not observe.\""
+condition = "Obtain the Trenchcoat effect. If you have already unlocked it, return to Bathroom."
