@@ -1,0 +1,66 @@
+[lang]
+# The language that missing entries are derived from
+base = "en"
+list = [
+    "ar", # Arabic
+    "de", # German
+    "en", # English
+    "eo", # Esperanto?
+    "es", # Spanish
+    "fr", # Franch
+    "id", # Indonesian
+    "it", # Italian
+    "ja", # Japanese
+    "ko", # Korean
+    "pl", # Polish
+    "pt", # Portugese
+    "ro", # Romanian
+    "ru", # Russian
+    "tr", # Turkish
+    "uk", # British
+    "vi", # Vietnamese
+    "zh", # Chinese
+]
+
+[groups.ynoproject]
+list = [
+    "1_badge", # Badges
+    "2_exp",   # Expeditions
+    "3_rank",  # Rankings
+    "4_spec",  # Special
+]
+
+[groups.2kki]
+default = "2_el"
+list = [
+    "0_loc", # Exploration
+    "1_exp", # Expeditions
+    "2_el",  # Events & Locations
+    "3_tt",  # Time Trials
+    "4_ch",  # Challenges
+    "5_end", # End Game
+]
+
+[groups.flow]
+default = "2_sb"
+list = [
+    "2_sb", # Sabitsuki
+    "2_sr", # Rust
+    "2_zz", # Both
+]
+
+[groups.unevendream]
+list = [
+    "2_kb", # Kubotsuki
+    "2_ts", # Totsutsuki
+    "2_zz", # Misc
+]
+
+[groups.fog]
+default = "2_aa"
+list = [
+    "2_aa", # Events & Locations
+    "2_cl", # Leon
+    "2_ct", # Tegan
+    "2_ec", # Emory
+]

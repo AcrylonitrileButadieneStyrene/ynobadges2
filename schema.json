@@ -27,7 +27,7 @@
         "animated": { "type": "boolean" },
         "secret": { "type": "boolean" }
       },
-      "required": ["points", "map", "art"],
+      "required": ["map", "art"],
       "additionalProperties": false
     },
     "conditions": {
