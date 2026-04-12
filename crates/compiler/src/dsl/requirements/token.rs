@@ -1,21 +1,12 @@
 #[derive(logos::Logos)]
 #[logos(skip r"[ \t\n]+")]
-enum Token {
-    #[token("ALL")]
-    All,
-
+pub enum Token {
     #[token("AND")]
     And,
 
     #[token("OR")]
     Or,
 
-    #[token("(")]
-    GroupStart,
-
-    #[token(")")]
-    GroupEnd,
-
-    #[regex("[a-zA-Z_]+")]
-    ID,
+    #[regex("[a-z0-9_]+", |lex| lex.slice().to_string())]
+    ID(String),
 }

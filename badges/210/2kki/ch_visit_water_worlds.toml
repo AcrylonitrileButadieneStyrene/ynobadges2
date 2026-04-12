@@ -9,7 +9,6 @@ id = 56
 secret = true
 
 [conditions]
-requirements = "ALL"
 water_world_1 = "M0056"
 water_world_2 = "M0840"
 water_world_3 = "M1245"

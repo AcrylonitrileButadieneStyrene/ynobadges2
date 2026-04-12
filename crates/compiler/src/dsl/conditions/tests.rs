@@ -2,7 +2,7 @@
 fn test() {
     assert_eq!(
         super::parse("M123 X=9:10 Y=11 S13=ON"),
-        crate::format::output::Condition {
+        Some(crate::format::output::Condition {
             map: Some(123),
             map_x1: Some(9),
             map_x2: Some(10),
@@ -11,6 +11,6 @@ fn test() {
             switch_value: true,
             trigger: Some(crate::format::output::ConditionTrigger::Coords),
             ..Default::default()
-        }
+        })
     );
 }
