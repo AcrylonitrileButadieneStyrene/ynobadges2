@@ -18,7 +18,21 @@ fn main() {
         return;
     };
 
-    dbg!(badges);
+    unsafe {
+        git2::opts::set_verify_owner_validation(false).unwrap();
+    }
+
+    let repo = git2::Repository::open("ynobadges")
+        .or_else(|_| {
+            log::info!("Cloning ynobadges...");
+            git2::Repository::clone("https://github.com/ynoproject/ynobadges", "ynobadges")
+        })
+        .unwrap();
+    git_reset(&repo);
+
+    // badges.into_iter().map(|badge| {
+
+    // })
 }
 
 fn collect() -> Option<Vec<Badge>> {
@@ -87,7 +101,9 @@ fn collect() -> Option<Vec<Badge>> {
                                     .inspect_err(|err| log::warn!("Failed to read badge: {err}"))
                                     .ok()?;
                                 let bundle = toml::from_slice(&contents)
-                                    .inspect_err(|err| log::warn!("Failed to parse badge: {err}"))
+                                    .inspect_err(|err| {
+                                        log::warn!("Failed to parse badge `{id}`:\n{err}")
+                                    })
                                     .ok()?;
 
                                 Some(Badge {
@@ -101,4 +117,40 @@ fn collect() -> Option<Vec<Badge>> {
             })
             .collect(),
     )
+}
+
+fn git_reset(repo: &git2::Repository) {
+    // git fetch
+    repo.find_remote("origin")
+        .unwrap()
+        .fetch(&["master"], None, None)
+        .unwrap();
+
+    // git reset --hard
+    repo.reset(
+        repo.find_reference("refs/remotes/origin/master")
+            .unwrap()
+            .peel_to_commit()
+            .unwrap()
+            .as_object(),
+        git2::ResetType::Hard,
+        None,
+    )
+    .unwrap();
+
+    // git clean -fd
+    for entry in repo
+        .statuses(Some(git2::StatusOptions::new().include_untracked(true)))
+        .unwrap()
+        .iter()
+    {
+        if entry.status().contains(git2::Status::WT_NEW) {
+            let path = std::path::PathBuf::from("ynobadges").join(entry.path().unwrap());
+            if path.is_dir() {
+                std::fs::remove_dir_all(path).unwrap();
+            } else {
+                std::fs::remove_file(path).unwrap();
+            }
+        }
+    }
 }
