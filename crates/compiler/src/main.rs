@@ -1,7 +1,14 @@
 #![feature(iterator_try_collect)]
 #![feature(bool_to_result)]
+#![warn(clippy::nursery)]
+#![warn(clippy::pedantic)]
+#![allow(clippy::missing_panics_doc)]
+#![allow(clippy::cast_sign_loss)]
+#![allow(clippy::cast_possible_truncation)]
 
 use std::{collections::HashMap, num::NonZeroU16};
+
+use format::output::BadgeReqType;
 
 pub mod dsl;
 pub mod format;
@@ -36,34 +43,42 @@ fn main() {
         .unwrap();
     git_reset(&repo);
 
-    // step 1: write out badge files
+    write_badges(&config, &badges);
+    write_conditions(&badges);
+    write_lang(&config, &badges);
+}
+
+fn write_badges(config: &format::config::Config, badges: &[Badge]) {
     for Badge {
         id,
         game,
         batch,
         bundle,
-    } in &badges
+    } in badges
     {
         let (map_id, map_x, map_y, map_secret) = match bundle.badge.map {
             format::input::Map::Plain(id) => (id, None, None, false),
             format::input::Map::Object { id, x, y, secret } => (id, Some(x), Some(y), secret),
         };
 
-        let Some(reqs) = (match &bundle.conditions.requirements {
-            None => Some(dsl::requirements::Request::All),
-            Some(requirements) => dsl::requirements::parse(&requirements),
-        }) else {
+        let Some(reqs) = bundle
+            .conditions
+            .requirements
+            .as_ref()
+            .map_or(Some(dsl::requirements::Request::All), |requirements| {
+                dsl::requirements::parse(requirements)
+            })
+        else {
             continue;
         };
 
-        use format::output::BadgeReqType;
         let (req_string, req_strings, req_string_arrays, req_type) = match reqs {
             dsl::requirements::Request::All => {
                 let conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
                 match conditions.len() {
                     0 => (Some(id.clone()), None, None, BadgeReqType::Tag),
                     1 => (
-                        Some(match &**conditions.iter().next().unwrap() {
+                        Some(match &**conditions.first().unwrap() {
                             "default" => id.clone(),
                             x => x.to_string(),
                         }),
@@ -85,7 +100,7 @@ fn main() {
             animated: bundle.badge.animated,
             art: bundle.badge.art.clone(),
             batch: *batch,
-            bp: NonZeroU16::new(bundle.badge.points).map(|x| x.into()),
+            bp: NonZeroU16::new(bundle.badge.points).map(Into::into), // todo: temporary
             group: bundle.badge.group.clone().or_else(|| {
                 config
                     .groups
@@ -117,14 +132,15 @@ fn main() {
         )
         .unwrap();
     }
+}
 
-    // step 2: write condition files
+fn write_conditions(badges: &[Badge]) {
     for Badge {
         id: badge_id,
         game,
         bundle: format::input::Bundle { conditions, .. },
         ..
-    } in &badges
+    } in badges
     {
         conditions
             .rest
@@ -145,7 +161,9 @@ fn main() {
                 .unwrap();
             });
     }
+}
 
+fn write_lang(config: &format::config::Config, badges: &[Badge]) {
     let mut locales: HashMap<String, format::output::Lang> = config
         .lang
         .list
@@ -163,7 +181,7 @@ fn main() {
         game,
         bundle: format::input::Bundle { lang, .. },
         ..
-    } in &badges
+    } in badges
     {
         let base = lang.get(&config.lang.base).unwrap();
         for (key, locale) in &mut locales {
@@ -195,7 +213,9 @@ fn collect() -> Option<Vec<Badge>> {
                 let batch = batch_entry
                     .file_name()
                     .into_string()
-                    .inspect_err(|err| log::warn!("Batch contains invalid unicode: {err:?}"))
+                    .inspect_err(|err| {
+                        log::warn!("Batch contains invalid unicode: {}", err.display());
+                    })
                     .ok()?
                     .parse::<u16>()
                     .inspect_err(|err| log::warn!("Batch is not a number: {err}"))
@@ -216,11 +236,13 @@ fn collect() -> Option<Vec<Badge>> {
                         let game = game_entry
                             .file_name()
                             .into_string()
-                            .inspect_err(|err| log::warn!("Game contains invalid unicode: {err:?}"))
+                            .inspect_err(|err| {
+                                log::warn!("Game contains invalid unicode: {}", err.display());
+                            })
                             .ok()?;
                         let badge_entries = std::fs::read_dir(game_entry.path())
                             .inspect_err(|err| {
-                                log::warn!("Failed to read `badges/:batch/:game`: {err}")
+                                log::warn!("Failed to read `badges/:batch/:game`: {err}");
                             })
                             .ok()?;
                         Some((game, badge_entries))
@@ -240,7 +262,10 @@ fn collect() -> Option<Vec<Badge>> {
                                     .to_os_string()
                                     .into_string()
                                     .inspect_err(|err| {
-                                        log::warn!("Badge contained invalid unicode: {err:?}")
+                                        log::warn!(
+                                            "Badge contained invalid unicode: {}",
+                                            err.display()
+                                        );
                                     })
                                     .ok()?;
                                 let contents = std::fs::read(badge_entry.path())
@@ -248,7 +273,7 @@ fn collect() -> Option<Vec<Badge>> {
                                     .ok()?;
                                 let bundle = toml::from_slice(&contents)
                                     .inspect_err(|err| {
-                                        log::warn!("Failed to parse badge `{id}`:\n{err}")
+                                        log::warn!("Failed to parse badge `{id}`:\n{err}");
                                     })
                                     .ok()?;
 

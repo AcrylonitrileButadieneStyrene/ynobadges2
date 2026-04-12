@@ -6,6 +6,7 @@ mod token;
 #[cfg(test)]
 mod tests;
 
+#[must_use]
 pub fn parse(input: &str) -> Option<crate::format::output::Condition> {
     let tokens = token::Token::lexer(input)
         .spanned()

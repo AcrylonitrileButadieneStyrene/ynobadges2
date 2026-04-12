@@ -5,6 +5,7 @@ fn default<T: Default + PartialEq>(t: &T) -> bool {
 #[serde_with::skip_serializing_none]
 #[derive(serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
+#[allow(clippy::struct_excessive_bools)]
 pub struct Badge {
     #[serde(skip_serializing_if = "default")]
     pub animated: bool,
@@ -55,6 +56,7 @@ pub enum BadgeReqType {
 #[serde_with::skip_serializing_none]
 #[derive(Debug, Default, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
+#[allow(clippy::struct_excessive_bools)]
 pub struct Condition {
     pub map: Option<u16>,
     pub map_x1: Option<u16>,

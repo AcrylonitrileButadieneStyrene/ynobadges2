@@ -16,6 +16,7 @@ enum State {
     Merge,
 }
 
+#[must_use]
 pub fn parse(input: &str) -> Option<Request> {
     token::Token::lexer(input)
         .spanned()
@@ -96,7 +97,7 @@ pub fn parse(input: &str) -> Option<Request> {
                     (Some(Request::TagArray(array)), State::Default)
                 }
                 _ => {
-                    ariadne::Report::build(ariadne::ReportKind::Error, span.clone())
+                    ariadne::Report::build(ariadne::ReportKind::Error, span)
                         .with_message("unexpected input")
                         .finish()
                         .eprint(ariadne::Source::from(input))
