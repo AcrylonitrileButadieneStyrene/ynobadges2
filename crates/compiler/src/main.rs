@@ -1,3 +1,5 @@
+use std::num::NonZeroU16;
+
 pub mod format;
 
 #[derive(Debug)]
@@ -30,9 +32,55 @@ fn main() {
         .unwrap();
     git_reset(&repo);
 
-    // badges.into_iter().map(|badge| {
+    // step 1: write out badge files
+    for Badge {
+        id,
+        game,
+        batch,
+        bundle,
+    } in badges
+    {
+        let (map_id, map_x, map_y, map_secret) = match bundle.badge.map {
+            format::input::Map::Plain(id) => (id, None, None, false),
+            format::input::Map::Object { id, x, y, secret } => (id, Some(x), Some(y), secret),
+        };
 
-    // })
+        let out = format::output::Badge {
+            animated: bundle.badge.animated,
+            art: bundle.badge.art,
+            batch,
+            bp: NonZeroU16::new(bundle.badge.points).map(|x| x.into()),
+            group: bundle.badge.group.or_else(|| {
+                config
+                    .groups
+                    .get(&game)
+                    .and_then(|group| group.default.clone())
+            }),
+            hidden: bundle.badge.hidden,
+            map: map_id,
+            map_order: None,
+            map_x,
+            map_y,
+            order: None,
+            overlay_type: None,
+            parent: None,
+            req_count: None,
+            req_int: None,
+            req_string: None,
+            req_string_arrays: None,
+            req_strings: None,
+            req_type: None,
+            secret: bundle.badge.secret,
+            secret_condition: bundle.conditions.secret,
+            secret_map: map_secret,
+        };
+
+        std::fs::write(
+            format!("ynobadges/badges/{game}/{id}.json"),
+            serde_json::to_string_pretty(&out).unwrap(),
+        )
+        .unwrap();
+    }
 }
 
 fn collect() -> Option<Vec<Badge>> {

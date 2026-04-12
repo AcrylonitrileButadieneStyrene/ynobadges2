@@ -18,6 +18,8 @@ pub struct Badge {
     pub animated: bool,
     #[serde(default)]
     pub secret: bool,
+    #[serde(default)]
+    pub hidden: bool,
 }
 
 #[derive(Debug, serde::Deserialize)]

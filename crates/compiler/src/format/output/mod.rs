@@ -1,27 +1,38 @@
+fn default<T: Default + PartialEq>(t: &T) -> bool {
+    *t == Default::default()
+}
+
+#[serde_with::skip_serializing_none]
 #[derive(serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Badge {
+    #[serde(skip_serializing_if = "default")]
     pub animated: bool,
     pub art: String,
     pub batch: u16,
-    pub bp: u16,
-    pub group: String,
+    // todo: change this to NonZeroU16 when `just_smile_dog_aseprite` gets fixed
+    pub bp: Option<u16>,
+    pub group: Option<String>,
+    #[serde(skip_serializing_if = "default")]
     pub hidden: bool,
     pub map: u16,
-    pub map_order: u8,
-    pub map_x: u16,
-    pub map_y: u16,
-    pub order: u8,
-    pub overlay_type: u8,
-    pub parent: String,
-    pub req_count: u8,
-    pub req_int: u16,
-    pub req_string: String,
-    pub req_string_arrays: Vec<Vec<String>>,
-    pub req_strings: Vec<String>,
-    pub req_type: BadgeReqType,
+    pub map_order: Option<u8>,
+    pub map_x: Option<u16>,
+    pub map_y: Option<u16>,
+    pub order: Option<u8>,
+    pub overlay_type: Option<u8>,
+    pub parent: Option<String>,
+    pub req_count: Option<u8>,
+    pub req_int: Option<u16>,
+    pub req_string: Option<String>,
+    pub req_string_arrays: Option<Vec<Vec<String>>>,
+    pub req_strings: Option<Vec<String>>,
+    pub req_type: Option<BadgeReqType>,
+    #[serde(skip_serializing_if = "default")]
     pub secret: bool,
+    #[serde(skip_serializing_if = "default")]
     pub secret_condition: bool,
+    #[serde(skip_serializing_if = "default")]
     pub secret_map: bool,
 }
 
@@ -80,10 +91,12 @@ pub enum ConditionTrigger {
     PrevMap,
 }
 
+pub use super::input::Locale;
+
 pub type Lang = std::collections::HashMap<
     String, // game
     std::collections::HashMap<
         String, // req string
-        super::input::Locale,
+        Locale,
     >,
 >;
