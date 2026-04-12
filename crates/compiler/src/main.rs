@@ -6,12 +6,11 @@
 #![allow(clippy::cast_sign_loss)]
 #![allow(clippy::cast_possible_truncation)]
 
-use std::{collections::HashMap, num::NonZeroU16};
-
-use format::output::BadgeReqType;
+use std::sync::Arc;
 
 pub mod dsl;
 pub mod format;
+mod write;
 
 #[derive(Debug)]
 struct Badge {
@@ -43,160 +42,18 @@ fn main() {
         .unwrap();
     git_reset(&repo);
 
-    write_badges(&config, &badges);
-    write_conditions(&badges);
-    write_lang(&config, &badges);
+    tokio::runtime::Builder::new_multi_thread()
+        .build()
+        .unwrap()
+        .block_on(async_main(Arc::new(config), Arc::from(badges)));
 }
 
-fn write_badges(config: &format::config::Config, badges: &[Badge]) {
-    for Badge {
-        id,
-        game,
-        batch,
-        bundle,
-    } in badges
-    {
-        let (map_id, map_x, map_y, map_secret) = match bundle.badge.map {
-            format::input::Map::Plain(id) => (id, None, None, false),
-            format::input::Map::Object { id, x, y, secret } => (id, Some(x), Some(y), secret),
-        };
-
-        let Some(reqs) = bundle
-            .conditions
-            .requirements
-            .as_ref()
-            .map_or(Some(dsl::requirements::Request::All), |requirements| {
-                dsl::requirements::parse(requirements)
-            })
-        else {
-            continue;
-        };
-
-        let (req_string, req_strings, req_string_arrays, req_type) = match reqs {
-            dsl::requirements::Request::All => {
-                let conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
-                match conditions.len() {
-                    0 => (Some(id.clone()), None, None, BadgeReqType::Tag),
-                    1 => (
-                        Some(match &**conditions.first().unwrap() {
-                            "default" => id.clone(),
-                            x => x.to_string(),
-                        }),
-                        None,
-                        None,
-                        BadgeReqType::Tag,
-                    ),
-                    _ => (None, Some(conditions), None, BadgeReqType::Tags),
-                }
-            }
-            dsl::requirements::Request::Tag(id) => (Some(id), None, None, BadgeReqType::Tag),
-            dsl::requirements::Request::Tags(ids) => (None, Some(ids), None, BadgeReqType::Tags),
-            dsl::requirements::Request::TagArray(ids) => {
-                (None, None, Some(ids), BadgeReqType::TagArrays)
-            }
-        };
-
-        let out = format::output::Badge {
-            animated: bundle.badge.animated,
-            art: bundle.badge.art.clone(),
-            batch: *batch,
-            bp: NonZeroU16::new(bundle.badge.points).map(Into::into), // todo: temporary
-            group: bundle.badge.group.clone().or_else(|| {
-                config
-                    .groups
-                    .get(game)
-                    .and_then(|group| group.default.clone())
-            }),
-            hidden: bundle.badge.hidden,
-            map: map_id,
-            map_order: None,
-            map_x,
-            map_y,
-            order: None,
-            overlay_type: None,
-            parent: None,
-            req_count: None,
-            req_int: None,
-            req_string,
-            req_string_arrays,
-            req_strings,
-            req_type: Some(req_type),
-            secret: bundle.badge.secret,
-            secret_condition: bundle.conditions.secret,
-            secret_map: map_secret,
-        };
-
-        std::fs::write(
-            format!("ynobadges/badges/{game}/{id}.json"),
-            serde_json::to_string_pretty(&out).unwrap(),
-        )
-        .unwrap();
-    }
-}
-
-fn write_conditions(badges: &[Badge]) {
-    for Badge {
-        id: badge_id,
-        game,
-        bundle: format::input::Bundle { conditions, .. },
-        ..
-    } in badges
-    {
-        conditions
-            .rest
-            .iter()
-            .filter_map(|(condition_id, condition)| {
-                let condition_id = match &**condition_id {
-                    "default" => badge_id.clone(),
-                    x => x.to_string(),
-                };
-
-                dsl::conditions::parse(condition).map(|condition| (condition_id, condition))
-            })
-            .for_each(|(condition_id, condition)| {
-                std::fs::write(
-                    format!("ynobadges/conditions/{game}/{condition_id}.json"),
-                    serde_json::to_string_pretty(&condition).unwrap(),
-                )
-                .unwrap();
-            });
-    }
-}
-
-fn write_lang(config: &format::config::Config, badges: &[Badge]) {
-    let mut locales: HashMap<String, format::output::Lang> = config
-        .lang
-        .list
-        .iter()
-        .map(|key| {
-            let path = format!("ynobadges/lang/{key}.json");
-            let contents = std::fs::read(&path).unwrap();
-            let lang: format::output::Lang = serde_json::from_slice(&contents).unwrap();
-            (key.clone(), lang)
-        })
-        .collect();
-
-    for Badge {
-        id,
-        game,
-        bundle: format::input::Bundle { lang, .. },
-        ..
-    } in badges
-    {
-        let base = lang.get(&config.lang.base).unwrap();
-        for (key, locale) in &mut locales {
-            let lang = lang.get(key).unwrap_or(base);
-            locale
-                .entry(game.clone())
-                .or_insert_with(indexmap::IndexMap::new)
-                .insert(id.clone(), lang.clone());
-        }
-    }
-
-    for (key, locale) in locales {
-        let path = format!("ynobadges/lang/{key}.json");
-        std::fs::write(&path, serde_json::to_string_pretty(&locale).unwrap()).unwrap();
-    }
+async fn async_main(config: Arc<format::config::Config>, badges: Arc<[Badge]>) {
+    let mut set = tokio::task::JoinSet::new();
+    set.spawn(write::badges(config.clone(), badges.clone()));
+    set.spawn(write::conditions(badges.clone()));
+    set.spawn(write::lang(config, badges));
+    set.join_all().await;
 }
 
 fn collect() -> Option<Vec<Badge>> {
