@@ -100,9 +100,9 @@ pub enum ConditionTrigger {
 
 pub use super::input::Locale;
 
-pub type Lang = std::collections::HashMap<
+pub type Lang = indexmap::IndexMap<
     String, // game
-    std::collections::HashMap<
+    indexmap::IndexMap<
         String, // req string
         Locale,
     >,

@@ -46,10 +46,11 @@ pub struct Conditions {
     pub rest: HashMap<String, String>,
 }
 
-#[derive(Debug, serde::Deserialize)]
+#[serde_with::skip_serializing_none]
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
 pub struct Locale {
     pub name: Option<String>,
     pub description: Option<String>,
     pub condition: Option<String>,
-    pub checkbox: Option<HashMap<String, String>>,
+    pub checkbox: Option<indexmap::IndexMap<String, String>>,
 }

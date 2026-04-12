@@ -1,7 +1,7 @@
 #![feature(iterator_try_collect)]
 #![feature(bool_to_result)]
 
-use std::num::NonZeroU16;
+use std::{collections::HashMap, num::NonZeroU16};
 
 pub mod dsl;
 pub mod format;
@@ -124,7 +124,7 @@ fn main() {
         game,
         bundle: format::input::Bundle { conditions, .. },
         ..
-    } in badges
+    } in &badges
     {
         conditions
             .rest
@@ -144,6 +144,40 @@ fn main() {
                 )
                 .unwrap();
             });
+    }
+
+    let mut locales: HashMap<String, format::output::Lang> = config
+        .lang
+        .list
+        .iter()
+        .map(|key| {
+            let path = format!("ynobadges/lang/{key}.json");
+            let contents = std::fs::read(&path).unwrap();
+            let lang: format::output::Lang = serde_json::from_slice(&contents).unwrap();
+            (key.clone(), lang)
+        })
+        .collect();
+
+    for Badge {
+        id,
+        game,
+        bundle: format::input::Bundle { lang, .. },
+        ..
+    } in &badges
+    {
+        let base = lang.get(&config.lang.base).unwrap();
+        for (key, locale) in &mut locales {
+            let lang = lang.get(key).unwrap_or(base);
+            locale
+                .entry(game.clone())
+                .or_insert_with(indexmap::IndexMap::new)
+                .insert(id.clone(), lang.clone());
+        }
+    }
+
+    for (key, locale) in locales {
+        let path = format!("ynobadges/lang/{key}.json");
+        std::fs::write(&path, serde_json::to_string_pretty(&locale).unwrap()).unwrap();
     }
 }
 

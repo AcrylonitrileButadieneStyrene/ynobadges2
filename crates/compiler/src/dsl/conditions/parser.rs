@@ -65,7 +65,7 @@ impl Parser {
 
                     let id = *id as u16;
 
-                    self.expect_equals();
+                    self.expect_equals()?;
 
                     let value = match self.next() {
                         Some(Token::On) => true,
@@ -98,7 +98,7 @@ impl Parser {
                     let id = *id as u16;
 
                     // todo: more ops
-                    self.expect_equals();
+                    self.expect_equals()?;
 
                     let Some(Token::Number(value)) = self.next() else {
                         return Err(Error::Expected("number"));
@@ -139,7 +139,7 @@ impl Parser {
     }
 
     fn equals_range(&mut self) -> Result<(i32, Option<i32>), Error> {
-        self.expect_equals();
+        self.expect_equals()?;
 
         let Some(Token::Number(x1)) = self.next() else {
             return Err(Error::Expected("number"));
