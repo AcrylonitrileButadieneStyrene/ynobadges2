@@ -3,8 +3,6 @@
 
 use std::num::NonZeroU16;
 
-use crate::format::output::BadgeReqType;
-
 pub mod dsl;
 pub mod format;
 
@@ -44,35 +42,24 @@ fn main() {
         game,
         batch,
         bundle,
-    } in badges
+    } in &badges
     {
         let (map_id, map_x, map_y, map_secret) = match bundle.badge.map {
             format::input::Map::Plain(id) => (id, None, None, false),
             format::input::Map::Object { id, x, y, secret } => (id, Some(x), Some(y), secret),
         };
 
-        let Some(reqs) = (match bundle.conditions.requirements {
-            None => Some(crate::dsl::requirements::Request::All),
-            Some(requirements) => crate::dsl::requirements::parse(&requirements),
+        let Some(reqs) = (match &bundle.conditions.requirements {
+            None => Some(dsl::requirements::Request::All),
+            Some(requirements) => dsl::requirements::parse(&requirements),
         }) else {
             continue;
         };
 
+        use format::output::BadgeReqType;
         let (req_string, req_strings, req_string_arrays, req_type) = match reqs {
             dsl::requirements::Request::All => {
-                let conditions = bundle
-                    .conditions
-                    .rest
-                    .keys()
-                    .cloned()
-                    .chain(
-                        bundle
-                            .conditions
-                            .default
-                            .iter()
-                            .map(|_| "default".to_string()),
-                    )
-                    .collect::<Vec<_>>();
+                let conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
                 match conditions.len() {
                     0 => (Some(id.clone()), None, None, BadgeReqType::Tag),
                     1 => (
@@ -96,13 +83,13 @@ fn main() {
 
         let out = format::output::Badge {
             animated: bundle.badge.animated,
-            art: bundle.badge.art,
-            batch,
+            art: bundle.badge.art.clone(),
+            batch: *batch,
             bp: NonZeroU16::new(bundle.badge.points).map(|x| x.into()),
-            group: bundle.badge.group.or_else(|| {
+            group: bundle.badge.group.clone().or_else(|| {
                 config
                     .groups
-                    .get(&game)
+                    .get(game)
                     .and_then(|group| group.default.clone())
             }),
             hidden: bundle.badge.hidden,
@@ -129,6 +116,34 @@ fn main() {
             serde_json::to_string_pretty(&out).unwrap(),
         )
         .unwrap();
+    }
+
+    // step 2: write condition files
+    for Badge {
+        id: badge_id,
+        game,
+        bundle: format::input::Bundle { conditions, .. },
+        ..
+    } in badges
+    {
+        conditions
+            .rest
+            .iter()
+            .filter_map(|(condition_id, condition)| {
+                let condition_id = match &**condition_id {
+                    "default" => badge_id.clone(),
+                    x => x.to_string(),
+                };
+
+                dsl::conditions::parse(condition).map(|condition| (condition_id, condition))
+            })
+            .for_each(|(condition_id, condition)| {
+                std::fs::write(
+                    format!("ynobadges/conditions/{game}/{condition_id}.json"),
+                    serde_json::to_string_pretty(&condition).unwrap(),
+                )
+                .unwrap();
+            });
     }
 }
 

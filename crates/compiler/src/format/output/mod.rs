@@ -69,6 +69,7 @@ pub struct Condition {
     #[serde(skip_serializing_if = "default")]
     pub switch_value: bool,
     pub switch_values: Option<Vec<bool>>,
+    #[serde(skip_serializing_if = "default")]
     pub time_trial: bool,
     pub trigger: Option<ConditionTrigger>,
     pub value: Option<String>,

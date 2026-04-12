@@ -41,7 +41,6 @@ pub enum Map {
 pub struct Conditions {
     #[serde(default)]
     pub secret: bool,
-    pub default: Option<String>,
     pub requirements: Option<String>,
     #[serde(flatten)]
     pub rest: HashMap<String, String>,
