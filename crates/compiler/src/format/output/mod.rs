@@ -37,7 +37,7 @@ pub struct Badge {
 }
 
 #[derive(serde::Serialize, serde::Deserialize)]
-#[serde(untagged, rename_all = "camelCase")]
+#[serde(rename_all = "camelCase")]
 pub enum BadgeReqType {
     BadgeCount,
     Exp,
@@ -87,7 +87,7 @@ pub struct Condition {
 }
 
 #[derive(Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
-#[serde(untagged, rename_all = "camelCase")]
+#[serde(rename_all = "camelCase")]
 pub enum ConditionTrigger {
     Event,
     EventAction,

@@ -3,6 +3,8 @@
 
 use std::num::NonZeroU16;
 
+use crate::format::output::BadgeReqType;
+
 pub mod dsl;
 pub mod format;
 
@@ -49,6 +51,49 @@ fn main() {
             format::input::Map::Object { id, x, y, secret } => (id, Some(x), Some(y), secret),
         };
 
+        let Some(reqs) = (match bundle.conditions.requirements {
+            None => Some(crate::dsl::requirements::Request::All),
+            Some(requirements) => crate::dsl::requirements::parse(&requirements),
+        }) else {
+            continue;
+        };
+
+        let (req_string, req_strings, req_string_arrays, req_type) = match reqs {
+            dsl::requirements::Request::All => {
+                let conditions = bundle
+                    .conditions
+                    .rest
+                    .keys()
+                    .cloned()
+                    .chain(
+                        bundle
+                            .conditions
+                            .default
+                            .iter()
+                            .map(|_| "default".to_string()),
+                    )
+                    .collect::<Vec<_>>();
+                match conditions.len() {
+                    0 => (Some(id.clone()), None, None, BadgeReqType::Tag),
+                    1 => (
+                        Some(match &**conditions.iter().next().unwrap() {
+                            "default" => id.clone(),
+                            x => x.to_string(),
+                        }),
+                        None,
+                        None,
+                        BadgeReqType::Tag,
+                    ),
+                    _ => (None, Some(conditions), None, BadgeReqType::Tags),
+                }
+            }
+            dsl::requirements::Request::Tag(id) => (Some(id), None, None, BadgeReqType::Tag),
+            dsl::requirements::Request::Tags(ids) => (None, Some(ids), None, BadgeReqType::Tags),
+            dsl::requirements::Request::TagArray(ids) => {
+                (None, None, Some(ids), BadgeReqType::TagArrays)
+            }
+        };
+
         let out = format::output::Badge {
             animated: bundle.badge.animated,
             art: bundle.badge.art,
@@ -70,10 +115,10 @@ fn main() {
             parent: None,
             req_count: None,
             req_int: None,
-            req_string: None,
-            req_string_arrays: None,
-            req_strings: None,
-            req_type: None,
+            req_string,
+            req_string_arrays,
+            req_strings,
+            req_type: Some(req_type),
             secret: bundle.badge.secret,
             secret_condition: bundle.conditions.secret,
             secret_map: map_secret,
