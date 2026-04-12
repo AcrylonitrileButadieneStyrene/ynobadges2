@@ -1,3 +1,11 @@
 [workspace]
 resolver = "3"
 members = ["crates/compiler"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+strip = true
+lto = true
