@@ -52,32 +52,38 @@ pub enum BadgeReqType {
     VmCount,
 }
 
-#[derive(serde::Serialize, serde::Deserialize)]
+#[serde_with::skip_serializing_none]
+#[derive(Debug, Default, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Condition {
-    pub map: u16,
-    pub map_x1: u16,
-    pub map_x2: u16,
-    pub map_y1: u16,
-    pub map_y2: u16,
+    pub map: Option<u16>,
+    pub map_x1: Option<u16>,
+    pub map_x2: Option<u16>,
+    pub map_y1: Option<u16>,
+    pub map_y2: Option<u16>,
+    #[serde(skip_serializing_if = "default")]
     pub switch_delay: bool,
-    pub switch_id: u16,
-    pub switch_ids: Vec<u16>,
+    pub switch_id: Option<u16>,
+    pub switch_ids: Option<Vec<u16>>,
+    // this is rarely omitted
+    #[serde(skip_serializing_if = "default")]
     pub switch_value: bool,
-    pub switch_values: Vec<bool>,
+    pub switch_values: Option<Vec<bool>>,
     pub time_trial: bool,
-    pub trigger: ConditionTrigger,
-    pub value: String,
-    pub values: Vec<String>,
+    pub trigger: Option<ConditionTrigger>,
+    pub value: Option<String>,
+    pub values: Option<Vec<String>>,
+    #[serde(skip_serializing_if = "default")]
     pub var_delay: bool,
-    pub var_id: u16,
-    pub var_ids: Vec<u16>,
-    pub var_op: String,
-    pub var_ops: Vec<String>,
+    pub var_id: Option<u16>,
+    pub var_ids: Option<Vec<u16>>,
+    pub var_op: Option<String>,
+    pub var_ops: Option<Vec<String>>,
+    #[serde(skip_serializing_if = "default")]
     pub var_trigger: bool,
-    pub var_value: u32,
-    pub var_value2: u32,
-    pub var_values: Vec<u32>,
+    pub var_value: Option<u32>,
+    pub var_value2: Option<u32>,
+    pub var_values: Option<Vec<u32>>,
 }
 
 #[derive(serde::Serialize, serde::Deserialize)]
