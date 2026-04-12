@@ -25,7 +25,7 @@ pub enum Token {
     #[token(":")]
     Colon,
 
-    #[regex("-?[0-9]+", |lex| lex.slice().parse())]
+    #[regex("-?[0-9]+", |lex| lex.slice().parse::<i32>().unwrap())]
     Number(i32),
 
     #[token("ON")]

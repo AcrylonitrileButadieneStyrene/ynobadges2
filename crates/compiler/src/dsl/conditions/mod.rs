@@ -13,7 +13,5 @@ pub fn parse(input: &str) -> crate::format::output::Condition {
         .try_collect::<Vec<_>>()
         .unwrap();
 
-    let parser = parser::Parser::new(tokens).eval();
-
-    todo!()
+    parser::Parser::new(tokens).eval().unwrap()
 }

@@ -7,15 +7,11 @@ type TokenSpan = (Token, std::ops::Range<usize>);
 pub struct Parser {
     tokens: Vec<TokenSpan>,
     condition: Condition,
-    state: State,
     position: usize,
 }
 
-enum State {
-    None,
-}
-
-enum Error {
+#[derive(Debug)]
+pub enum Error {
     Expected(&'static str),
 }
 
@@ -24,7 +20,6 @@ impl Parser {
         Self {
             tokens,
             condition: Condition::default(),
-            state: State::None,
             position: 0,
         }
     }
@@ -49,11 +44,19 @@ impl Parser {
                     let (x1, x2) = self.equals_range()?;
                     self.condition.map_x1 = Some(x1 as _);
                     self.condition.map_x2 = x2.map(|x| x as _);
+                    if self.condition.trigger.is_none() {
+                        self.condition.trigger =
+                            Some(crate::format::output::ConditionTrigger::Coords);
+                    }
                 }
                 Token::Y => {
                     let (y1, y2) = self.equals_range()?;
                     self.condition.map_y1 = Some(y1 as _);
                     self.condition.map_y2 = y2.map(|x| x as _);
+                    if self.condition.trigger.is_none() {
+                        self.condition.trigger =
+                            Some(crate::format::output::ConditionTrigger::Coords);
+                    }
                 }
                 Token::Switch => {
                     let Some(Token::Number(id)) = self.next() else {
@@ -87,8 +90,47 @@ impl Parser {
                         self.condition.switch_value = value;
                     }
                 }
-                Token::Variable => todo!(),
-                Token::Event => todo!(),
+                Token::Variable => {
+                    let Some(Token::Number(id)) = self.next() else {
+                        return Err(Error::Expected("number"));
+                    };
+
+                    let id = *id as u16;
+
+                    // todo: more ops
+                    self.expect_equals();
+
+                    let Some(Token::Number(value)) = self.next() else {
+                        return Err(Error::Expected("number"));
+                    };
+
+                    let value = *value;
+
+                    if let (Some(var_ids), Some(var_values)) =
+                        (&mut self.condition.var_ids, &mut self.condition.var_values)
+                    {
+                        var_ids.push(id);
+                        var_values.push(value);
+                    } else if let (Some(existing_id), Some(existing_value)) =
+                        (self.condition.var_id, self.condition.var_value)
+                    {
+                        self.condition.var_ids = Some(vec![existing_id, id]);
+                        self.condition.var_values = Some(vec![existing_value, value]);
+                        self.condition.var_id = None;
+                        self.condition.var_value = None;
+                    } else {
+                        self.condition.var_id = Some(id);
+                        self.condition.var_value = Some(value);
+                    }
+                }
+                Token::Event => {
+                    let Some(Token::Number(id)) = self.next() else {
+                        return Err(Error::Expected("number"));
+                    };
+
+                    self.condition.value = Some(id.to_string());
+                    self.condition.trigger = Some(crate::format::output::ConditionTrigger::Event);
+                }
                 _ => return Err(Error::Expected("start of instruction")),
             }
         }

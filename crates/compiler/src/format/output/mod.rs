@@ -81,12 +81,12 @@ pub struct Condition {
     pub var_ops: Option<Vec<String>>,
     #[serde(skip_serializing_if = "default")]
     pub var_trigger: bool,
-    pub var_value: Option<u32>,
-    pub var_value2: Option<u32>,
-    pub var_values: Option<Vec<u32>>,
+    pub var_value: Option<i32>,
+    pub var_value2: Option<i32>,
+    pub var_values: Option<Vec<i32>>,
 }
 
-#[derive(serde::Serialize, serde::Deserialize)]
+#[derive(Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 #[serde(untagged, rename_all = "camelCase")]
 pub enum ConditionTrigger {
     Event,
