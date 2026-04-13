@@ -28,10 +28,8 @@ pub enum Map {
     Plain(u16),
     Object {
         id: u16,
-        #[serde(default)]
-        x: u16,
-        #[serde(default)]
-        y: u16,
+        x: Option<u16>,
+        y: Option<u16>,
         #[serde(default)]
         secret: bool,
     },

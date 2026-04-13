@@ -23,7 +23,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
     {
         let (map_id, map_x, map_y, map_secret) = match bundle.badge.map {
             input::Map::Plain(id) => (id, None, None, false),
-            input::Map::Object { id, x, y, secret } => (id, Some(x), Some(y), secret),
+            input::Map::Object { id, x, y, secret } => (id, x, y, secret),
         };
 
         let Some(reqs) = bundle

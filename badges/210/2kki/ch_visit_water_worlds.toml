@@ -9,10 +9,11 @@ id = 56
 secret = true
 
 [conditions]
+requirements = "water_world_1 AND water_world_2 AND water_world_3 AND water_world_4 AND water_world_5 AND water_world_6 AND water_world_7 AND water_world_8 AND water_world_9 AND water_world_10 AND water_world_11 AND water_world_12 AND water_world_13a OR water_world_13b"
 water_world_1 = "M0056"
 water_world_2 = "M0840"
 water_world_3 = "M1245"
-water_world_4 = "M1273"
+water_world_4 = "M1273 X=128:317 Y=0:149"
 water_world_5 = "M1398"
 water_world_6 = "M1842"
 water_world_7 = "M1862"
@@ -21,7 +22,8 @@ water_world_9 = "M2121"
 water_world_10 = "M2400"
 water_world_11 = "M3117"
 water_world_12 = "M3224"
-water_world_13 = "M3361"
+water_world_13a = "M3361"
+water_world_13b = "M3364"
 
 [lang.en]
 name = "Everlasting Reef"
