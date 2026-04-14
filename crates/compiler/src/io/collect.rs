@@ -1,11 +1,11 @@
 use crate::Badge;
 
 pub fn badges() -> Option<Vec<Badge>> {
-    let badges_entries = std::fs::read_dir("badges")
+    let entries = std::fs::read_dir("badges")
         .inspect_err(|err| log::error!("Failed to read `badges`: {err}"))
         .ok()?;
 
-    let badges = badges_entries
+    let badges = entries
         .filter_map(|batch_entry| {
             let batch_entry = batch_entry
                 .inspect_err(|err| log::warn!("Failed to read batch: {err}"))
