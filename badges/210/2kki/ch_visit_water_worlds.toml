@@ -9,7 +9,7 @@ id = 56
 secret = true
 
 [conditions]
-requirements = "atlantis AND neon_sea AND calcarina_sea AND azure_depths AND alrescha_sea AND pastel_pools AND watching_waters AND coral_shoal AND peaceful_shoal AND flowery_pond AND goldfish_pond AND elysium_pools AND pastel_dream_sea_a OR pastel_dream_sea_b"
+requirements = "atlantis AND neon_sea AND calcarina_sea AND azure_depths AND alrescha_sea AND pastel_pools AND watching_waters AND shoal_coral AND peaceful_shoal AND flowery_pond AND goldfish_pond AND elysium_pools AND pastel_dream_sea_a OR pastel_dream_sea_b"
 calcarina_sea = "M1245"
 azure_depths = "M1273 X=128:317 Y=0:149"
 alrescha_sea = "M1398"
@@ -32,7 +32,7 @@ azure_depths = "Azure Depths"
 alrescha_sea = "Alrescha Sea"
 pastel_pools = "Pastel Pools"
 watching_waters = "Watching Waters"
-coral_shoal = "Coral Shoal"
+shoal_coral = "Coral Shoal"
 peaceful_shoal = "Peaceful Shoal"
 flowery_pond = "Flowery Pond"
 goldfish_pond = "Goldfish Pond"
