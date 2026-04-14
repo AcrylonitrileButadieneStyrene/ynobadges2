@@ -14,8 +14,8 @@ mod io;
 
 #[derive(Debug)]
 struct Badge {
-    id: String,
-    game: String,
+    badge_id: String,
+    game_id: String,
     batch: u16,
     bundle: format::input::Bundle,
 }

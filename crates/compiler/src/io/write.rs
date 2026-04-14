@@ -15,8 +15,8 @@ use crate::{
 
 pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
     for Badge {
-        id,
-        game,
+        badge_id: id,
+        game_id: game,
         batch,
         bundle,
     } in &*badges
@@ -100,8 +100,8 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
 
 pub async fn conditions(badges: Arc<[Badge]>) {
     for Badge {
-        id: badge_id,
-        game,
+        badge_id,
+        game_id: game,
         bundle: input::Bundle { conditions, .. },
         ..
     } in &*badges
@@ -130,7 +130,7 @@ pub async fn conditions(badges: Arc<[Badge]>) {
 }
 
 pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
-    let mut locales: HashMap<String, output::Lang> = config
+    let mut languages: HashMap<String, output::Lang> = config
         .lang
         .list
         .iter()
@@ -143,23 +143,31 @@ pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
         .collect();
 
     for Badge {
-        id,
-        game,
+        badge_id,
+        game_id,
         bundle: input::Bundle { lang, .. },
         ..
     } in &*badges
     {
         let base = lang.get(&config.lang.base).unwrap();
-        for (key, locale) in &mut locales {
-            let lang = lang.get(key).unwrap_or(base);
-            locale
-                .entry(game.clone())
-                .or_insert_with(indexmap::IndexMap::new)
-                .insert(id.clone(), lang.clone());
+        for (language_id, language) in &mut languages {
+            let (lang, is_fallback) = lang
+                .get(language_id)
+                .map_or((base, true), |entry| (entry, false));
+            let game_entries = language
+                .entry(game_id.clone())
+                .or_insert_with(indexmap::IndexMap::new);
+            if game_entries.contains_key(badge_id) {
+                if !is_fallback {
+                    log::warn!("Mismatch between locale {language_id}/{game_id}/{badge_id}");
+                }
+            } else {
+                game_entries.insert(badge_id.clone(), lang.clone());
+            }
         }
     }
 
-    for (key, locale) in locales {
+    for (key, locale) in languages {
         let path = format!("ynobadges/lang/{key}.json");
         tokio::fs::write(&path, serde_json::to_string_pretty(&locale).unwrap())
             .await
