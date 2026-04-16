@@ -157,12 +157,10 @@ pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
             let game_entries = language
                 .entry(game_id.clone())
                 .or_insert_with(indexmap::IndexMap::new);
-            if game_entries.contains_key(badge_id) {
-                if !is_fallback {
-                    log::warn!("Mismatch between locale {language_id}/{game_id}/{badge_id}");
-                }
-            } else {
-                game_entries.insert(badge_id.clone(), lang.clone());
+
+            let entry = game_entries.entry(badge_id.clone()).or_insert(lang.clone());
+            if !is_fallback && entry != lang {
+                log::warn!("Mismatch between locale {language_id}/{game_id}/{badge_id}");
             }
         }
     }
