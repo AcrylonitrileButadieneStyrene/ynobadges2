@@ -1,0 +1,11 @@
+[badge]
+map = 2415
+points = 15
+art = "vena"
+
+[conditions]
+default = "M2415"
+
+[lang.en]
+name = "Spicy Muffin"
+condition = "Visit Muffin Spice World"

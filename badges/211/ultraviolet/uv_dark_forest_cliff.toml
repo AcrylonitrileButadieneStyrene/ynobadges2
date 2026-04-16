@@ -1,0 +1,12 @@
+[badge]
+map = 73
+points = 15
+art = "Paraverdant"
+
+[conditions]
+default = "M73"
+
+[lang.en]
+name = "Viola Nocturna"
+description = "Violets of the lonesome cliff."
+condition = "Reach the cliffside in Dark Forest"

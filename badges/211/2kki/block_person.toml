@@ -1,0 +1,34 @@
+[badge]
+animated = true
+map = 149
+points = 10
+art = "Hazeframe & Zaakarias"
+
+[conditions]
+default = "M149 V3930=500201"
+
+[lang.en]
+name = "Little Block"
+description = "A little block farming aura."
+condition = "Transform into a block person in the Red Brick Maze"
+
+[lang.fr]
+condition = "Se transformer en bloc sur pattes au Red Brick Maze"
+
+[lang.ja]
+condition = "煉瓦ダンジョンで分銅くんに変身する"
+
+[lang.ko]
+condition = "Red Brick Maze에서 블록 인간으로 변신하기"
+
+[lang.pt]
+condition = "Transforme-se em uma pessoa bloco em Red Brick Maze"
+
+[lang.ru]
+condition = "Превратитесь в ходячий блок в Red Brick Maze."
+
+[lang.vt]
+condition = "Biến thành khối lăng trụ ở Red Brick Maze"
+
+[lang.zh]
+condition = "在Red Brick Maze里变身方块人"

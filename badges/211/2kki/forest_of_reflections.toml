@@ -1,0 +1,33 @@
+[badge]
+map = 1803
+art = "Takofuusen"
+points = 15
+
+[conditions]
+default = "M1803"
+
+[lang.en]
+name = "Reflection of a Reflection"
+description = "I feel like a reflection of a reflection of a person, you know what I mean?"
+condition = "Visit the Forest Of Reflections"
+
+[lang.fr]
+condition = "Visiter la Forest Of Reflections"
+
+[lang.ja]
+condition = "鏡の森に到達する。"
+
+[lang.ko]
+condition = "Forest Of Reflections에 입장하기"
+
+[lang.pt]
+condition = "Visite o Forest Of Reflections."
+
+[lang.ru]
+condition = "Доберитесь до Forest Of Reflections."
+
+[lang.vt]
+condition = "Đến Forest Of Reflections"
+
+[lang.zh]
+condition = "拜访Forest of Reflections"

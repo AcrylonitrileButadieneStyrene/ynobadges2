@@ -1,0 +1,28 @@
+[badge]
+animated = true
+map = 143
+points = 15
+art = "Etikals"
+
+[conditions]
+dg_visit_subnexus = "M143"
+dg_visit_3d_projection = "M142"
+dg_visit_wise_sea_a = "M144"
+dg_visit_cellar = "M157"
+dg_visit_desert_field = "M268"
+dg_visit_star_river = "M284"
+dg_visit_space_station = "M239"
+
+[lang.en]
+name = "World Between Worlds"
+description = "An empty void filled with worlds."
+condition = "Visit Subnexus and its 6 connecting worlds"
+
+[lang.en.checkbox]
+dg_visit_subnexus = "Subnexus"
+dg_visit_3d_projection = "3D Projection"
+dg_visit_wise_sea_a = "Star of Wise Sea A"
+dg_visit_cellar = "Cellar"
+dg_visit_desert_field = "Desert Field"
+dg_visit_star_river = "Star River"
+dg_visit_space_station = "Space Station"

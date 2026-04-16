@@ -101,7 +101,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
 pub async fn conditions(badges: Arc<[Badge]>) {
     for Badge {
         badge_id,
-        game_id: game,
+        game_id,
         bundle: input::Bundle { conditions, .. },
         ..
     } in &*badges
@@ -115,12 +115,12 @@ pub async fn conditions(badges: Arc<[Badge]>) {
                     x => x.to_string(),
                 };
 
-                conditions::parse(condition).map(|condition| (condition_id, condition))
+                conditions::parse(badge_id, condition).map(|condition| (condition_id, condition))
             });
 
         for (condition_id, condition) in conditions {
             tokio::fs::write(
-                format!("ynobadges/conditions/{game}/{condition_id}.json"),
+                format!("ynobadges/conditions/{game_id}/{condition_id}.json"),
                 serde_json::to_string_pretty(&condition).unwrap(),
             )
             .await

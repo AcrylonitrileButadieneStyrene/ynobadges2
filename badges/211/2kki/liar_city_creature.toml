@@ -1,0 +1,11 @@
+[badge]
+map = 1944
+points = 10
+art = "elliotzZz"
+
+[conditions]
+default = "M1944 X=31:47 Y=47:57"
+
+[lang.en]
+name = "That's cute, but my eyes hurt."
+condition = "See the creature in the Hallway Maze of the City Of Liars"

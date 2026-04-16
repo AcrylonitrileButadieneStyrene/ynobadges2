@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3328
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+default = "M3328"
+
+[lang.en]
+name = "Comfort in The Wreckage"
+description = "Looking past the change, looking past the disrepair, I can still enjoy myself here even if for just a fleeting moment."
+condition = "Visit the Peace subarea of Jazz Station"

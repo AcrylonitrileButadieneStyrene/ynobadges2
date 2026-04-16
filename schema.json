@@ -25,7 +25,8 @@
         },
         "art": { "type": "string" },
         "animated": { "type": "boolean" },
-        "secret": { "type": "boolean" }
+        "secret": { "type": "boolean" },
+        "hidden": { "type": "boolean" }
       },
       "required": ["map", "art"],
       "additionalProperties": false

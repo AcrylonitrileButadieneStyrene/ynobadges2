@@ -6,8 +6,18 @@ type TokenSpan = (Token, std::ops::Range<usize>);
 
 pub struct Parser {
     tokens: Vec<TokenSpan>,
+    state: State,
     condition: Condition,
     position: usize,
+}
+
+struct State {
+    last_delayable: Option<DelayTarget>,
+}
+
+enum DelayTarget {
+    Switch,
+    Variable,
 }
 
 #[derive(Debug)]
@@ -19,6 +29,9 @@ impl Parser {
     pub fn new(tokens: Vec<TokenSpan>) -> Self {
         Self {
             tokens,
+            state: State {
+                last_delayable: None,
+            },
             condition: Condition::default(),
             position: 0,
         }
@@ -89,6 +102,8 @@ impl Parser {
                         self.condition.switch_id = Some(id);
                         self.condition.switch_value = value;
                     }
+
+                    self.state.last_delayable = Some(DelayTarget::Switch);
                 }
                 Token::Variable => {
                     let Some(Token::Number(id)) = self.next() else {
@@ -122,6 +137,8 @@ impl Parser {
                         self.condition.var_id = Some(id);
                         self.condition.var_value = Some(value);
                     }
+
+                    self.state.last_delayable = Some(DelayTarget::Variable);
                 }
                 Token::Event => {
                     let Some(Token::Number(id)) = self.next() else {
@@ -131,6 +148,15 @@ impl Parser {
                     self.condition.value = Some(id.to_string());
                     self.condition.trigger = Some(crate::format::output::ConditionTrigger::Event);
                 }
+                Token::Delayed => match self.state.last_delayable {
+                    Some(DelayTarget::Switch) => {
+                        self.condition.switch_delay = true;
+                    }
+                    Some(DelayTarget::Variable) => {
+                        self.condition.var_delay = true;
+                    }
+                    None => return Err(Error::Expected("a switch or variable earlier")),
+                },
                 _ => return Err(Error::Expected("start of instruction")),
             }
         }

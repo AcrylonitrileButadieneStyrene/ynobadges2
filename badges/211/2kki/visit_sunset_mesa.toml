@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3000
+points = 15
+art = "Sheanicc"
+
+[conditions]
+default = "M3000"
+
+[lang.en]
+name = "Evanescent Sunset"
+description = "Take a seat and rest for a while. Let's take this time to enjoy the setting sun, for this moment won't last forever."
+condition = "Visit Sunset Mesa"

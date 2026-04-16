@@ -1,0 +1,28 @@
+[badge]
+group = "4_ch"
+animated = true
+points = 20
+art = "HenryAutumn & Etikals"
+
+[badge.map]
+id = 289
+hidden = true
+
+[conditions]
+requirements = "visit_mushroom_world AND visit_vibrant_mushroom_world AND bleeding_mush_grd AND visit_spore_forest AND visit_sunken_spore_sea"
+visit_mushroom_world = "M289"
+visit_vibrant_mushroom_world = "M2118"
+visit_spore_forest = "M1657"
+visit_sunken_spore_sea = "M3123"
+
+[lang.en]
+name = "Mushy Shrookki"
+description = "\"Shimako these mushrooms aren't doing anything fo- WOAH\""
+condition = "Visit the main areas of the following worlds: Vibrant Mushroom Forest, Sunken Spore Sea, Mushroom World, Spore Forest, and Bleeding Mushroom Garden"
+
+[lang.en.checkbox]
+visit_mushroom_world = "Mushroom World"
+visit_vibrant_mushroom_world = "Vibrant Mushroom World"
+bleeding_mush_grd = "Bleeding Mushroom Garden"
+visit_spore_forest = "Spore Forest"
+visit_sunken_spore_sea = "Sunken Spore Sea"

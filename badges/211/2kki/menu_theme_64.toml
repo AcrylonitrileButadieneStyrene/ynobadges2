@@ -1,0 +1,12 @@
+[badge]
+map = 3101
+points = 10
+art = "thatdolphin"
+
+[conditions]
+default = "M3101 S842=ON"
+
+[lang.en]
+name = "A Final Memorial"
+description = "The world is brighter on the other side of the sky."
+condition = "Obtain Menu Theme 64 in Pollution District"

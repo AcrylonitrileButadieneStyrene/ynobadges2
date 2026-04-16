@@ -25,6 +25,10 @@ pub fn parse(input: &str) -> Option<Request> {
         .inspect_err(|span| {
             ariadne::Report::build(ariadne::ReportKind::Error, span.clone())
                 .with_message("unrecognized token")
+                .with_label(
+                    ariadne::Label::new(span.clone())
+                        .with_message("Does not match any known tokens"),
+                )
                 .finish()
                 .eprint(ariadne::Source::from(input))
                 .unwrap();
@@ -97,8 +101,12 @@ pub fn parse(input: &str) -> Option<Request> {
                     (Some(Request::TagArray(array)), State::Default)
                 }
                 _ => {
-                    ariadne::Report::build(ariadne::ReportKind::Error, span)
-                        .with_message("unexpected input")
+                    ariadne::Report::build(ariadne::ReportKind::Error, span.clone())
+                        .with_message("unrecognized token")
+                        .with_label(
+                            ariadne::Label::new(span)
+                                .with_message("Does not match any known tokens"),
+                        )
                         .finish()
                         .eprint(ariadne::Source::from(input))
                         .unwrap();

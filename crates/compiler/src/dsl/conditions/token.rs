@@ -33,4 +33,7 @@ pub enum Token {
 
     #[token("OFF")]
     Off,
+
+    #[token("DELAYED")]
+    Delayed,
 }

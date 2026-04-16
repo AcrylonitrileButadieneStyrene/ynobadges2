@@ -1,0 +1,35 @@
+[badge]
+animated = true
+map = 1139
+points = 15
+art = "Hazeframe, Zaakarias, & Canio"
+
+[conditions]
+default = "M1139 S4=ON S5=ON DELAYED"
+secret = true
+
+[lang.en]
+name = "Fat Bird"
+description = "Super Barbecue Pombo Plus Master Blaster Power"
+condition = "Use the Rainbow effect at the Lost Creek to summon the bird from Nocturnal Grove and look at it"
+
+[lang.fr]
+condition = "Utiliser l'effet Arc-En-Ciel dans la Lost Creek pour appeler l'oiseau de Nocturnal Grove et le regarder"
+
+[lang.ja]
+condition = "垂水でにじを使って尾長鳥を見る"
+
+[lang.ko]
+condition = "Lost Creek에서 무지개 이펙트를 사용하여 Nocturnal Grove에 있는 새를 부른 뒤 그 새를 바라보기"
+
+[lang.pt]
+condition = "Use o efeito Rainbow no Lost Creek para chamar o pássaro de Nocturnal Grove e olhe para ele"
+
+[lang.ru]
+condition = "Используйте эффект Радуги на Lost Creek, чтобы вызвать птицу из Nocturnal Grove и взглянуть на неё."
+
+[lang.vt]
+condition = "Dùng hiệu ứng Cầu vồng ở Lost Creek để gọi con chim từ Nocturnal Grove và nhìn thấy nó"
+
+[lang.zh]
+condition = "在Lost Creek使用彩虹召唤出来自Nocturnal Grove的长尾鸟，并仰望它"

@@ -1,0 +1,30 @@
+[badge]
+map = 22
+points = 10
+art = "Rennatalia & Komaki"
+
+[conditions]
+default = "M22"
+
+[lang.en]
+name = "A Gentle Visit"
+description = "A gentle moment between human and rabbit inside a cozy burrow."
+condition = "Visit the Rabbit's House in Pastel World"
+
+[lang.fr]
+condition = "Visiter la Maison du Lapin dans le Pastel World"
+
+[lang.ja]
+condition = "Pastel WorldのRabbit's Houseに到達する"
+
+[lang.ko]
+condition = "Pastel World의 Rabbit's House 서브 에리어에 방문하기"
+
+[lang.pt]
+condition = "Visite a Casa do Coelho em Pastel World."
+
+[lang.ru]
+condition = "Найдите Дом Кролика в Пастельном мире."
+
+[lang.zh]
+condition = "抵达Pastel World里小兔子的家。"

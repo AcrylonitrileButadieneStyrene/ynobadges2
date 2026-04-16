@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 1609
+points = 25
+art = "Aurora"
+
+[conditions]
+default = "M1609 X=198:217 Y=0:14"
+secret = true
+
+[lang.en]
+name = "Digital Anguish"
+description = "I really don't like what became of me."
+condition = "Get sent to the secret room in Fliperama Hall by the security in the basement."

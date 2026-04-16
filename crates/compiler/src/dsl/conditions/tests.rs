@@ -1,7 +1,7 @@
 #[test]
 fn test() {
     assert_eq!(
-        super::parse("M123 X=9:10 Y=11 S13=ON"),
+        super::parse("<test>", "M123 X=9:10 Y=11 S13=ON"),
         Some(crate::format::output::Condition {
             map: Some(123),
             map_x1: Some(9),

@@ -1,0 +1,12 @@
+[badge]
+map = 3
+points = 10
+art = "Aurora"
+
+[conditions]
+default = "M3 E46"
+
+[lang.en]
+name = "Angel Statue"
+description = "The Angel Statue does absolutely nothing, until you look away."
+condition = "View the angel statue in Illusion World"

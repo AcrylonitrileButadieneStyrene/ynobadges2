@@ -1,0 +1,27 @@
+[badge]
+map = 76
+points = 15
+art = "Takofuusen"
+
+[conditions]
+default = "M76"
+
+[lang.en]
+name = "Epithelial Swamp"
+description = "Maybe more than fish thrive here?"
+condition = "Visit the Docks"
+
+[lang.fr]
+condition = "Visiter les Docks"
+
+[lang.ja]
+condition = "Docksに到達する"
+
+[lang.ko]
+condition = "Docks를 방문하기"
+
+[lang.pt]
+condition = "Visite Docks."
+
+[lang.zh]
+condition = "拜访Docks。"

@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 2058
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+requirements = "shoal_coral_morita_1 OR shoal_coral_morita_2"
+shoal_coral_morita_1 = "M2058 E167"
+shoal_coral_morita_2 = "M2058 E168"
+
+[lang.en]
+name = "Slug of The Shoal"
+description = "Despite being a solitary creature they're always happy to have company."
+condition = "Interact with Morita in Coral Shoal"

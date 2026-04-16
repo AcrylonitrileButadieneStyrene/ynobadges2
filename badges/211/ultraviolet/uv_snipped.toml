@@ -1,0 +1,31 @@
+[badge]
+animated = true
+map = 36
+points = 15
+art = "Amadeus"
+
+[conditions]
+default = "M36 S170=ON"
+
+[lang.en]
+name = "Shredded Memories"
+description = "Pain that has taken root."
+condition = "Obtain the Short Hair effect. If you have already unlocked it, return to the Bloody Water Dungeon."
+
+[lang.fr]
+condition = "Obtenir l'effet Cheveux courts. Si vous l'avez déjà obtenu, retournez au Bloody Water Dungeon."
+
+[lang.ja]
+condition = "Bloody Water Dungeonでショートヘアーを入手する"
+
+[lang.ko]
+condition = "Bloody Water Dungeon에서 Short Hair 이펙트를 얻기"
+
+[lang.pt]
+condition = "Obtenha o efeito Short Hair em Bloody Water Dungeon."
+
+[lang.ru]
+condition = "Получите эффект Короткой стрижки в Подземелье кровавых вод."
+
+[lang.zh]
+condition = "找到位于Bloody Water Dungeon的短发效果。"
