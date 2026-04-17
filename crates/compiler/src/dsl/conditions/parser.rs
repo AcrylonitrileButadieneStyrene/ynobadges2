@@ -146,7 +146,8 @@ impl Parser {
                     };
 
                     self.condition.value = Some(id.to_string());
-                    self.condition.trigger = Some(crate::format::output::ConditionTrigger::Event);
+                    self.condition.trigger =
+                        Some(crate::format::output::ConditionTrigger::EventAction);
                 }
                 Token::Delayed => match self.state.last_delayable {
                     Some(DelayTarget::Switch) => {
