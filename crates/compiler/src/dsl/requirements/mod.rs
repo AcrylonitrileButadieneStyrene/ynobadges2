@@ -81,10 +81,13 @@ pub fn parse(input: &str) -> Option<Request> {
                         && matches!(state, State::Split) =>
                 {
                     let last = array.pop().unwrap();
-                    (
-                        Some(Request::TagArray(vec![array, vec![last, id.clone()]])),
-                        State::Default,
-                    )
+                    let mut old = array
+                        .into_iter()
+                        .map(|item| vec![item])
+                        .collect::<Vec<Vec<String>>>();
+                    old.push(vec![last, id.clone()]);
+
+                    (Some(Request::TagArray(old)), State::Default)
                 }
                 Some(Request::TagArray(mut array))
                     if let token::Token::ID(ref id) = token
@@ -168,7 +171,7 @@ mod tests {
     #[test]
     fn complex_3() {
         assert_eq!(
-            super::parse("test1 AND test2 OR test3 OR test4 AND test5 "),
+            super::parse("test1 AND test2 OR test3 OR test4 AND test5"),
             Some(super::Request::TagArray(vec![
                 vec!["test1".to_string()],
                 vec![
@@ -177,6 +180,27 @@ mod tests {
                     "test4".to_string()
                 ],
                 vec!["test5".to_string()],
+            ]))
+        )
+    }
+
+    #[test]
+    fn complex_4() {
+        assert_eq!(
+            super::parse(
+                "test1 AND test2 AND test3 AND test4 AND test5 AND test6 OR test7 OR test8"
+            ),
+            Some(super::Request::TagArray(vec![
+                vec!["test1".to_string()],
+                vec!["test2".to_string()],
+                vec!["test3".to_string()],
+                vec!["test4".to_string()],
+                vec!["test5".to_string()],
+                vec![
+                    "test6".to_string(),
+                    "test7".to_string(),
+                    "test8".to_string()
+                ],
             ]))
         )
     }
