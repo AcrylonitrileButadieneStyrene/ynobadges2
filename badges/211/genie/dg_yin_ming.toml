@@ -2,13 +2,13 @@
 animated = true
 map = 231
 art = "Komaki"
+hidden = true
 
 [conditions]
 requirements = "dg_ying_ming OR dg_colon_vertical_bar AND dg_ying_ming_delayed"
 dg_ying_ming = "M231 V114=4"
 dg_ying_ming_delayed = "M231 V114=6"
 dg_colon_vertical_bar = "M231 V114=5"
-secret = true
 
 [lang.en]
 name = "Strings of Connection"

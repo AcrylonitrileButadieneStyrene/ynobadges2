@@ -12,4 +12,4 @@ trombone_acoustic_lounge = "M3135 S64=ON"
 [lang.en]
 name = "Golden Instrument"
 description = "doot doot"
-condition = "Obtatin the Trombone effect. If already obtained, return to where you have done so in the Baddies Bar or Acoustic Lounge."
+condition = "Obtain the Trombone effect. If already obtained, return to where you have done so in the Baddies Bar or Acoustic Lounge."
