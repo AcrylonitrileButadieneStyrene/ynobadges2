@@ -9,4 +9,4 @@ default = "M3888"
 [lang.en]
 name = "Sister of The Void"
 description = "Consumed by Abyss: Lost Urotsuki"
-condition = "Enter Abyss	Map"
+condition = "Enter Abyss"
