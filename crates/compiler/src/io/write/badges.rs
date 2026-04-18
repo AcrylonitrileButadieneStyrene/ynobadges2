@@ -12,8 +12,8 @@ use crate::{
 
 pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
     for Badge {
-        badge_id: id,
-        game_id: game,
+        badge_id,
+        game_id,
         batch,
         bundle,
     } in &*badges
@@ -38,10 +38,10 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             Request::All => {
                 let mut conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
                 match conditions.len() {
-                    0 => (Some(id.clone()), None, None, BadgeReqType::Tag),
+                    0 => (Some(badge_id.clone()), None, None, BadgeReqType::Tag),
                     1 => (
                         Some(match &**conditions.first().unwrap() {
-                            "default" => id.clone(),
+                            "default" => badge_id.clone(),
                             x => x.to_string(),
                         }),
                         None,
@@ -72,7 +72,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             group: bundle.badge.group.clone().or_else(|| {
                 config
                     .groups
-                    .get(game)
+                    .get(game_id)
                     .and_then(|group| group.default.clone())
             }),
             hidden: bundle.badge.hidden,
@@ -94,11 +94,20 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             secret_map: map_secret,
         };
 
-        tokio::fs::write(
-            format!("ynobadges/badges/{game}/{id}.json"),
-            serde_json::to_string_pretty(&out).unwrap(),
-        )
-        .await
-        .unwrap();
+        let path = format!("ynobadges/badges/{game_id}/{badge_id}.json");
+
+        if tokio::fs::try_exists(&path).await.unwrap_or_default() {
+            let bytes = tokio::fs::read(&path).await.unwrap();
+            let original: output::Badge = serde_json::from_slice(&bytes).unwrap();
+            if original != out {
+                // todo: print a diff
+                log::warn!("Desync detected: {batch}/{game_id}/{badge_id} != {path}");
+                continue;
+            }
+        }
+
+        tokio::fs::write(path, serde_json::to_string_pretty(&out).unwrap())
+            .await
+            .unwrap();
     }
 }

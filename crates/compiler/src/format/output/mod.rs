@@ -3,18 +3,18 @@ fn default<T: Default + PartialEq>(t: &T) -> bool {
 }
 
 #[serde_with::skip_serializing_none]
-#[derive(serde::Serialize, serde::Deserialize)]
+#[derive(Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 #[allow(clippy::struct_excessive_bools)]
 pub struct Badge {
-    #[serde(skip_serializing_if = "default")]
+    #[serde(default, skip_serializing_if = "default")]
     pub animated: bool,
     pub art: String,
     pub batch: u16,
     // todo: change this to NonZeroU16 when `just_smile_dog_aseprite` gets fixed
     pub bp: Option<u16>,
     pub group: Option<String>,
-    #[serde(skip_serializing_if = "default")]
+    #[serde(default, skip_serializing_if = "default")]
     pub hidden: bool,
     pub map: u16,
     pub map_order: Option<u8>,
@@ -29,15 +29,15 @@ pub struct Badge {
     pub req_string_arrays: Option<Vec<Vec<String>>>,
     pub req_strings: Option<Vec<String>>,
     pub req_type: Option<BadgeReqType>,
-    #[serde(skip_serializing_if = "default")]
+    #[serde(default, skip_serializing_if = "default")]
     pub secret: bool,
-    #[serde(skip_serializing_if = "default")]
+    #[serde(default, skip_serializing_if = "default")]
     pub secret_condition: bool,
-    #[serde(skip_serializing_if = "default")]
+    #[serde(default, skip_serializing_if = "default")]
     pub secret_map: bool,
 }
 
-#[derive(serde::Serialize, serde::Deserialize)]
+#[derive(Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub enum BadgeReqType {
     BadgeCount,

@@ -1,8 +1,12 @@
 [badge]
 points = 15
-map = 3368
 art = "Tanjunebi"
 animated = true
+
+[badge.map]
+id = 2038
+x = 1
+y = 312
 
 [conditions]
 default = "M3368 S6=ON"
