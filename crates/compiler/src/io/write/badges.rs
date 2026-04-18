@@ -1,11 +1,8 @@
-use std::{collections::HashMap, num::NonZeroU16, sync::Arc};
+use std::{num::NonZeroU16, sync::Arc};
 
 use crate::{
     Badge,
-    dsl::{
-        conditions,
-        requirements::{self, Request},
-    },
+    dsl::requirements::{self, Request},
     format::{
         config::Config,
         input,
@@ -39,7 +36,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
 
         let (req_string, req_strings, req_string_arrays, req_type) = match reqs {
             Request::All => {
-                let conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
+                let mut conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
                 match conditions.len() {
                     0 => (Some(id.clone()), None, None, BadgeReqType::Tag),
                     1 => (
@@ -51,7 +48,15 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                         None,
                         BadgeReqType::Tag,
                     ),
-                    _ => (None, Some(conditions), None, BadgeReqType::Tags),
+                    _ => (
+                        None,
+                        Some({
+                            conditions.sort();
+                            conditions
+                        }),
+                        None,
+                        BadgeReqType::Tags,
+                    ),
                 }
             }
             Request::Tag(id) => (Some(id), None, None, BadgeReqType::Tag),
@@ -95,80 +100,5 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
         )
         .await
         .unwrap();
-    }
-}
-
-pub async fn conditions(badges: Arc<[Badge]>) {
-    for Badge {
-        badge_id,
-        game_id,
-        bundle: input::Bundle { conditions, .. },
-        ..
-    } in &*badges
-    {
-        let conditions = conditions
-            .rest
-            .iter()
-            .filter_map(|(condition_id, condition)| {
-                let condition_id = match &**condition_id {
-                    "default" => badge_id.clone(),
-                    x => x.to_string(),
-                };
-
-                conditions::parse(badge_id, condition).map(|condition| (condition_id, condition))
-            });
-
-        for (condition_id, condition) in conditions {
-            tokio::fs::write(
-                format!("ynobadges/conditions/{game_id}/{condition_id}.json"),
-                serde_json::to_string_pretty(&condition).unwrap(),
-            )
-            .await
-            .unwrap();
-        }
-    }
-}
-
-pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
-    let mut languages: HashMap<String, output::Lang> = config
-        .lang
-        .list
-        .iter()
-        .map(|key| {
-            let path = format!("ynobadges/lang/{key}.json");
-            let contents = std::fs::read(&path).unwrap();
-            let lang: output::Lang = serde_json::from_slice(&contents).unwrap();
-            (key.clone(), lang)
-        })
-        .collect();
-
-    for Badge {
-        badge_id,
-        game_id,
-        bundle: input::Bundle { lang, .. },
-        ..
-    } in &*badges
-    {
-        let base = lang.get(&config.lang.base).unwrap();
-        for (language_id, language) in &mut languages {
-            let (lang, is_fallback) = lang
-                .get(language_id)
-                .map_or((base, true), |entry| (entry, false));
-            let game_entries = language
-                .entry(game_id.clone())
-                .or_insert_with(indexmap::IndexMap::new);
-
-            let entry = game_entries.entry(badge_id.clone()).or_insert(lang.clone());
-            if !is_fallback && entry != lang {
-                log::warn!("Mismatch between locale {language_id}/{game_id}/{badge_id}");
-            }
-        }
-    }
-
-    for (key, locale) in languages {
-        let path = format!("ynobadges/lang/{key}.json");
-        tokio::fs::write(&path, serde_json::to_string_pretty(&locale).unwrap())
-            .await
-            .unwrap();
     }
 }
