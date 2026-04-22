@@ -1,7 +1,10 @@
 [badge]
 art = "Staghouse33"
-map = 3368
 hidden = true
+
+[badge.map]
+id = 3368
+y = 250
 
 [conditions]
 default = "M3368 X=271:287 Y=272:278"

@@ -1,8 +1,12 @@
 [badge]
 points = 20
-map = 3368
 art = "Paraverdant"
 animated = true
+
+[badge.map]
+id = 3368
+x = 121
+y = 314
 
 [conditions]
 secret = true

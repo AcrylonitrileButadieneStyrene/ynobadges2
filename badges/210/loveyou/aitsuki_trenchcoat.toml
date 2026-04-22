@@ -1,11 +1,13 @@
 [badge]
 points = 15
-map = 110
+map = 99
 art = "thatdolphin"
 animated = true
 
 [conditions]
-default = "M99 S33=ON"
+requirements = "aitsuki_trenchcoat OR aitsuki_trenchcoat_b"
+aitsuki_trenchcoat = "M99 S56=ON"
+aitsuki_trenchcoat_b = "M99 V14=8"
 
 [lang.en]
 name = "Elementary, my dear Aitsuki."
