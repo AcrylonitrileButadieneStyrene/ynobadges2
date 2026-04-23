@@ -1,0 +1,54 @@
+[badge]
+points = 35
+animated = true
+art = "CoolKid95"
+
+[badge.map]
+id = 248
+secret = true
+
+[conditions]
+requirements = "glitch_world_kondo AND tubes_kondo AND purple_crystal AND corrupted_art_gallery_sh_e AND lsd_world AND kondo_ending_room OR kondo_ending_room_2"
+glitch_world_kondo = "M53 E3"
+tubes_kondo = "M31 X=34:54 Y=25:31 S171=OFF"
+purple_crystal = "M262"
+corrupted_art_gallery_sh_e = "M271 Picture='paintkondo'"
+lsd_world = "M166"
+kondo_ending_room = "M248"
+kondo_ending_room_2 = "M250"
+
+[lang.en]
+name = "Yes, it's him."
+condition = "See Kondo in Glitch World, Tubes, Memory Graveyard, Empty Gallery, LSD World, Chaos"
+
+[lang.en.checkbox]
+"glitch_world_kondo" = "Glitch World"
+"tubes_kondo" = "Tubes"
+"purple_crystal" = "Memory Graveyard"
+"corrupted_art_gallery_sh_e" = "Empty Gallery"
+"lsd_world" = "LSD World"
+"kondo_ending_room|kondo_ending_room_2" = "Chaos"
+
+[lang.fr]
+name = "Oui, c'est lui."
+condition = "Voir Kondo au Glitch World, à Tubes, au Memory Graveyard, à l'Empty Gallery, au LSD World et à Chaos"
+
+[lang.ja]
+name = "そう、彼だ"
+condition = "Glitch World、Tubes、Memory Graveyard、Empty Gallery、LSD World、Chaosでコンドを見つける"
+
+[lang.ko]
+name = "그래. 바로 쟤구나."
+condition = "콘도(Kondo) NPC가 등장하는 모든 곳에서 그녀를 발견하기"
+
+[lang.pt]
+name = "Sim, é ele."
+condition = "Veja Kondo em todos os lugares em que ele aparece."
+
+[lang.ru]
+name = "Да, это Он."
+condition = "Найдите Кондо везде, где она появляется."
+
+[lang.zh]
+name = "没错，就是她。"
+condition = "找到kondo出现的所有位置：Glitch World、Tubes、Memory Graveyard、Empty Gallery、LSD World、Chaos。"

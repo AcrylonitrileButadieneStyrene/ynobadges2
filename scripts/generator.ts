@@ -56,7 +56,7 @@ for (const entry of entries) {
     lines.push("");
 
     const path = `badges/${batch}/${game_id}`;
-    Deno.mkdir(path, { recursive: true });
+    Deno.mkdirSync(path, { recursive: true });
     Deno.writeFileSync(`${path}/${badge_id}.toml`, encoder.encode(lines.join("\n")));
 
     for (const file of files.replace(/"/g, '').split("\n")) {

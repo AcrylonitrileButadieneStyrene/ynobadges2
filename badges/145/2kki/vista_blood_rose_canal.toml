@@ -1,0 +1,12 @@
+[badge]
+map = 3273
+points = 15
+art = "aukse"
+
+[conditions]
+default = "M3273 X=0:19 Y=195:209"
+
+[lang.en]
+name = "A Hidden View of The Beautiful Blood Sea~"
+description = "I wonder how far this ethereal scene stretches on for…"
+condition = "See the vista in Blood Rose Canal"

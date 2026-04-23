@@ -1,0 +1,34 @@
+[badge]
+animated = true
+map = 104
+points = 30
+art = "Amadeus"
+
+[conditions]
+default = "M104 S433=ON DELAYED"
+
+[lang.en]
+name = "False self"
+description = "Who are I and them？"
+condition = "Fill up all of the Test Tubes in the Secret Lab"
+
+[lang.fr]
+condition = "Remplir tout les tubes de test dans le Secret Lab"
+
+[lang.ja]
+condition = "Secret Labの試験管をすべて埋める"
+
+[lang.ko]
+condition = "Secret Lab의 실험관을 모두 채우기"
+
+[lang.pt]
+condition = "Encha todos os Test Tubes no Secret Lab"
+
+[lang.ru]
+condition = "Заполните все Сосуды с подопытными в Лаборатории."
+
+[lang.vt]
+condition = "Làm đầy tất cả Ống nghiệm tại Secret Lab"
+
+[lang.zh]
+condition = "为实验室的所有试管注满水。"

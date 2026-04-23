@@ -1,0 +1,34 @@
+[badge]
+animated = true
+map = 129
+art = "Amadeus"
+hidden = true
+
+[conditions]
+default = "M129 S413=ON DELAYED"
+
+[lang.en]
+name = "Goodbye Muma"
+description = "Muma is over"
+condition = "You helped Muma find a definitive end."
+
+[lang.fr]
+condition = "Vous avez aidé Muma à trouver une fin définitive."
+
+[lang.ja]
+condition = "あなたはMumaが決定的な終止符を打つ手助けをした"
+
+[lang.ko]
+condition = "Erased Ending을 보기"
+
+[lang.pt]
+condition = "Você ajudou Muma encontrar um fim definitvo."
+
+[lang.ru]
+condition = "Вы помогли Муме обрести свой конец."
+
+[lang.vt]
+condition = "Hoàn thành Erased Ending."
+
+[lang.zh]
+condition = "帮Muma画上圆满的句号。"

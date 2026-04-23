@@ -1,0 +1,34 @@
+[badge]
+animated = true
+map = 1827
+points = 15
+art = "Ren"
+
+[conditions]
+requirements = "seesaw_critter_village_a OR seesaw_critter_village_b"
+seesaw_critter_village_a = "M1827 V77>=100"
+seesaw_critter_village_b = "M1827 V78>=100"
+secret = true
+
+[lang.en]
+name = "Up You Go!"
+description = "Yippee! This is so much fun!!"
+condition = "Play see-saw at Critter Village"
+
+[lang.fr]
+condition = "Jouer sur la balançoire à bascule au Critter Village"
+
+[lang.ja]
+condition = "六角タイル世界のシーソーで遊ぶ"
+
+[lang.ko]
+condition = "Critter Village에서 시소를 타고 놀기"
+
+[lang.pt]
+condition = "Brinque de gangorra em Critter Village"
+
+[lang.vt]
+condition = "Chơi bập bênh ở Critter Village"
+
+[lang.zh]
+condition = "在Critter Village玩跷跷板"
