@@ -1,0 +1,12 @@
+[badge]
+map = 2078
+points = 15
+art = "emocore"
+
+[conditions]
+default = "M2078"
+
+[lang.en]
+name = "Execute Them All"
+description = "Anywhere I go, I'll cut through you."
+condition = "Visit Knife World"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 126
+points = 15
+art = "LittleCherry"
+
+[conditions]
+default = "M126 E16"
+
+[lang.en]
+name = "A"
+description = "aA aaA aAa a Aaaa a Aa"
+condition = "Obtain the A effect. If you have already obtained it, return to the area where you have done so."

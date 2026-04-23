@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2967
+points = 15
+art = "Somsnosna"
+
+[conditions]
+default = "M2967 E13"
+
+[lang.en]
+name = "Snack Time"
+description = "What's on the menu for today?"
+condition = "Buy a snack from the Burgundy Flats' snack vendor."

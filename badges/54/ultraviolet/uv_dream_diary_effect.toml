@@ -1,0 +1,31 @@
+[badge]
+animated = true
+map = 23
+points = 15
+art = "Amadeus"
+
+[conditions]
+default = "M23 V23=2"
+
+[lang.en]
+name = "Somenikki"
+description = "Would you like to write down your dreams?"
+condition = "Buy the save book from the Pastel World shop"
+
+[lang.fr]
+condition = "Acheter le journal des rêves de la boutique du Pastel World"
+
+[lang.ja]
+condition = "黄色い店で夢日記帳を購入する"
+
+[lang.ko]
+condition = "Pastel World shop에서 save book을 구매하기"
+
+[lang.pt]
+condition = "Compre o livro de salvamento no Pastel World shop."
+
+[lang.ru]
+condition = "Купите книгу для сохранений в магазине Пастельного мира."
+
+[lang.zh]
+condition = "购买Pastel World shop的存档书。"

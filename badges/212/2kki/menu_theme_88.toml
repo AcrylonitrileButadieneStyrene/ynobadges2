@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3592
+points = 20
+art = "Etikals"
+
+[conditions]
+default = "M3592 S845=ON"
+
+[lang.en]
+name = "Menu Overload"
+description = "This is why you should never spam click if it lags"
+condition = "Obtain Menu Theme #88. If already obtained, return to where you have done so."

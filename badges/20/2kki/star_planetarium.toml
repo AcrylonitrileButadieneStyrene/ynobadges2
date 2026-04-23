@@ -1,0 +1,34 @@
+[badge]
+animated = true
+map = 567
+points = 20
+art = "Zaakarias & Canio"
+
+[conditions]
+default = "M567"
+
+[lang.en]
+name = "Wanderer & March Of Star"
+description = "Stars that once woke comets"
+condition = "View the \"Starry Sky Event\" in Planetarium"
+
+[lang.fr]
+condition = "Voir l'événement de la « Nuit Étoilée » dans le Planetarium"
+
+[lang.ja]
+condition = "星の夜でプラネタリウムイベントを見る"
+
+[lang.ko]
+condition = "Planetarium에서 \"별빛 하늘\"(Starry Sky) 이벤트를 감상하기"
+
+[lang.pt]
+condition = "Veja o \"Starry Sky Event\" em Planetarium."
+
+[lang.ru]
+condition = "Просмотрите событие \"Звёздного неба\" в Planetarium."
+
+[lang.vt]
+condition = "Ngắm bầu trời đầy sao ở Planetarium"
+
+[lang.zh]
+condition = "在Planetarium观赏见证Starry Sky事件。"

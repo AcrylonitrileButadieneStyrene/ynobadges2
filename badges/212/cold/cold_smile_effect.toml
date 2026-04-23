@@ -1,0 +1,12 @@
+[badge]
+map = 12
+points = 10
+art = "elliotzZz"
+
+[conditions]
+default = "M12 S12=ON"
+
+[lang.en]
+name = "A mask of my own face"
+description = "And smile as they grip their own nd try to do the same!"
+condition = "Obtain the Smile effect. If already obtained, return to where you have done so."

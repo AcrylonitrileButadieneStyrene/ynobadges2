@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 1090
+points = 15
+art = "w"
+
+[conditions]
+sepia_cloud_gardens_creature_a = "M1090 E59"
+sepia_cloud_gardens_creature_b = "M1090 E60"
+sepia_cloud_gardens_creature_c = "M1090 E61"
+
+[lang.en]
+name = "Sepia Filter Friends"
+description = "\"At least i know i'm not lonely here...\""
+condition = "Interact with the three humanoid creatures in Sepia Cloud Gardens"

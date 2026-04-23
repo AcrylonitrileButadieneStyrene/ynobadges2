@@ -1,0 +1,16 @@
+[badge]
+animated = true
+points = 10
+art = "CoolKid95"
+
+[badge.map]
+id = 2256
+y = 495
+
+[conditions]
+default = "M2256 X=0:19 Y=494:499"
+
+[lang.en]
+name = "The long forgotten wizard"
+description = "\"I haven't seen anyone down here in a long time.\""
+condition = "See the sky in Ruby Forest"

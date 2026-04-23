@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 108
+points = 10
+art = "IronCam"
+
+[conditions]
+default = "M108 X=21:37 Y=58:67 S20=OFF"
+
+[lang.en]
+name = "Knight In Shining Armor"
+description = "I'll always protect you."
+condition = "Obtain the Golden Armor delusion. If already obtained, return to where it can be found in Golden Canopy."

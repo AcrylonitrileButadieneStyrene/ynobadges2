@@ -1,0 +1,11 @@
+[badge]
+map = 2189
+points = 10
+art = "IronCam"
+
+[conditions]
+default = "M2189 X=186:212 Y=39:54"
+
+[lang.en]
+name = "Peering Through the Smog"
+condition = "See the eye in Industrial Rooftops"

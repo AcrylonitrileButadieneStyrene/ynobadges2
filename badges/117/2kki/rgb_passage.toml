@@ -1,0 +1,30 @@
+[badge]
+animated = true
+map = 490
+points = 10
+art = "Zaakarias & Canio"
+
+[conditions]
+requirements = "rgb_passage OR rgb_passage_2"
+rgb_passage = "M490 X=14:49 Y=0:28"
+rgb_passage_2 = "M490 X=27:44 Y=46:79"
+
+[lang.en]
+name = "AV Cable Triangle"
+description = "owari2 by.sakai!"
+condition = "Enter RGB Passage"
+
+[lang.fr]
+condition = "Visiter le RGB Passage"
+
+[lang.ja]
+condition = "嘔吐庭側からネオン通路に到達する"
+
+[lang.pt]
+condition = "Entre o RGB Passage"
+
+[lang.vt]
+condition = "Vào RGB Passage"
+
+[lang.zh]
+condition = "进入RGB Passage"

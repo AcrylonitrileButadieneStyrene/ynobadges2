@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1140
+points = 15
+art = "Canto Mk. 6"
+
+[conditions]
+default = "M1140 Picture='qxy_pic_TVnoise02'"
+
+[lang.en]
+name = "Universal Unfolding"
+description = "A secret channel presents: Behold! The Starry Night!"
+condition = "See the Stargazing TV channel in Nocturnal Grove"

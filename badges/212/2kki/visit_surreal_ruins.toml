@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 4069
+points = 10
+art = "IronCam"
+
+[conditions]
+default = "M4069"
+
+[lang.en]
+name = "Cubic Surreality"
+condition = "Visit Surreal Ruins World"

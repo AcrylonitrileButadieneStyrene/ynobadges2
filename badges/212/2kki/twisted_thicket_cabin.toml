@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 1839
+points = 15
+art = "Michi"
+
+[conditions]
+default = "M1839"
+secret = true
+
+[lang.en]
+name = "Secluded Coziness"
+description = "Just relax, close your eyes and listen to the fire crackling gently like a lullaby. You're safe here."
+condition = "Visit the hidden cabin in Twisted Thicket"

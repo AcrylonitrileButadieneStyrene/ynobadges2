@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 70
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M70"
+
+[lang.en]
+name = "Garden of False Dream"
+description = "I'm looking at the sky and thinking about my false idea of life"
+condition = "Visit Sleeping Garden"
