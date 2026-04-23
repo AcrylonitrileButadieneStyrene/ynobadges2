@@ -12,7 +12,7 @@ use crate::{
 
 pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
     for Badge {
-        badge_id,
+        id: badge_id,
         game_id,
         batch,
         bundle,
@@ -102,7 +102,6 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             if original != out {
                 // todo: print a diff
                 log::warn!("Desync detected: {batch}/{game_id}/{badge_id} != {path}");
-                continue;
             }
         }
 

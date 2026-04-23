@@ -4,7 +4,7 @@ use crate::{Badge, dsl::conditions, format::input};
 
 pub async fn conditions(badges: Arc<[Badge]>) {
     for Badge {
-        badge_id,
+        id: badge_id,
         game_id,
         bundle: input::Bundle { conditions, .. },
         ..

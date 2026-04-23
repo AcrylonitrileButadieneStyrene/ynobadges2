@@ -71,7 +71,7 @@ pub fn badges() -> Option<Vec<Badge>> {
                             .ok()?;
 
                         Some(Badge {
-                            badge_id: id,
+                            id,
                             batch,
                             game_id: game.clone(),
                             bundle,

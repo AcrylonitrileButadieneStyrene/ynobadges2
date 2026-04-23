@@ -1,4 +1,4 @@
-use crate::format::output::Condition;
+use crate::format::output::{Condition, ConditionTrigger};
 
 use super::token::Token;
 
@@ -112,8 +112,15 @@ impl Parser {
 
                     let id = *id as u16;
 
-                    // todo: more ops
-                    self.expect_equals()?;
+                    let op = match self.next() {
+                        Some(Token::Eq) => "=",
+                        Some(Token::Ge) => ">=",
+                        Some(Token::Le) => "<=",
+                        Some(Token::Lt) => "<",
+                        Some(Token::Gt) => ">",
+                        _ => return Err(Error::Expected("comparison")),
+                    }
+                    .to_string();
 
                     let Some(Token::Number(value)) = self.next() else {
                         return Err(Error::Expected("number"));
@@ -121,20 +128,29 @@ impl Parser {
 
                     let value = *value;
 
-                    if let (Some(var_ids), Some(var_values)) =
-                        (&mut self.condition.var_ids, &mut self.condition.var_values)
-                    {
+                    if let (Some(var_ids), Some(var_ops), Some(var_values)) = (
+                        &mut self.condition.var_ids,
+                        &mut self.condition.var_ops,
+                        &mut self.condition.var_values,
+                    ) {
                         var_ids.push(id);
+                        var_ops.push(op);
                         var_values.push(value);
-                    } else if let (Some(existing_id), Some(existing_value)) =
-                        (self.condition.var_id, self.condition.var_value)
-                    {
+                    } else if let (Some(existing_id), Some(existing_op), Some(existing_value)) = (
+                        self.condition.var_id,
+                        &self.condition.var_op,
+                        self.condition.var_value,
+                    ) {
                         self.condition.var_ids = Some(vec![existing_id, id]);
+                        self.condition.var_ops = Some(vec![existing_op.clone(), op]);
                         self.condition.var_values = Some(vec![existing_value, value]);
+
                         self.condition.var_id = None;
+                        self.condition.var_op = None;
                         self.condition.var_value = None;
                     } else {
                         self.condition.var_id = Some(id);
+                        self.condition.var_op = Some(op);
                         self.condition.var_value = Some(value);
                     }
 
@@ -146,8 +162,7 @@ impl Parser {
                     };
 
                     self.condition.value = Some(id.to_string());
-                    self.condition.trigger =
-                        Some(crate::format::output::ConditionTrigger::EventAction);
+                    self.condition.trigger = Some(ConditionTrigger::EventAction);
                 }
                 Token::Delayed => match self.state.last_delayable {
                     Some(DelayTarget::Switch) => {
@@ -158,6 +173,17 @@ impl Parser {
                     }
                     None => return Err(Error::Expected("a switch or variable earlier")),
                 },
+                Token::Picture => {
+                    self.expect_equals()?;
+                    let Some(Token::String(string)) = self.next() else {
+                        return Err(Error::Expected("string"));
+                    };
+
+                    // todo: throw an error if the value/trigger were already
+                    //       set or overwrite trigger: bounds (above too).
+                    self.condition.value = Some(string.clone());
+                    self.condition.trigger = Some(ConditionTrigger::Picture);
+                }
                 _ => return Err(Error::Expected("start of instruction")),
             }
         }
@@ -198,6 +224,6 @@ impl Parser {
     }
 
     fn expect_equals(&mut self) -> Result<(), Error> {
-        matches!(self.next(), Some(Token::Equals)).ok_or(Error::Expected("equals"))
+        matches!(self.next(), Some(Token::Eq)).ok_or(Error::Expected("equals"))
     }
 }

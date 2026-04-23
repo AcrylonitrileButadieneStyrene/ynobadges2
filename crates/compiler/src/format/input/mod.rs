@@ -45,7 +45,7 @@ pub struct Conditions {
 }
 
 #[serde_with::skip_serializing_none]
-#[derive(Clone, Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
+#[derive(Clone, Debug, Default, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 pub struct Locale {
     pub name: Option<String>,
     pub description: Option<String>,

@@ -19,7 +19,7 @@ pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
         .collect();
 
     for Badge {
-        badge_id,
+        id: badge_id,
         game_id,
         bundle: input::Bundle { lang, .. },
         ..
@@ -27,25 +27,39 @@ pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
     {
         let base = lang.get(&config.lang.base).unwrap();
         for (language_id, language) in &mut languages {
-            let (lang, is_fallback) = lang
-                .get(language_id)
-                .map_or((base, true), |entry| (entry, false));
+            let this = lang.get(language_id);
+
+            let (name, name_fallback) = extract(base, this, |x| x.name.clone());
+            let (description, desc_fallback) = extract(base, this, |x| x.description.clone());
+            let (condition, condition_fallback) = extract(base, this, |x| x.condition.clone());
+            let (checkbox, checkbox_fallback) = extract(base, this, |x| x.checkbox.clone());
+
+            let path = format!("lang/{language_id}/{game_id}/{badge_id}");
+            check_tab(&path, "name", name.as_ref());
+            check_tab(&path, "description", description.as_ref());
+            check_tab(&path, "condition", condition.as_ref());
+            // the checkbox field can't really be messed up, checking not necessary
+
             let game_entries = language
                 .entry(game_id.clone())
                 .or_insert_with(indexmap::IndexMap::new);
+            let entry = game_entries
+                .entry(badge_id.clone())
+                .or_insert(input::Locale {
+                    name: name.clone(),
+                    description: description.clone(),
+                    condition: condition.clone(),
+                    checkbox: checkbox.clone(),
+                });
 
-            let entry = game_entries.entry(badge_id.clone()).or_insert(lang.clone());
-            if !is_fallback && entry != lang {
+            let mut inequal = false;
+            inequal |= check_conflict(&entry.name, &name, name_fallback);
+            inequal |= check_conflict(&entry.description, &description, desc_fallback);
+            inequal |= check_conflict(&entry.condition, &condition, condition_fallback);
+            inequal |= check_conflict(&entry.checkbox, &checkbox, checkbox_fallback);
+            if inequal {
                 log::warn!("Mismatch between locale {language_id}/{game_id}/{badge_id}");
             }
-
-            let path = format!("lang/{language_id}/{game_id}/{badge_id}");
-            check_tab(&path, "name", &lang.name);
-            check_tab(&path, "description", &lang.description);
-            check_tab(&path, "condition", &lang.condition);
-            // the checkbox field can't really be messed up, checking not necessary
-
-            lang.name.as_ref().map(|item| item.contains("\t"));
         }
     }
 
@@ -57,12 +71,25 @@ pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
     }
 }
 
-fn check_tab(path: &str, field: &str, option: &Option<String>) {
-    let has_tab = option
-        .as_ref()
-        .map(|item| item.contains('\t'))
-        .unwrap_or_default();
+fn extract<T, U>(
+    base: &input::Locale,
+    this: Option<&input::Locale>,
+    extractor: U,
+) -> (Option<T>, bool)
+where
+    U: Fn(&input::Locale) -> Option<T>,
+{
+    this.and_then(&extractor)
+        .map_or_else(|| (extractor(base), true), |value| (Some(value), false))
+}
+
+fn check_tab(path: &str, field: &str, option: Option<&String>) {
+    let has_tab = option.as_ref().is_some_and(|item| item.contains('\t'));
     if has_tab {
         log::warn!("{path}/{field} contains a tab.");
     }
+}
+
+fn check_conflict<T: PartialEq>(old: &T, new: &T, silenced: bool) -> bool {
+    !silenced && old != new
 }

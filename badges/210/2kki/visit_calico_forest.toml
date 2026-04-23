@@ -1,7 +1,11 @@
 [badge]
 points = 20
-map = 2290
 art = "vena"
+
+[badge.map]
+id = 2289
+x = 44
+y = 34
 
 [conditions]
 default = "M2290"

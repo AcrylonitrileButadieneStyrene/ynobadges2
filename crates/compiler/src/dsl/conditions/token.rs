@@ -20,7 +20,19 @@ pub enum Token {
     Event,
 
     #[token("=")]
-    Equals,
+    Eq,
+
+    #[token(">=")]
+    Ge,
+
+    #[token("<=")]
+    Le,
+
+    #[token(">")]
+    Gt,
+
+    #[token("<")]
+    Lt,
 
     #[token(":")]
     Colon,
@@ -36,4 +48,10 @@ pub enum Token {
 
     #[token("DELAYED")]
     Delayed,
+
+    #[token("Picture")]
+    Picture,
+
+    #[regex("'[^']*'", |lex| lex.slice().to_string())]
+    String(String),
 }

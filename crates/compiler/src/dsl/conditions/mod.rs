@@ -33,7 +33,7 @@ pub fn parse(source: &str, input: &str) -> Option<crate::format::output::Conditi
                     parser::Error::Expected(str) => format!("Expected {str}"),
                 }))
                 .with_message(match err {
-                    parser::Error::Expected(_) => format!("Syntax error"),
+                    parser::Error::Expected(_) => "Syntax error".to_string(),
                 })
                 .finish()
                 .eprint(ariadne::Source::from(input))
