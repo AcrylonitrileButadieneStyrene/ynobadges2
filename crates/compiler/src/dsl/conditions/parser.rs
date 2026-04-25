@@ -118,6 +118,7 @@ impl Parser {
                         Some(Token::Le) => "<=",
                         Some(Token::Lt) => "<",
                         Some(Token::Gt) => ">",
+                        Some(Token::Ne) => "!=",
                         _ => return Err(Error::Expected("comparison")),
                     }
                     .to_string();
@@ -136,11 +137,15 @@ impl Parser {
                         var_ids.push(id);
                         var_ops.push(op);
                         var_values.push(value);
-                    } else if let (Some(existing_id), Some(existing_op), Some(existing_value)) = (
-                        self.condition.var_id,
-                        &self.condition.var_op,
-                        self.condition.var_value,
-                    ) {
+                    } else if let (Some(existing_id), Some(existing_value)) =
+                        (self.condition.var_id, self.condition.var_value)
+                    {
+                        let existing_op = self
+                            .condition
+                            .var_op
+                            .clone()
+                            .unwrap_or_else(|| "=".to_string());
+
                         self.condition.var_ids = Some(vec![existing_id, id]);
                         self.condition.var_ops = Some(vec![existing_op.clone(), op]);
                         self.condition.var_values = Some(vec![existing_value, value]);
@@ -150,7 +155,9 @@ impl Parser {
                         self.condition.var_value = None;
                     } else {
                         self.condition.var_id = Some(id);
-                        self.condition.var_op = Some(op);
+                        if op != "=" {
+                            self.condition.var_op = Some(op);
+                        }
                         self.condition.var_value = Some(value);
                     }
 

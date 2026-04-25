@@ -34,6 +34,9 @@ pub enum Token {
     #[token("<")]
     Lt,
 
+    #[token("!=")]
+    Ne,
+
     #[token(":")]
     Colon,
 
