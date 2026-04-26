@@ -13,6 +13,7 @@ pub struct Parser {
 
 struct State {
     last_delayable: Option<DelayTarget>,
+    has_trigger: bool,
 }
 
 enum DelayTarget {
@@ -31,6 +32,7 @@ impl Parser {
             tokens,
             state: State {
                 last_delayable: None,
+                has_trigger: false,
             },
             condition: Condition::default(),
             position: 0,
@@ -57,7 +59,7 @@ impl Parser {
                     let (x1, x2) = self.equals_range()?;
                     self.condition.map_x1 = Some(x1 as _);
                     self.condition.map_x2 = x2.map(|x| x as _);
-                    if self.condition.trigger.is_none() {
+                    if self.condition.trigger.is_none() && !self.state.has_trigger {
                         self.condition.trigger =
                             Some(crate::format::output::ConditionTrigger::Coords);
                     }
@@ -66,7 +68,7 @@ impl Parser {
                     let (y1, y2) = self.equals_range()?;
                     self.condition.map_y1 = Some(y1 as _);
                     self.condition.map_y2 = y2.map(|x| x as _);
-                    if self.condition.trigger.is_none() {
+                    if self.condition.trigger.is_none() && !self.state.has_trigger {
                         self.condition.trigger =
                             Some(crate::format::output::ConditionTrigger::Coords);
                     }
@@ -104,6 +106,10 @@ impl Parser {
                     }
 
                     self.state.last_delayable = Some(DelayTarget::Switch);
+                    self.state.has_trigger = true;
+                    if self.condition.trigger == Some(ConditionTrigger::Coords) {
+                        self.condition.trigger = None;
+                    }
                 }
                 Token::Variable => {
                     let Some(Token::Number(id)) = self.next() else {
@@ -162,6 +168,10 @@ impl Parser {
                     }
 
                     self.state.last_delayable = Some(DelayTarget::Variable);
+                    self.state.has_trigger = true;
+                    if self.condition.trigger == Some(ConditionTrigger::Coords) {
+                        self.condition.trigger = None;
+                    }
                 }
                 Token::Event => {
                     let Some(Token::Number(id)) = self.next() else {
