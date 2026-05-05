@@ -1,0 +1,12 @@
+[badge]
+map = 3088
+points = 10
+art = "HenryAutumn"
+
+[conditions]
+default = "M3088"
+
+[lang.en]
+name = "Crossing Guard of The Future"
+description = "Rumor has it this thing and the World Treader are related, it's not that far-fetched if you think about it."
+condition = "Visit Crosswalk To Nowhere"

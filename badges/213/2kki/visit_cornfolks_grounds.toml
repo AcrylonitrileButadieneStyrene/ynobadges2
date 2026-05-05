@@ -1,0 +1,12 @@
+[badge]
+map = 2558
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+default = "M2558"
+
+[lang.en]
+name = "Mages of Maize"
+description = "Their stare pops people like popcorn."
+condition = "Visit Cornfolk's Grounds"

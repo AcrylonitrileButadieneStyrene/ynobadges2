@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3098
+points = 15
+art = "thatdolphin"
+
+[conditions]
+default = "M3098"
+
+[lang.en]
+name = "Ashen Snowscape"
+description = "This isn't VR..."
+condition = "Visit Amplitude"

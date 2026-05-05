@@ -1,0 +1,15 @@
+[badge]
+points = 15
+art = "Paraverdant"
+
+[badge.map]
+id = 1805
+x = 215
+
+[conditions]
+default = "M1805 X=215:349 Y=0:199"
+
+[lang.en]
+name = "Pufferfish Extraction"
+description = "Or, as they say, \"blowfish\"."
+condition = "Visit Toxicology Research Facility"

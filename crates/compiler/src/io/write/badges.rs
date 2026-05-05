@@ -76,11 +76,11 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                     .and_then(|group| group.default.clone())
             }),
             hidden: bundle.badge.hidden,
-            map: map_id,
+            map: Some(map_id),
             map_order: None,
             map_x,
             map_y,
-            order: None,
+            order: bundle.badge.order,
             overlay_type: None,
             parent: None,
             req_count: None,
@@ -98,10 +98,16 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
 
         if tokio::fs::try_exists(&path).await.unwrap_or_default() {
             let bytes = tokio::fs::read(&path).await.unwrap();
-            let original: output::Badge = serde_json::from_slice(&bytes).unwrap();
-            if original != out {
-                // todo: print a diff
-                log::warn!("Desync detected: {batch}/{game_id}/{badge_id} != {path}");
+            match serde_json::from_slice::<output::Badge>(&bytes) {
+                Ok(original) => {
+                    if original != out {
+                        // todo: print a diff
+                        log::warn!("Desync detected: {batch}/{game_id}/{badge_id} != {path}");
+                    }
+                }
+                Err(err) => {
+                    log::warn!("Error parsing original badge @ badges/{game_id}/{badge_id}: {err}")
+                }
             }
         }
 

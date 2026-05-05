@@ -6,6 +6,7 @@
       "type": "object",
       "properties": {
         "group": { "type": "string" },
+        "order": { "type": "number" },
         "points": { "type": "number" },
         "map": {
           "oneOf": [

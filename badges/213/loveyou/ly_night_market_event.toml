@@ -1,0 +1,11 @@
+[badge]
+map = 107
+points = 15
+art = "Snoocola"
+
+[conditions]
+default = "M107 E1"
+
+[lang.en]
+name = "Wrong move, Kodoko!"
+condition = "See the event in Night Market"

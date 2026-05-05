@@ -10,6 +10,7 @@ pub struct Bundle {
 #[derive(Debug, serde::Deserialize)]
 pub struct Badge {
     pub group: Option<String>,
+    pub order: Option<u8>,
     #[serde(default)]
     pub points: u16,
     pub map: Map,

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2419
+points = 15
+art = "emocore"
+
+[conditions]
+default = "M2419"
+
+[lang.en]
+name = "Yippe Gumball!"
+description = "Did you see it? Of course you did, a joyous gumball!"
+condition = "Visit Autumn Park"

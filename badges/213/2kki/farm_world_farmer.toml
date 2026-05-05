@@ -1,0 +1,16 @@
+[badge]
+animated = true
+map = 291
+points = 15
+art = "Paraverdant"
+
+[conditions]
+requirements = "farm_world_farmer_a OR farm_world_farmer_b OR farm_world_farmer_c"
+farm_world_farmer_a = "M291 E60"
+farm_world_farmer_b = "M291 E43"
+farm_world_farmer_c = "M291 E137"
+
+[lang.en]
+name = "The Farmer"
+description = "Quite a collection of plants here..."
+condition = "Interact with a farmer in Farm World A"

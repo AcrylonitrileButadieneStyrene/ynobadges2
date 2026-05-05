@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2337 
+points = 20
+art = "Etikals"
+
+[conditions]
+# spreadsheet said 2377
+default = "M2337 X=35:70 Y=148:158 S4342=ON"
+
+[lang.en]
+name = "It's a fair price..."
+condition = "Obtain Menu theme #79 in Black Dust Desert. If you have already unlocked it, return to where it can be found."

@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 186
+points = 15
+art = "Paraverdant"
+
+[conditions]
+underwater_amusement_npc_1 = "M186 E194"
+underwater_amusement_npc_2 = "M186 E195"
+
+[lang.en]
+name = "TV Dudes"
+description = "Who knows, they might be taking charge of the teleporting TVs in this weird area."
+condition = "Interact with the pink and blue creatures in Underwater Amusement Park"

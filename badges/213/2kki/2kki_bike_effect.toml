@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 81
+points = 10
+art = "Canto Mk. 6"
+
+[conditions]
+requirements = "2kki_bike_effect_garden OR 2kki_bike_effect_portrait"
+2kki_bike_effect_garden = "M81 S52=ON"
+2kki_bike_effect_portrait = "M1313 S52=ON"
+
+[lang.en]
+name = "Yume SR400"
+description = "Your trusty motorcycle, ready for you to ride through this endless dream"
+condition = "Obtain the Bike effect. If already obtained, return to where you have done so."

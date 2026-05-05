@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1777
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M1777 X=158:176 Y=231:239"
+
+[lang.en]
+name = "Wardrobe Secret "
+description = "SG0sIHRoaXMgd2l0Y2ggaG91c2UgbG9vayBhIGxpdHRsZSBiaXQgZGlmZnJlbnQuLi4g"
+condition = "Reach the isolated area of Shadow Lady Estate"

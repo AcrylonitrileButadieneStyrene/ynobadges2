@@ -16,7 +16,7 @@ pub struct Badge {
     pub group: Option<String>,
     #[serde(default, skip_serializing_if = "default")]
     pub hidden: bool,
-    pub map: u16,
+    pub map: Option<u16>,
     pub map_order: Option<u8>,
     pub map_x: Option<u16>,
     pub map_y: Option<u16>,

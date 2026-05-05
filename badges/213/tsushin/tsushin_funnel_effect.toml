@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 8
+points = 10
+art = "Ticks"
+
+[conditions]
+default = "M8 E33 S128=ON"
+
+[lang.en]
+name = "Irritating Kitty Cone"
+description = "You know I can never scratch my head with this..."
+condition = "Obtain the Funnel Effect. If already obtained, return to where you have done so."

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4041
+points = 25
+art = "Cla"
+
+[conditions]
+default = "M4041 V0074=108"
+
+[lang.en]
+name = "Puzzle in the Pail"
+description = "Don't spend it all in one place! Well, you literally can't."
+condition = "Play a game of nonogram and claim your prize at Nonogram Sands"

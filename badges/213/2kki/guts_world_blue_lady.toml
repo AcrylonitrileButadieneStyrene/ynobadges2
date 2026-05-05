@@ -1,0 +1,12 @@
+[badge]
+map = 247
+points = 15
+art = "HenryAutumn & taintedeve"
+
+[conditions]
+default = "M247"
+
+[lang.en]
+name = "Balcony Blues"
+description = "I can see the blood altar from up here!"
+condition = "See the blue lady on top of the gray building in Guts World"
