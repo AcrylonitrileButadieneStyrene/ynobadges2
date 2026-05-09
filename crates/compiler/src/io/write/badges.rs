@@ -102,7 +102,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                 Ok(original) => {
                     if original != out {
                         // todo: print a diff
-                        log::warn!("Desync detected: {batch}/{game_id}/{badge_id} != {path}");
+                        log::warn!("Desync detected: {batch}/{game_id}/{badge_id}.toml != {path}");
                     }
                 }
                 Err(err) => {

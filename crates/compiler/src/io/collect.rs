@@ -1,6 +1,6 @@
 use crate::Badge;
 
-pub fn badges() -> Option<Vec<Badge>> {
+pub fn badges(batches: &[u16]) -> Option<Vec<Badge>> {
     let entries = std::fs::read_dir("badges")
         .inspect_err(|err| log::error!("Failed to read `badges`: {err}"))
         .ok()?;
@@ -21,10 +21,14 @@ pub fn badges() -> Option<Vec<Badge>> {
                 .parse::<u16>()
                 .inspect_err(|err| log::warn!("Batch is not a number: {err}"))
                 .ok()?;
-            let game_entries = std::fs::read_dir(batch_entry.path())
-                .inspect_err(|err| log::warn!("Failed to read `badges/:batch`: {err}"))
-                .ok()?;
-            Some((batch, game_entries))
+            if !batches.is_empty() && !batches.contains(&batch) {
+                None
+            } else {
+                let game_entries = std::fs::read_dir(batch_entry.path())
+                    .inspect_err(|err| log::warn!("Failed to read `badges/:batch`: {err}"))
+                    .ok()?;
+                Some((batch, game_entries))
+            }
         })
         .flat_map(|(batch, game_entries)| {
             game_entries

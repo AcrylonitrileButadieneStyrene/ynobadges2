@@ -1,9 +1,14 @@
 use std::sync::Arc;
 
-use crate::{Badge, dsl::conditions, format::input};
+use crate::{
+    Badge,
+    dsl::conditions,
+    format::{input, output},
+};
 
 pub async fn conditions(badges: Arc<[Badge]>) {
     for Badge {
+        batch,
         id: badge_id,
         game_id,
         bundle: input::Bundle { conditions, .. },
@@ -23,12 +28,22 @@ pub async fn conditions(badges: Arc<[Badge]>) {
             });
 
         for (condition_id, condition) in conditions {
-            tokio::fs::write(
-                format!("ynobadges/conditions/{game_id}/{condition_id}.json"),
-                serde_json::to_string_pretty(&condition).unwrap(),
-            )
-            .await
-            .unwrap();
+            let path = format!("ynobadges/conditions/{game_id}/{condition_id}.json");
+
+            match tokio::fs::read(&path).await {
+                Ok(bytes) => {
+                    let original: output::Condition = serde_json::from_slice(&bytes).unwrap();
+                    if original != condition {
+                        log::warn!("Desync detected: {batch}/{game_id}/{badge_id}.toml != {path}");
+                    }
+                }
+                Err(err) if matches!(err.kind(), std::io::ErrorKind::NotFound) => {}
+                Err(err) => panic!("{err}"),
+            };
+
+            tokio::fs::write(&path, serde_json::to_string_pretty(&condition).unwrap())
+                .await
+                .unwrap();
         }
     }
 }

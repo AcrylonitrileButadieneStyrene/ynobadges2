@@ -14,9 +14,6 @@ condition = "Visit the Docks"
 [lang.fr]
 condition = "Visiter les Docks"
 
-[lang.ja]
-condition = "Docksに到達する"
-
 [lang.ko]
 condition = "Docks를 방문하기"
 

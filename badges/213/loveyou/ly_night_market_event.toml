@@ -8,4 +8,4 @@ default = "M107 E1"
 
 [lang.en]
 name = "Wrong move, Kodoko!"
-condition = "See the event in Night Market"
+condition = "See the event in Black Market"

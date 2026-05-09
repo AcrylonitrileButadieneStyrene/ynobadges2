@@ -4,7 +4,7 @@ points = 10
 art = "elliotzZz"
 
 [conditions]
-default = "M12 S12=ON"
+default = "M12 S262=ON"
 
 [lang.en]
 name = "A mask of my own face"
