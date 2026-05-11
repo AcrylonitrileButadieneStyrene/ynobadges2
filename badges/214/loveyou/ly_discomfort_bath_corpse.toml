@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 31
+points = 20
+art = "Anju"
+
+[conditions]
+default = "M31 E3"
+
+[lang.en]
+name = "Worthless"
+condition = "View the \"It's not worth it\" event in Discomfort Bath"

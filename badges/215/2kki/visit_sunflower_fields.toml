@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2068
+points = 25
+art = "HenryAutumn"
+
+[conditions]
+default = "M2068"
+
+[lang.en]
+name = "Breezy Springtime"
+description = "I used to know this girl, she was like a sunflower, I wonder how she's doing nowadays..."
+condition = "Visit Sunflower Fields"

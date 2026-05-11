@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 198
+points = 15
+art = "Moumekie"
+
+[conditions]
+default = "M198 E110 S124=ON"
+
+[lang.en]
+name = "That Really Shatters My Urotsuki"
+description = "I hope nobody was watching you mess THAT up, kiddo!"
+condition = "Chainsaw your own reflection in the mirror room of Day and Night Towers"

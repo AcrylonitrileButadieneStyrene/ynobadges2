@@ -1,0 +1,12 @@
+[badge]
+map = 1089
+points = 15
+art = "Paraverdant"
+
+[conditions]
+default = "M1089"
+
+[lang.en]
+name = "Sauna Time!"
+description = "Feels perfect after a refreshing bath!"
+condition = "Enter the sauna in Bathhouse"

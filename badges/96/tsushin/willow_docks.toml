@@ -19,6 +19,3 @@ condition = "Docks를 방문하기"
 
 [lang.pt]
 condition = "Visite Docks."
-
-[lang.zh]
-condition = "拜访Docks。"

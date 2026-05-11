@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 58
+points = 15
+art = "Kantyo"
+
+[conditions]
+default = "M58 V14=10"
+
+[lang.en]
+name = "The Light That Shines Beyond Death"
+description = "When all is lost to death, a candle still whispers hope."
+condition = "Use the Candle effect in Death World"

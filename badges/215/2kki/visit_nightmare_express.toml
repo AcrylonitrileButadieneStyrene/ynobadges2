@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2562
+points = 10
+art = "thatdolphin"
+
+[conditions]
+default = "M2562"
+
+[lang.en]
+name = "There Is no Turning Back."
+description = "I find to forget them, will keep them all alive."
+condition = "Visit Nightmare Express"

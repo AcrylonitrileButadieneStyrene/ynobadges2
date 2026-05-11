@@ -28,15 +28,15 @@ pub fn parse(source: &str, input: &str) -> Option<crate::format::output::Conditi
     parser::Parser::new(tokens)
         .eval()
         .inspect_err(|(span, err)| {
-            ariadne::Report::build(ariadne::ReportKind::Error, span.clone())
-                .with_label(ariadne::Label::new(span.clone()).with_message(match err {
+            ariadne::Report::build(ariadne::ReportKind::Error, (source, span.clone()))
+                .with_label(ariadne::Label::new((source, span.clone())).with_message(match err {
                     parser::Error::Expected(str) => format!("Expected {str}"),
                 }))
                 .with_message(match err {
                     parser::Error::Expected(_) => "Syntax error".to_string(),
                 })
                 .finish()
-                .eprint(ariadne::Source::from(input))
+                .eprint((source, ariadne::Source::from(input)))
                 .unwrap();
         })
         .ok()

@@ -1,0 +1,12 @@
+[badge]
+map = 8
+points = 15
+art = "three33"
+
+[conditions]
+default = "M8 V5=1 E153"
+
+[lang.en]
+name = "LE(on)D"
+description = "\"(phôs, phōtós) 'light'\n\""
+condition = "As Leon, obtain the Photon Effect. If you have already unlocked it, return to Neon World."

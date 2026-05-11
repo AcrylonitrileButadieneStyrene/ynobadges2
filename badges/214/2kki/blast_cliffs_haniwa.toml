@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 3886
+points = 15
+art = "w"
+
+[conditions]
+blast_cliffs_haniwa_1 = "M3886 X=45:62 Y=70:82"
+blast_cliffs_haniwa_2 = "M3886 X=41:54 Y=111:120"
+
+[lang.en]
+name = "Dance Dance Haniwa"
+description = "\"Let me break it down for ya!\""
+condition = "See all the haniwa statues in Blasted Cliffs"

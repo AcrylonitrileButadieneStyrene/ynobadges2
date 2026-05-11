@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 278
+points = 10
+art = "Kantyo"
+
+[conditions]
+default = "M278 E1"
+
+[lang.en]
+name = "Angry Vibes from Behind!"
+description = "Calm down, your majesty—please don't smite me!"
+condition = "Reach the Abyss from Chasers' Versailles"

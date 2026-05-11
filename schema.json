@@ -60,6 +60,6 @@
       }
     }
   },
-  "required": ["badge", "conditions", "lang"],
+  "required": ["badge", "conditions"],
   "additionalProperties": false
 }

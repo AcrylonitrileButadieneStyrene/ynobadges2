@@ -10,4 +10,4 @@ default = "M65 X=0:19 Y=105:119 S671=ON"
 [lang.en]
 name = "The Lady's Tome"
 description = "Hi there..."
-condition = "Obtain Menu Theme #91 in Highway. If already obtained, return to the room where you have done so."
+condition = "Obtain the menu type 91. If you have already unlocked it, return where it can be found in Highway."

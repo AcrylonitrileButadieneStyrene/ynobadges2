@@ -1,0 +1,12 @@
+[badge]
+map = 82
+points = 15
+art = "three33"
+
+[conditions]
+default = "M82"
+
+[lang.en]
+name = "Purgatory"
+description = "Oh my god! They killed Muma!"
+condition = "Visit The Grinder"

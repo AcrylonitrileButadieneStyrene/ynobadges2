@@ -1,0 +1,12 @@
+[badge]
+map = 112
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M112"
+
+[lang.en]
+name = "At the Edge of the World"
+description = "If only you were here with me..."
+condition = "Visit Sky Garden"

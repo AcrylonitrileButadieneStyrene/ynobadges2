@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 16
+points = 10
+art = "Canto Mk. 6"
+
+[conditions]
+default = "M16 S17=ON"
+
+[lang.en]
+name = "Nightmare Navigator"
+description = "You'll travel to many places, but nothing will be your friend except this bike. It'll be your true companion wherever you go."
+condition = "Obtain the Bicycle effect. If you have already unlocked it, return to Graffiti World."

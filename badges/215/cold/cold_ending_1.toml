@@ -1,0 +1,11 @@
+[badge]
+map = 122
+points = 30
+art = "Kantyo"
+
+[conditions]
+default = "M122 Picture='ED1'"
+
+[lang.en]
+name = "is that good enough?"
+condition = "See the Ending #1"

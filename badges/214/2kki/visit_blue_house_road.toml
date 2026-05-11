@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1374
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M1374"
+
+[lang.en]
+name = "Take Me to The City!"
+description = "You promised me we'd get stuck in traffic together! :D"
+condition = "Visit Blue House Road"

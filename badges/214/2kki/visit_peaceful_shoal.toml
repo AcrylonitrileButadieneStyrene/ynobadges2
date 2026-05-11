@@ -1,0 +1,12 @@
+[badge]
+map = 2121
+points = 15
+art = "tophat"
+
+[conditions]
+default = "M2121"
+
+[lang.en]
+name = "Paradise, Paradise"
+description = "Built perfectly just for you. "
+condition = "Visit Peaceful Shoal"

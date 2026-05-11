@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1308
+points = 20
+art = "Paraverdant"
+
+[conditions]
+default = "M1308 X=21:38 Y=99:101 S5031=ON"
+
+[lang.en]
+name = "Binary Truth"
+description = "A hidden gift of truth in deception and lies."
+condition = "Interact with 01-Kun in City of Liars"

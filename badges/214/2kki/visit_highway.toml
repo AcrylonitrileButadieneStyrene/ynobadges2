@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 66
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M66"
+
+[lang.en]
+name = "Life Isn't a Highway, Unfortunately"
+description = "Nights at the highway shine brighter. "
+condition = "Visit Highway"

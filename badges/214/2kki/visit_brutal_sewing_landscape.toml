@@ -1,0 +1,12 @@
+[badge]
+map = 2520
+points = 10
+art = "AduriteStar"
+
+[conditions]
+default = "M2520"
+
+[lang.en]
+name = "BRUTAL."
+description = "It's not that deep."
+condition = "Visit Brutal Sewing Landscape"

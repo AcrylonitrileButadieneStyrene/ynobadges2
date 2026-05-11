@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 70
+points = 10
+art = "Canto Mk. 6"
+
+[conditions]
+default = "M70 S35=ON"
+
+[lang.en]
+name = "Helium-Powered Scooter"
+description = "Comfort and style."
+condition = "Obtain the Scooter effect. If you have already unlocked it, return to Noble Gas District."

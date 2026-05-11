@@ -1,0 +1,12 @@
+[badge]
+map = 2424
+points = 10
+art = "Etikals"
+
+[conditions]
+default = "M2424"
+
+[lang.en]
+name = "Construction View"
+description = "How do they even build them that fast?"
+condition = "Enter the balcony in Empty Abode"

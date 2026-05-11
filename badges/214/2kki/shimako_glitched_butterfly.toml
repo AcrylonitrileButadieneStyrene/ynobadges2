@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1888
+points = 20
+art = "HenryAutumn"
+
+[conditions]
+default = "M1888 E14"
+
+[lang.en]
+name = "Shimako's Sanctuary"
+description = "Welcome to my haven, I hope you find it as comfy as I do."
+condition = "Interact with Shimako in Glitched Butterfly Sector"

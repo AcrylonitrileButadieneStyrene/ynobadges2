@@ -1,0 +1,12 @@
+[badge]
+map = 1562
+points = 15
+art = "Michi"
+
+[conditions]
+default = "M1562 X=69:82 Y=100:109"
+
+[lang.en]
+name = "Throne of Providence"
+description = "The golden likeness of God's divine harbingers."
+condition = "See the ophanim in Twilight Park"

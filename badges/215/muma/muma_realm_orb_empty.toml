@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 9
+points = 25
+art = "Aurora"
+
+[conditions]
+default = "M9 E6 S217=ON"
+
+[lang.en]
+name = "Caution! Fragile!"
+description = "One day, she fell into her creation, and was shattered across dream and reality."
+condition = "Witness the Realm of the Orb's Empty event"

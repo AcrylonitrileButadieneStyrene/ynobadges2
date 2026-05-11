@@ -1,0 +1,13 @@
+[badge]
+map = 2594
+points = 20
+art = "three33"
+
+[conditions]
+visit_serpent_ruins_a = "M2594"
+visit_serpent_ruins_b = "M2600"
+
+[lang.en]
+name = "The Hiss List"
+description = "SSSsssssssss!"
+condition = "Visit Serpent Ruins A and Serpent Ruins B"

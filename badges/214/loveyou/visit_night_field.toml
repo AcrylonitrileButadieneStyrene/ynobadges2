@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 94
+points = 10
+art = "Masky1977"
+
+[conditions]
+default = "M94"
+
+[lang.en]
+name = "Midnight Fields"
+description = "Despite the darkness and slowly gathering rain, you feel a strange feeling of comfort and relief in your heart."
+condition = "Visit Night Field"

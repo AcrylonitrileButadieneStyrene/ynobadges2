@@ -1,0 +1,15 @@
+[badge]
+points = 15
+art = "KitsuneYume"
+
+[badge.map]
+id = 1725
+x = 95
+
+[conditions]
+default = "M1725 X=95:219"
+
+[lang.en]
+name = "Olden Days"
+description = "Enter the old days."
+condition = "Visit Restored Sky Kingdom"

@@ -1,0 +1,12 @@
+[badge]
+map = 278
+points = 15
+art = "three33"
+
+[conditions]
+default = "M278"
+
+[lang.en]
+name = "DUDE Was Here"
+description = "And so was Kubo."
+condition = "See the Turtle Hole event in All-Seeing Forest"

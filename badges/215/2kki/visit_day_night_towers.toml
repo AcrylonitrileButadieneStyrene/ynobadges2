@@ -1,0 +1,16 @@
+[badge]
+animated = true
+map = 372
+points = 15
+art = "Paraverdant & HenryAutumn"
+
+[conditions]
+visit_day_night_towers_1 = "M372 X=0:39 Y=0:99"
+visit_day_night_towers_2 = "M372 X=40:80 Y=0:99"
+visit_day_night_towers_3 = "M372 X=81:165 Y=0:99"
+visit_day_night_towers_4 = "M198"
+
+[lang.en]
+name = "Daylight Cycles"
+description = "Day after night after day after night."
+condition = "See all areas of the Day and Night Towers"

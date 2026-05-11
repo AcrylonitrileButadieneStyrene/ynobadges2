@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 78
+points = 10
+art = "Canto Mk. 6"
+
+[conditions]
+default = "M78 S101=ON"
+
+[lang.en]
+name = "Roomba!"
+description = "A super cute and comedically large robot vacuum that you can use as a mode of transportation."
+condition = "Obtain the Sweeping Robot effect. If you have already unlocked it, return to the Library."

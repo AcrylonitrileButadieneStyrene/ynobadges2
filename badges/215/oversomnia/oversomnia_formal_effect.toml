@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 31
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M31 S25=ON"
+
+[lang.en]
+name = "Style Work Clothes"
+description = "You can be cute even in work too!"
+condition = "Obtain the Formal Effect. If you have already unlocked it, return to Electro Tower."

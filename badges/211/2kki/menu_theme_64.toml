@@ -9,4 +9,4 @@ default = "M3101 S842=ON"
 [lang.en]
 name = "A Final Memorial"
 description = "The world is brighter on the other side of the sky."
-condition = "Obtain Menu Theme 64 in Pollution District"
+condition = "Obtain the menu type 64. If you have already unlocked it, return to Pollution District."
