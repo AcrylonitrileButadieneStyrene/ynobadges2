@@ -92,6 +92,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             secret: bundle.badge.secret,
             secret_condition: bundle.conditions.secret,
             secret_map: map_secret,
+            dev: false,
         };
 
         let path = format!("ynobadges/badges/{game_id}/{badge_id}.json");

@@ -7,34 +7,36 @@ fn default<T: Default + PartialEq>(t: &T) -> bool {
 #[serde(rename_all = "camelCase")]
 #[allow(clippy::struct_excessive_bools)]
 pub struct Badge {
-    #[serde(default, skip_serializing_if = "default")]
-    pub animated: bool,
-    pub art: String,
-    pub batch: u16,
+    pub order: Option<u8>,
+    pub group: Option<String>,
+    pub map_order: Option<u8>,
     // todo: change this to NonZeroU16 when `just_smile_dog_aseprite` gets fixed
     pub bp: Option<u16>,
-    pub group: Option<String>,
-    #[serde(default, skip_serializing_if = "default")]
-    pub hidden: bool,
-    pub map: Option<u16>,
-    pub map_order: Option<u8>,
-    pub map_x: Option<u16>,
-    pub map_y: Option<u16>,
-    pub order: Option<u8>,
-    pub overlay_type: Option<u8>,
-    pub parent: Option<String>,
-    pub req_count: Option<u8>,
+    pub req_type: Option<BadgeReqType>,
     pub req_int: Option<u16>,
     pub req_string: Option<String>,
-    pub req_string_arrays: Option<Vec<Vec<String>>>,
     pub req_strings: Option<Vec<String>>,
-    pub req_type: Option<BadgeReqType>,
+    pub req_string_arrays: Option<Vec<Vec<String>>>,
+    pub req_count: Option<u8>,
+    pub map: Option<u16>,
+    pub map_x: Option<u16>,
+    pub map_y: Option<u16>,
     #[serde(default, skip_serializing_if = "default")]
     pub secret: bool,
     #[serde(default, skip_serializing_if = "default")]
+    pub secret_map: bool,
+    #[serde(default, skip_serializing_if = "default")]
     pub secret_condition: bool,
     #[serde(default, skip_serializing_if = "default")]
-    pub secret_map: bool,
+    pub hidden: bool,
+    pub parent: Option<String>,
+    pub overlay_type: Option<u8>,
+    pub art: String,
+    #[serde(default, skip_serializing_if = "default")]
+    pub animated: bool,
+    pub batch: u16,
+    #[serde(default, skip_serializing_if = "default")]
+    pub dev: bool,
 }
 
 #[derive(Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
@@ -63,30 +65,30 @@ pub struct Condition {
     pub map_x2: Option<u16>,
     pub map_y1: Option<u16>,
     pub map_y2: Option<u16>,
-    #[serde(default, skip_serializing_if = "default")]
-    pub switch_delay: bool,
     pub switch_id: Option<u16>,
-    pub switch_ids: Option<Vec<u16>>,
-    // this is rarely omitted
     #[serde(default, skip_serializing_if = "default")]
     pub switch_value: bool,
+    pub switch_ids: Option<Vec<u16>>,
+    // this is rarely omitted
     pub switch_values: Option<Vec<bool>>,
     #[serde(default, skip_serializing_if = "default")]
-    pub time_trial: bool,
+    pub switch_delay: bool,
+    pub var_id: Option<u16>,
+    pub var_value: Option<i32>,
+    pub var_value2: Option<i32>,
+    pub var_op: Option<String>,
+    pub var_ids: Option<Vec<u16>>,
+    pub var_values: Option<Vec<i32>>,
+    pub var_ops: Option<Vec<String>>,
+    #[serde(default, skip_serializing_if = "default")]
+    pub var_delay: bool,
+    #[serde(default, skip_serializing_if = "default")]
+    pub var_trigger: bool,
     pub trigger: Option<ConditionTrigger>,
     pub value: Option<String>,
     pub values: Option<Vec<String>>,
     #[serde(default, skip_serializing_if = "default")]
-    pub var_delay: bool,
-    pub var_id: Option<u16>,
-    pub var_ids: Option<Vec<u16>>,
-    pub var_op: Option<String>,
-    pub var_ops: Option<Vec<String>>,
-    #[serde(default, skip_serializing_if = "default")]
-    pub var_trigger: bool,
-    pub var_value: Option<i32>,
-    pub var_value2: Option<i32>,
-    pub var_values: Option<Vec<i32>>,
+    pub time_trial: bool,
 }
 
 #[derive(Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
