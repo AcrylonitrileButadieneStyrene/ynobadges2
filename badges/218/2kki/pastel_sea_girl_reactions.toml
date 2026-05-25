@@ -1,0 +1,20 @@
+[badge]
+animated = true
+map = 3364
+points = 20
+art = "Kantyo"
+
+[conditions]
+requirements = "pastel_sea_girl_reaction_1a OR pastel_sea_girl_reaction_1b AND pastel_sea_girl_reaction_2a OR pastel_sea_girl_reaction_2b OR pastel_sea_girl_reaction_2c AND pastel_sea_girl_reaction_3 AND pastel_sea_girl_reaction_4"
+pastel_sea_girl_reaction_1a = "M3364 X=86:97 Y=88:94 S135=ON"
+pastel_sea_girl_reaction_1b = "M3364 X=86:97 Y=88:94 S168=ON"
+pastel_sea_girl_reaction_2a = "M3364 X=86:97 Y=88:94 S140=ON"
+pastel_sea_girl_reaction_2b = "M3364 X=86:97 Y=88:94 S153=ON"
+pastel_sea_girl_reaction_2c = "M3364 X=86:97 Y=88:94 S155=ON"
+pastel_sea_girl_reaction_3 = "M3364 X=86:97 Y=88:94 S129=ON"
+pastel_sea_girl_reaction_4 = "M3364 X=86:97 Y=88:94 S4=ON"
+
+[lang.en]
+name = "All Devoured Beneath a Gentle Face"
+description = "She wears a princess's smile—yet hunts as the queen of the deep."
+condition = "See all effect reactions from the girl in the chair in the Sunken Ship Mansion of Pastel Dream Sea"

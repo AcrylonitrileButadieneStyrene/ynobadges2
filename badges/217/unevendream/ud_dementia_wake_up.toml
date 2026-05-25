@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 539
+points = 15
+art = "Witness the Screaming Monster Event in Freezing Point"
+
+[conditions]
+default = "M539 E2 E6 S192=ON X=27:28 Y=58:58"
+
+[lang.en]
+name = "Lights Off"
+description = "I lost it all before I knew I had it."
+condition = "Trigger the wake up event in Dementia"

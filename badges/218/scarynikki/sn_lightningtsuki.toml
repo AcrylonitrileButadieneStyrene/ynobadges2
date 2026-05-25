@@ -1,0 +1,12 @@
+[badge]
+map = 80
+points = 15
+art = "three33"
+
+[conditions]
+default = "M80 E34"
+
+[lang.en]
+name = "Lightningtsuki"
+description = "You interacted with him and got this stupid badge of him. Great job!"
+condition = "Interact with Lightningtsuki in his room"

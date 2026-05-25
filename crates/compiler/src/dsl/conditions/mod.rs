@@ -1,5 +1,6 @@
 use logos::Logos as _;
 
+mod transformers;
 mod parser;
 mod token;
 
@@ -29,9 +30,11 @@ pub fn parse(source: &str, input: &str) -> Option<crate::format::output::Conditi
         .eval()
         .inspect_err(|(span, err)| {
             ariadne::Report::build(ariadne::ReportKind::Error, (source, span.clone()))
-                .with_label(ariadne::Label::new((source, span.clone())).with_message(match err {
-                    parser::Error::Expected(str) => format!("Expected {str}"),
-                }))
+                .with_label(
+                    ariadne::Label::new((source, span.clone())).with_message(match err {
+                        parser::Error::Expected(str) => format!("Expected {str}"),
+                    }),
+                )
                 .with_message(match err {
                     parser::Error::Expected(_) => "Syntax error".to_string(),
                 })

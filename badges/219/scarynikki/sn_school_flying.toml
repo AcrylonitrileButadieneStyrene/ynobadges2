@@ -1,0 +1,12 @@
+[badge]
+map = 66
+points = 15
+art = "Kantyo"
+
+[conditions]
+default = "M66"
+
+[lang.en]
+name = "Violet Wings that Tear Through the Heavens"
+description = "Wings meant to break the boundaries of the world."
+condition = "View the flying event at the school balcony"

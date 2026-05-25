@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2481
+points = 15
+art = "HenryAutumn & taintedeve"
+
+[conditions]
+default = "M2481"
+
+[lang.en]
+name = "This is the REAL Me!"
+description = "Now I have NOTHING TO HIDE"
+condition = "Visit The Skin"

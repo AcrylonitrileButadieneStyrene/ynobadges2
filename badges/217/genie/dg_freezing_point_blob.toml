@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 133
+points = 15
+art = "Tanjunebi"
+
+[conditions]
+default = "M133 E5 E6 S198=ON"
+
+[lang.en]
+name = "Unbalanced Temperature"
+description = "Maybe it's not too bad."
+condition = "Interact with the screaming chromatic blob thing in Freezing Point"

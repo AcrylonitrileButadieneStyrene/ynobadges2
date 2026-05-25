@@ -1,0 +1,12 @@
+[badge]
+map = 17
+points = 10
+art = "Ticks"
+
+[conditions]
+default = "M17 S167=ON"
+
+[lang.en]
+name = "Sun Petals"
+description = "Maybe it wouldn't hurt to look at the sun this time."
+condition = "Obtain the Sunflower effect. If you have already unlocked it, return where it can be found in Field of Sunflowers."

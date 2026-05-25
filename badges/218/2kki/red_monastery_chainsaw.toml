@@ -1,0 +1,12 @@
+[badge]
+map = 1377
+points = 10
+art = "Limbs"
+
+[conditions]
+default = "M1377 E288 S124=ON"
+
+[lang.en]
+name = "Crybaby"
+description = "\"I mean, you DID stab them with a chainsaw.\""
+condition = "Chainsaw the sad face in Red Monastery"

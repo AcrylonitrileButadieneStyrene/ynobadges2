@@ -1,0 +1,12 @@
+[badge]
+map = 2438
+points = 20
+art = "Paraverdant"
+
+[conditions]
+default = "M2438"
+
+[lang.en]
+name = "Lilium"
+description = "Simply reaching here is not the end. The lilies... they hide a sinister secret. Let the world guide you to the last dream."
+condition = "Visit White Lily Laboratory"

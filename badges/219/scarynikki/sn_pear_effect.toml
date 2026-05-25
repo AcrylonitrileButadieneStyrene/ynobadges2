@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 68
+points = 20
+art = "HenryAutumn"
+
+[conditions]
+default = "M68 V19=15"
+
+[lang.en]
+name = "Sanpearutsuki"
+description = "The happiest, most joyous specimen to ever live."
+condition = "Equip the Pear effect where it was obtained in WIP"

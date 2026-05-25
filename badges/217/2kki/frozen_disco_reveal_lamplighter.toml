@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 1557
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M1557 X=11:41 Y=72:82 S168=ON"
+secret = true
+
+[lang.en]
+name = "The Disco of Pain"
+description = "The pain never ends, and it haunts me in the afterlife"
+condition = "Use the Glasses effect to reveal the Lamplighter in Frozen Disco"

@@ -1,0 +1,12 @@
+[badge]
+map = 35
+points = 15
+art = "three33"
+
+[conditions]
+default = "M35"
+
+[lang.en]
+name = "Erythrophobia"
+description = "\"YOU WILL PERMIT IT TO PASS OVER YOU AND GO THROUGH YOU.\nAND WHEN IT HAS GONE PAST, YOU WILL TURN THE INNER EYE TO SEE IT'S PATH.\""
+condition = "Visit Red Corridors"

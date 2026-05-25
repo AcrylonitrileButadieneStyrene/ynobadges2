@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1552
+points = 20
+art = "tophat"
+
+[conditions]
+default = "M1552 E1 S1=ON"
+
+[lang.en]
+name = "No More Lighting Lamps"
+description = "Thanks for working so hard...?"
+condition = "Trigger the Ghostly Ambush event in Rainy Town"

@@ -1,0 +1,12 @@
+[badge]
+map = 20
+points = 10
+art = "Kantyo"
+
+[conditions]
+default = "M20 S170=ON"
+
+[lang.en]
+name = "Chrysanthemums Adrift in Tranquility"
+description = "Chrysanthemums drift—and so do I."
+condition = "Obtain the Chrysantheum effect. If you have already unlocked it, return to Chrysanthemums and Water Surface."

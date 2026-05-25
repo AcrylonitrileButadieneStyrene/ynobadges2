@@ -34,11 +34,11 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             continue;
         };
 
-        let (req_string, req_strings, req_string_arrays, req_type) = match reqs {
+        let (req_string, req_strings, req_string_arrays, req_type, req_count) = match reqs {
             Request::All => {
                 let mut conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
                 match conditions.len() {
-                    0 => (Some(badge_id.clone()), None, None, BadgeReqType::Tag),
+                    0 => (Some(badge_id.clone()), None, None, BadgeReqType::Tag, None),
                     1 => (
                         Some(match &**conditions.first().unwrap() {
                             "default" => badge_id.clone(),
@@ -47,6 +47,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                         None,
                         None,
                         BadgeReqType::Tag,
+                        None,
                     ),
                     _ => (
                         None,
@@ -56,12 +57,16 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                         }),
                         None,
                         BadgeReqType::Tags,
+                        None,
                     ),
                 }
             }
-            Request::Tag(id) => (Some(id), None, None, BadgeReqType::Tag),
-            Request::Tags(ids) => (None, Some(ids), None, BadgeReqType::Tags),
-            Request::TagArray(ids) => (None, None, Some(ids), BadgeReqType::TagArrays),
+            Request::Tag(id) => (Some(id), None, None, BadgeReqType::Tag, None),
+            Request::Tags(ids) => (None, Some(ids), None, BadgeReqType::Tags, None),
+            Request::TagsCount(ids, count) => {
+                (None, Some(ids), None, BadgeReqType::Tags, Some(count))
+            }
+            Request::TagArray(ids) => (None, None, Some(ids), BadgeReqType::TagArrays, None),
         };
 
         let out = output::Badge {
@@ -83,7 +88,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             order: bundle.badge.order,
             overlay_type: None,
             parent: None,
-            req_count: None,
+            req_count,
             req_int: None,
             req_string,
             req_string_arrays,
@@ -95,7 +100,8 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             dev: false,
         };
 
-        let path = format!("ynobadges/badges/{game_id}/{badge_id}.json");
+        let game = format!("ynobadges/badges/{game_id}");
+        let path = format!("{game}/{badge_id}.json");
 
         if tokio::fs::try_exists(&path).await.unwrap_or_default() {
             let bytes = tokio::fs::read(&path).await.unwrap();
@@ -109,6 +115,10 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                 Err(err) => {
                     log::warn!("Error parsing original badge @ badges/{game_id}/{badge_id}: {err}")
                 }
+            }
+        } else {
+            if !tokio::fs::try_exists(&game).await.unwrap_or_default() {
+                tokio::fs::create_dir(&game).await.unwrap();
             }
         }
 

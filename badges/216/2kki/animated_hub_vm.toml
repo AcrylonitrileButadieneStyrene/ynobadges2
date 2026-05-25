@@ -1,0 +1,12 @@
+[badge]
+map = 2012
+points = 15
+art = "mokqz2"
+
+[conditions]
+default = "M2012 X=40:40 Y=44:44 Picture='cheo_longanimation'"
+
+[lang.en]
+name = "Lactose intolerance"
+description = "You fainted from milkiness overload!"
+condition = "View the vending machine event in Animated Hub"

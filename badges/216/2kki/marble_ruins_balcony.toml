@@ -1,0 +1,12 @@
+[badge]
+map = 1578
+points = 25
+art = "Etikals"
+
+[conditions]
+default = "M1578 X=148:173 Y=253:259"
+
+[lang.en]
+name = "Marble Sky"
+description = "At the top of the tower only moonlight reaches its halls."
+condition = "Reach the Balcony at the top of the Marble Tower in Marble Ruins"

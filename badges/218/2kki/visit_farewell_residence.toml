@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3415
+points = 15
+art = "SamsungFridg"
+
+[conditions]
+default = "M3415"
+
+[lang.en]
+name = "Rusted Tranquility"
+description = "Echos of a final goodbye, lingering within a forlorn town."
+condition = "Visit Farewell Residence"

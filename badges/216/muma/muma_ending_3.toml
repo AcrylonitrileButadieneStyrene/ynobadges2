@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1
+points = 20
+art = "VoxSilentii"
+
+[conditions]
+default = "M1 E2 V164>=7"
+
+[lang.en]
+name = "Nothing Inside"
+description = "Let's leave this world behind us..."
+condition = "See the Ending #3"

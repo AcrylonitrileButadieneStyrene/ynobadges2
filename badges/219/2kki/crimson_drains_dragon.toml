@@ -1,0 +1,13 @@
+[badge]
+map = 4088
+points = 15
+art = "Michi"
+
+[conditions]
+default = "M4088 E1855 INDIRECT"
+secret = true
+
+[lang.en]
+name = "Vermilion Hydra"
+description = "Each head is a sin; each belch of fire is a sin put to action."
+condition = "View the double dragon heads in Crimson Drains"

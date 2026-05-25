@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 135
+points = 15
+art = "starbits"
+
+[conditions]
+default = "M135"
+
+[lang.en]
+name = "Everything and Anything Between You and Me..."
+description = "... was never meant, 'cause you can't miss what you forget."
+condition = "See the Summer House"

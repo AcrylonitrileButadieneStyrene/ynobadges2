@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3272
+points = 15
+art = "sleepysky"
+
+[conditions]
+default = "M3272"
+
+[lang.en]
+name = "Unfading Gloomlight"
+description = "Glimmering lights linger along your way"
+condition = "Visit Candlelight Void"

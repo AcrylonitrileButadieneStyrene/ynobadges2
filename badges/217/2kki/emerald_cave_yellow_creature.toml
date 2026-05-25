@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 778
+points = 15
+art = "w"
+
+[conditions]
+default = "M778 X=68:77 Y=16:22"
+
+[lang.en]
+name = "Emerald Caver"
+description = "Big fan of whatever this is."
+condition = "See the yellow creature in Emerald Cave"

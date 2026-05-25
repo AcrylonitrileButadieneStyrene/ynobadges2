@@ -28,7 +28,8 @@ pub async fn conditions(badges: Arc<[Badge]>) {
             });
 
         for (condition_id, condition) in conditions {
-            let path = format!("ynobadges/conditions/{game_id}/{condition_id}.json");
+            let game = format!("ynobadges/conditions/{game_id}");
+            let path = format!("{game}/{condition_id}.json");
 
             match tokio::fs::read(&path).await {
                 Ok(bytes) => {
@@ -37,7 +38,11 @@ pub async fn conditions(badges: Arc<[Badge]>) {
                         log::warn!("Desync detected: {batch}/{game_id}/{badge_id}.toml != {path}");
                     }
                 }
-                Err(err) if matches!(err.kind(), std::io::ErrorKind::NotFound) => {}
+                Err(err) if matches!(err.kind(), std::io::ErrorKind::NotFound) => {
+                    if !tokio::fs::try_exists(&game).await.unwrap_or_default() {
+                        tokio::fs::create_dir(&game).await.unwrap();
+                    }
+                }
                 Err(err) => panic!("{err}"),
             };
 

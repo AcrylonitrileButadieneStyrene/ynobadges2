@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 168
+points = 10
+art = "Rennatalia & Komaki"
+
+[conditions]
+default = "M168 X=0:27 Y=0:31"
+
+[lang.en]
+name = "Forgotten Route"
+description = "This bus sure is taking forever."
+condition = "See the bus stop in Forest Bus Stop"

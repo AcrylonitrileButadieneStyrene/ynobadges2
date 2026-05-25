@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4031
+points = 15
+art = "HenryAutumn, Cris, and CoolKid95"
+
+[conditions]
+default = "M4031"
+
+[lang.en]
+name = "Analog H-Uro-r"
+description = "Restez à l'écart des terres interdites."
+condition = "See the Giant Urotsuki Monster in Abyss"

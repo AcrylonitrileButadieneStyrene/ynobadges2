@@ -1,0 +1,12 @@
+[badge]
+map = 25
+points = 15
+art = "Kasatate"
+
+[conditions]
+default = "M25"
+
+[lang.en]
+name = "Slow & Serene"
+description = "Relax and take it easy."
+condition = "Visit Veranda"

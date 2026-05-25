@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 109
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M109"
+
+[lang.en]
+name = "Sky of the Past"
+description = "The past flashing before your eye but you can't do anything about it."
+condition = "Reach Rooftop in the School"

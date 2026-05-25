@@ -5,7 +5,7 @@ points = 10
 art = "Masky1977"
 
 [conditions]
-requirements = "visit_night_field OR visit_night_field_after_event"
+requirements = "visit_night_field AND visit_night_field_after_event COUNT=1"
 visit_night_field = "M94"
 
 [lang.en]

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 22
+points = 15
+art = "dawnchorrus"
+
+[conditions]
+default = "M22 S105=ON"
+
+[lang.en]
+name = "Cutest Little Snowglobe"
+description = "Happy Holidays from your beloved Wormiko!"
+condition = "Obtain the Snow Globe effect. If you have already unlocked it, return where it can be found in Snowy Avenue."

@@ -1,0 +1,30 @@
+[badge]
+map = 65
+points = 15
+art = "Sekiranun"
+
+[conditions]
+default = "M65 X=79:92 Y=64:72"
+
+[lang.en]
+name = "Lady Rafflesia"
+description = "The bearer of a smile as unpleasant as the rafflesia's signature stench"
+condition = "Find the rafflesia girl in the Apartments"
+
+[lang.fr]
+condition = "Entrer dans la dernière salle des Apartments"
+
+[lang.ja]
+condition = "Apartmentsの最奥の部屋に入る"
+
+[lang.ko]
+condition = "아파트의 마지막 방에 입장하기"
+
+[lang.pt]
+condition = "Entre na última sala dos apartamentos"
+
+[lang.ru]
+condition = "Доберитесь до последней комнаты Квартир."
+
+[lang.zh]
+condition = "进入Apartments最后一个房间。"

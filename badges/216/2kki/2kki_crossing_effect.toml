@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 91
+points = 15
+art = "Ticks"
+
+[conditions]
+default = "M91 S76=ON"
+
+[lang.en]
+name = "And... STOP!!!"
+condition = "Obtain the Railroad Crossing effect. If you have already unlocked it, return to Heart World."

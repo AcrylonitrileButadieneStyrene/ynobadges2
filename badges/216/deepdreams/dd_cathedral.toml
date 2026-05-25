@@ -1,0 +1,12 @@
+[badge]
+map = 10
+points = 15
+art = "AlfaDream & Anni"
+
+[conditions]
+default = "M10"
+
+[lang.en]
+name = "The Cathedral of Your Dreams"
+description = "Cathedral of dreams, a sanctuary of eternal light where stained glass mirrors your forgotten memories."
+condition = "Visit Cathedral"

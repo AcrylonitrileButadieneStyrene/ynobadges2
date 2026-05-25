@@ -1,7 +1,11 @@
 [badge]
-map = 111
 points = 15
 art = "HenryAutumn"
+
+[badge.map]
+id = 111
+x = 94
+y = 7
 
 [conditions]
 default = "M111 X=92:201 Y=7:136 S6=ON"

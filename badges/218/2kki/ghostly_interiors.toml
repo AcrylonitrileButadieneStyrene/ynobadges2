@@ -1,0 +1,34 @@
+[badge]
+animated = true
+map = 925
+points = 25
+art = "Etikals"
+
+[conditions]
+default = "M925 X=68:99 Y=0:169"
+
+[lang.en]
+name = "Spirit Resonance"
+description = "A sound Spirit dwells within a sound mind....and a sound body..."
+condition = "Enter the spirit mansion in the Haunted Forest Town"
+
+[lang.fr]
+condition = "Entrer dans le Manoir des Âmes dans l'Haunted Forest Town"
+
+[lang.ja]
+condition = "森屋敷に到達する"
+
+[lang.ko]
+condition = "Haunted Forest Town의 Spirit Mansion 서브 에리어를 방문하기"
+
+[lang.pt]
+condition = "Entre na mansão espiritual em Haunted Forest Town."
+
+[lang.ru]
+condition = "Войдите в особняк духов в Haunted Forest Town."
+
+[lang.vt]
+condition = "Vào căn biệt thự ma quái ở Haunted Forest Town"
+
+[lang.zh]
+condition = "进入Haunted Forest Town的闹鬼宅邸"

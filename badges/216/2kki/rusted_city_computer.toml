@@ -1,0 +1,12 @@
+[badge]
+map = 207
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M207 E19"
+
+[lang.en]
+name = "Machinery That Lasts"
+description = "Well... Don't let the rust consume you now."
+condition = "Interact with the only working computer in Rusted City"

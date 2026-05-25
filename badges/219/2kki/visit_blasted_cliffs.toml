@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3886
+points = 25
+art = "Etikals & HenryAutumn"
+
+[conditions]
+default = "M3886"
+
+[lang.en]
+name = "Turbine Tempest"
+description = "Above the clouds beyond the cliffs they spin."
+condition = "Visit Blasted Cliffs"

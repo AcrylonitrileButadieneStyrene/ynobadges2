@@ -1,0 +1,12 @@
+[badge]
+map = 839
+points = 25
+art = "Iesu"
+
+[conditions]
+default = "M839 V5=1"
+
+[lang.en]
+name = "In the Monochrome Skies"
+description = "It's a bird! It's a plane! no, it's totally not a Tako-Fuusen!"
+condition = "Witness Takofuusen's distant cousin in Monochromatic Abyss"

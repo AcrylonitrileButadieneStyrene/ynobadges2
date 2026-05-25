@@ -1,0 +1,22 @@
+[badge]
+animated = true
+points = 15
+art = "HenryAutumn"
+
+[badge.map]
+id = 118
+secret = true
+
+[conditions]
+requirements = "2kki_visit_museum AND 2kki_visit_dark_museum"
+2kki_visit_museum = "M118"
+2kki_visit_dark_museum = "M255"
+
+[lang.en]
+name = "Idol of the Forgotten Dreamer"
+description = "This strange idol was uncovered in a ruined Japanese Temple. No one knows what it represents but it emanates an abnormal glow. It has been moved to a museum where two security guards are always watching over it for unknown reasons..."
+condition = "Visit both the Museum and Dark Museum"
+
+[lang.en.checkbox]
+2kki_visit_museum = "Museum"
+2kki_visit_dark_museum = "Dark Museum"

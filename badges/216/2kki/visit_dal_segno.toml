@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2466
+points = 15
+art = "Aurora"
+
+[conditions]
+default = "M2466"
+
+[lang.en]
+name = "Displacement Dal Segno"
+description = "Let's meet again at the village where snow falls, and the fireflies fly."
+condition = "Visit Dal Segno Labyrinth"

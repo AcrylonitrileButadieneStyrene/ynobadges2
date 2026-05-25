@@ -52,6 +52,9 @@ pub enum Token {
     #[token("DELAYED")]
     Delayed,
 
+    #[token("INDIRECT")]
+    Indirect,
+
     #[token("Picture")]
     Picture,
 

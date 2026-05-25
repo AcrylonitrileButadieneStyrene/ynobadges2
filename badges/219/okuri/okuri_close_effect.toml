@@ -1,0 +1,12 @@
+[badge]
+map = 51
+points = 10
+art = "Ticks"
+
+[conditions]
+default = "M51 S172=ON"
+
+[lang.en]
+name = "Mini Butsudan"
+description = "How do you even walk with that?"
+condition = "Obtain the Close effect. If you have already unlocked it, return to Tatami Room."

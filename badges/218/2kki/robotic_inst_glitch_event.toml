@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 1244
+points = 20
+art = "IronCam"
+
+[conditions]
+requirements = "robotic_inst_glitch_event_a OR robotic_inst_glitch_event_b"
+robotic_inst_glitch_event_a = "M1244 X=130:169 Y=0:49"
+robotic_inst_glitch_event_b = "M1244 X=81:129 Y=0:27"
+
+[lang.en]
+name = "Corrupted Facility"
+condition = "Witness the glitched event in Robotic Institution"

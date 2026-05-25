@@ -5,18 +5,18 @@ use super::token::Token;
 type TokenSpan = (Token, std::ops::Range<usize>);
 
 pub struct Parser {
-    tokens: Vec<TokenSpan>,
-    state: State,
-    condition: Condition,
-    position: usize,
+    pub tokens: Vec<TokenSpan>,
+    pub state: State,
+    pub condition: Condition,
+    pub position: usize,
 }
 
-struct State {
-    last_delayable: Option<DelayTarget>,
-    has_trigger: bool,
+pub struct State {
+    pub last_delayable: Option<DelayTarget>,
+    pub has_trigger: bool,
 }
 
-enum DelayTarget {
+pub enum DelayTarget {
     Switch,
     Variable,
 }
@@ -56,7 +56,8 @@ impl Parser {
                     self.condition.map = Some(*id as u16);
                 }
                 Token::X => {
-                    let (x1, x2) = self.equals_range()?;
+                    self.expect_equals()?;
+                    let (x1, x2) = self.range()?;
                     self.condition.map_x1 = x1 as _;
                     self.condition.map_x2 = x2.unwrap_or_default() as _;
                     if self.condition.trigger.is_none() && !self.state.has_trigger {
@@ -65,7 +66,8 @@ impl Parser {
                     }
                 }
                 Token::Y => {
-                    let (y1, y2) = self.equals_range()?;
+                    self.expect_equals()?;
+                    let (y1, y2) = self.range()?;
                     self.condition.map_y1 = y1 as _;
                     self.condition.map_y2 = y2.unwrap_or_default() as _;
                     if self.condition.trigger.is_none() && !self.state.has_trigger {
@@ -88,28 +90,7 @@ impl Parser {
                         _ => return Err(Error::Expected("boolean")),
                     };
 
-                    if let (Some(switch_ids), Some(switch_values)) = (
-                        &mut self.condition.switch_ids,
-                        &mut self.condition.switch_values,
-                    ) {
-                        switch_ids.push(id);
-                        switch_values.push(value);
-                    } else if let Some(existing) = self.condition.switch_id {
-                        self.condition.switch_ids = Some(vec![existing, id]);
-                        self.condition.switch_values =
-                            Some(vec![self.condition.switch_value, value]);
-                        self.condition.switch_id = None;
-                        self.condition.switch_value = false;
-                    } else {
-                        self.condition.switch_id = Some(id);
-                        self.condition.switch_value = value;
-                    }
-
-                    self.state.last_delayable = Some(DelayTarget::Switch);
-                    self.state.has_trigger = true;
-                    if self.condition.trigger == Some(ConditionTrigger::Coords) {
-                        self.condition.trigger = None;
-                    }
+                    super::transformers::push_switch(self, id, value);
                 }
                 Token::Variable => {
                     let Some(Token::Number(id)) = self.next() else {
@@ -129,48 +110,22 @@ impl Parser {
                     }
                     .to_string();
 
-                    let Some(Token::Number(value)) = self.next() else {
-                        return Err(Error::Expected("number"));
+                    let (value1, value2) = if op == "=" {
+                        self.range()?
+                    } else {
+                        let Some(Token::Number(value)) = self.next() else {
+                            return Err(Error::Expected("number"));
+                        };
+
+                        (*value, None)
                     };
 
-                    let value = *value;
-
-                    if let (Some(var_ids), Some(var_ops), Some(var_values)) = (
-                        &mut self.condition.var_ids,
-                        &mut self.condition.var_ops,
-                        &mut self.condition.var_values,
-                    ) {
-                        var_ids.push(id);
-                        var_ops.push(op);
-                        var_values.push(value);
-                    } else if let (Some(existing_id), Some(existing_value)) =
-                        (self.condition.var_id, self.condition.var_value)
-                    {
-                        let existing_op = self
-                            .condition
-                            .var_op
-                            .clone()
-                            .unwrap_or_else(|| "=".to_string());
-
-                        self.condition.var_ids = Some(vec![existing_id, id]);
-                        self.condition.var_ops = Some(vec![existing_op.clone(), op]);
-                        self.condition.var_values = Some(vec![existing_value, value]);
-
-                        self.condition.var_id = None;
-                        self.condition.var_op = None;
-                        self.condition.var_value = None;
+                    if let Some(value2) = value2 {
+                        self.condition.var_value = Some(value1);
+                        self.condition.var_op = Some(">=<".to_string());
+                        self.condition.var_value2 = Some(value2);
                     } else {
-                        self.condition.var_id = Some(id);
-                        if op != "=" {
-                            self.condition.var_op = Some(op);
-                        }
-                        self.condition.var_value = Some(value);
-                    }
-
-                    self.state.last_delayable = Some(DelayTarget::Variable);
-                    self.state.has_trigger = true;
-                    if self.condition.trigger == Some(ConditionTrigger::Coords) {
-                        self.condition.trigger = None;
+                        super::transformers::push_variable(self, id, op, value1);
                     }
                 }
                 Token::Event => {
@@ -190,6 +145,13 @@ impl Parser {
                     }
                     None => return Err(Error::Expected("a switch or variable earlier")),
                 },
+                Token::Indirect => {
+                    if matches!(self.condition.trigger, Some(ConditionTrigger::EventAction)) {
+                        self.condition.trigger = Some(ConditionTrigger::Event);
+                    } else {
+                        return Err(Error::Expected("cannot make non-event action indirect"));
+                    }
+                }
                 Token::Picture => {
                     self.expect_equals()?;
                     let Some(Token::String(string)) = self.next() else {
@@ -208,9 +170,7 @@ impl Parser {
         Ok(())
     }
 
-    fn equals_range(&mut self) -> Result<(i32, Option<i32>), Error> {
-        self.expect_equals()?;
-
+    fn range(&mut self) -> Result<(i32, Option<i32>), Error> {
         let Some(Token::Number(x1)) = self.next() else {
             return Err(Error::Expected("number"));
         };

@@ -1,0 +1,12 @@
+[badge]
+map = 3245
+points = 10
+art = "Aurora"
+
+[conditions]
+default = "M3245 E1"
+
+[lang.en]
+name = "Real Fake Fox"
+description = "The folks in the Nexus would LOVE you!"
+condition = "Interact with Apricot in Crossing Forest with the Wolf effect"

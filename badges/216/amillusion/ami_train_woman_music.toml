@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 175
+points = 15
+art = "Tanjunebi"
+
+[conditions]
+default = "M175 E10"
+
+[lang.en]
+name = "Jazzy Tune"
+description = "But first, will you dance with me?"
+condition = "Interact with the woman who changes the music in Le Jazzy Train Bleu"

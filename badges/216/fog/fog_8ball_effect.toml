@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 25
+points = 15
+art = "Tanjunebi"
+
+[conditions]
+default = "M25 S149=ON"
+
+[lang.en]
+name = "Ask Me Anything"
+description = "Reply hazy, please try again."
+condition = "Obtain the 8 Ball effect. If you have already unlocked it, return to the Path to Pyramid in Grass World."

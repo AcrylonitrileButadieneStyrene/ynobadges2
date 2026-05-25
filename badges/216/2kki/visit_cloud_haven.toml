@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2774
+points = 15
+art = "w"
+
+[conditions]
+default = "M2774"
+
+[lang.en]
+name = "Head in the Clouds"
+description = "\"I found this really soft picnic spot!\""
+condition = "Visit Cloud Haven"

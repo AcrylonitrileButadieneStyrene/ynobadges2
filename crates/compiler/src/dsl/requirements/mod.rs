@@ -1,5 +1,7 @@
 use logos::Logos as _;
 
+use crate::dsl::requirements::token::Token;
+
 mod token;
 
 #[derive(Debug, PartialEq, Eq)]
@@ -7,6 +9,7 @@ pub enum Request {
     All,
     Tag(String),
     Tags(Vec<String>),
+    TagsCount(Vec<String>, u8),
     TagArray(Vec<Vec<String>>),
 }
 
@@ -14,11 +17,12 @@ enum State {
     Default,
     Split,
     Merge,
+    ExpectingCount,
 }
 
 #[must_use]
 pub fn parse(input: &str) -> Option<Request> {
-    token::Token::lexer(input)
+    Token::lexer(input)
         .spanned()
         .map(|(token, span)| token.map(|token| (token, span.clone())).map_err(|()| span))
         .try_collect::<Vec<_>>()
@@ -39,20 +43,20 @@ pub fn parse(input: &str) -> Option<Request> {
             (Some(Request::All), State::Default),
             |(acc, state), (token, span)| match acc {
                 None => (None, state),
-                x if matches!(token, token::Token::And) && matches!(state, State::Default) => {
+                x if matches!(token, Token::And) && matches!(state, State::Default) => {
                     (x, State::Merge)
                 }
-                x if matches!(token, token::Token::Or) && matches!(state, State::Default) => {
+                x if matches!(token, Token::Or) && matches!(state, State::Default) => {
                     (x, State::Split)
                 }
                 Some(Request::All)
-                    if let token::Token::ID(ref id) = token
+                    if let Token::ID(ref id) = token
                         && matches!(state, State::Default) =>
                 {
                     (Some(Request::Tag(id.clone())), State::Default)
                 }
                 Some(Request::Tag(existing))
-                    if let token::Token::ID(ref id) = token
+                    if let Token::ID(ref id) = token
                         && matches!(state, State::Merge) =>
                 {
                     (
@@ -61,7 +65,7 @@ pub fn parse(input: &str) -> Option<Request> {
                     )
                 }
                 Some(Request::Tag(existing))
-                    if let token::Token::ID(ref id) = token
+                    if let Token::ID(ref id) = token
                         && matches!(state, State::Split) =>
                 {
                     (
@@ -70,14 +74,14 @@ pub fn parse(input: &str) -> Option<Request> {
                     )
                 }
                 Some(Request::Tags(mut array))
-                    if let token::Token::ID(ref id) = token
+                    if let Token::ID(ref id) = token
                         && matches!(state, State::Merge) =>
                 {
                     array.push(id.clone());
                     (Some(Request::Tags(array)), State::Default)
                 }
                 Some(Request::Tags(mut array))
-                    if let token::Token::ID(ref id) = token
+                    if let Token::ID(ref id) = token
                         && matches!(state, State::Split) =>
                 {
                     let last = array.pop().unwrap();
@@ -89,15 +93,21 @@ pub fn parse(input: &str) -> Option<Request> {
 
                     (Some(Request::TagArray(old)), State::Default)
                 }
+                Some(Request::Tags(array)) if matches!(token, Token::Count) => {
+                    (Some(Request::TagsCount(array, 0)), State::ExpectingCount)
+                }
+                Some(Request::TagsCount(array, _)) if let Token::Number(count) = token => {
+                    (Some(Request::TagsCount(array, count)), State::Default)
+                }
                 Some(Request::TagArray(mut array))
-                    if let token::Token::ID(ref id) = token
+                    if let Token::ID(ref id) = token
                         && matches!(state, State::Merge) =>
                 {
                     array.push(vec![id.clone()]);
                     (Some(Request::TagArray(array)), State::Default)
                 }
                 Some(Request::TagArray(mut array))
-                    if let token::Token::ID(ref id) = token
+                    if let Token::ID(ref id) = token
                         && matches!(state, State::Split) =>
                 {
                     array.last_mut().unwrap().push(id.clone());
@@ -106,10 +116,7 @@ pub fn parse(input: &str) -> Option<Request> {
                 _ => {
                     ariadne::Report::build(ariadne::ReportKind::Error, span.clone())
                         .with_message("unrecognized token")
-                        .with_label(
-                            ariadne::Label::new(span)
-                                .with_message("Does not match any known tokens"),
-                        )
+                        .with_label(ariadne::Label::new(span).with_message("Unexpected token"))
                         .finish()
                         .eprint(ariadne::Source::from(input))
                         .unwrap();

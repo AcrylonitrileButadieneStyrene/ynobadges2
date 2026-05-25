@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3093
+points = 10
+art = "CoolKid95"
+
+[conditions]
+default = "M3093 E110"
+
+[lang.en]
+name = "Music Notes"
+description = "What a chill little bunny. Where did that sound come from, though?"
+condition = "Interact with the bunny in Stereo Station"

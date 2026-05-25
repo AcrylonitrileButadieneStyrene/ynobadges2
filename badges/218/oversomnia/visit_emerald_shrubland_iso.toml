@@ -1,0 +1,12 @@
+[badge]
+map = 59
+points = 15
+art = "Kantyo"
+
+[conditions]
+default = "M59 E6"
+
+[lang.en]
+name = "In the Quiet of Waiting for Something"
+description = "While the magpie waits for something, we share a quiet of our own."
+condition = "Visit the isolated section of Emerald Shrubland from the Vile Tunnels"

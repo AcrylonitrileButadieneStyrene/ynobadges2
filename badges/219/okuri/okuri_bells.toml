@@ -1,0 +1,16 @@
+[badge]
+animated = true
+map = 42
+points = 15
+art = "HenryAutumn & Tanjunebi"
+
+[conditions]
+okuri_bell_a = "M42 E13"
+okuri_bell_b = "M42 E14"
+okuri_bell_c = "M42 E15"
+okuri_bell_d = "M42 E16"
+
+[lang.en]
+name = "Little Bell-Ringer"
+description = "Would you care to make a donation to the Subconscious Association?"
+condition = "Interact with every bell in Bell Passage"

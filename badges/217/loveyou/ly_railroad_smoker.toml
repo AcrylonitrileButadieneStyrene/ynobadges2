@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 139
+points = 15
+art = "Canio"
+
+[conditions]
+default = "M139 E12"
+
+[lang.en]
+name = "Phantom Express"
+description = "A brawl is surely brewing! You're up!"
+condition = "Interact with the Smoking Motorman in Orange Railroad Crossing"

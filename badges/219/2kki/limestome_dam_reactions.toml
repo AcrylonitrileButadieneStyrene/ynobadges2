@@ -1,0 +1,18 @@
+[badge]
+animated = true
+map = 4082
+points = 15
+art = "3heart"
+
+[conditions]
+requirements = "limestome_dam_reaction_a1 OR limestome_dam_reaction_a2 AND limestome_dam_reaction_b AND limestome_dam_reaction_c AND limestome_dam_reaction_d"
+limestome_dam_reaction_a1 = "M4082 X=0:7 Y=52:56 S124=ON"
+limestome_dam_reaction_a2 = "M4082 X=0:7 Y=52:56 S153=ON"
+limestome_dam_reaction_b = "M4082 X=0:7 Y=52:56 S129=ON"
+limestome_dam_reaction_c = "M4082 X=0:7 Y=52:56 S138=ON"
+limestome_dam_reaction_d = "M4082 X=0:7 Y=52:56 S139=ON"
+
+[lang.en]
+name = "The Great Prism in the Sky"
+description = "And I am not frightened of dreaming"
+condition = "Use every effect that reacts to the giant prism in Limestone Dam"

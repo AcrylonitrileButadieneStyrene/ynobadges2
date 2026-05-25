@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 728
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M728"
+
+[lang.en]
+name = "Each Day Better than the Last"
+description = "Daytime turns into dusk, dusk turns into nighttime, and nighttime turns into dawn."
+condition = "Visit Cloud Tops"

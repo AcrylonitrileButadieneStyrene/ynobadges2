@@ -1,0 +1,11 @@
+[badge]
+map = 13
+points = 10
+art = "vena"
+
+[conditions]
+default = "M13 S23=ON"
+
+[lang.en]
+name = "Bioluminescent Seashells"
+condition = "Use the Light Bug effect in the night version of Seaside"

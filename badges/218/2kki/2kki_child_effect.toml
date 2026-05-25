@@ -1,0 +1,12 @@
+[badge]
+map = 295
+points = 10
+art = "Catsalotl "
+
+[conditions]
+default = "M295 S67=ON"
+
+[lang.en]
+name = "Inner Child"
+description = "Back to simpler times..."
+condition = "Obtain the Child effect. If you have already unlocked it, return where it can be in found in the isolated section of the Hourglass Desert accessible from Ocean Floor."

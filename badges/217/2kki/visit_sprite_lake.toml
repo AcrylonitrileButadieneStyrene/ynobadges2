@@ -1,0 +1,12 @@
+[badge]
+map = 4085
+points = 20
+art = "HenryAutumn"
+
+[conditions]
+default = "M4085"
+
+[lang.en]
+name = "A Land Where Water and Sky are One"
+description = "The most patient adventurers receive the most beautiful reward."
+condition = "Visit Sprite Lake"

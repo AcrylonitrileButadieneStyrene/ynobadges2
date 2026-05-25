@@ -5,7 +5,8 @@ points = 25
 art = "Aurora"
 
 [conditions]
-default = "M9 E6 S217=ON"
+requirements = "muma_realm_orb_empty AND realm_of_the_orb_snake_a COUNT=1"
+muma_realm_orb_empty = "M9 E6 INDIRECT S217=ON"
 
 [lang.en]
 name = "Caution! Fragile!"

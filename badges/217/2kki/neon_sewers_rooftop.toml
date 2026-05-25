@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3153
+points = 15
+art = "Sheanicc"
+
+[conditions]
+default = "M3153 X=0:28 Y=115:119"
+
+[lang.en]
+name = "Where an Afterglow Revolves Forever"
+description = "After reaching the top of the world everything is far beyond reach, the world flows forever, together with an eternal afterglow."
+condition = "Reach the rooftop in Neon Sewers"

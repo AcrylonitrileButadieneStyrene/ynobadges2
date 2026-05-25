@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 25
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M25 X=46:53 Y=4:11 S165=ON"
+
+[lang.en]
+name = "Please Take Care of Me"
+description = "They little bit shy are they?"
+condition = "Obtain the Turtle effect. If you have already unlocked it, return where it can be found in Veranda."

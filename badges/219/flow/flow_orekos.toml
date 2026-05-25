@@ -1,0 +1,30 @@
+[badge]
+group = "2_zz"
+animated = true
+points = 35
+art = "DreamBird"
+
+[badge.map]
+id = 243
+secret = true
+
+[conditions]
+requirements = "flow_oreko_hospital AND flow_oreko_orange_maze_1 OR flow_oreko_orange_maze_2 AND flow_oreko_submarine_world_1 OR flow_oreko_submarine_world_2 OR flow_oreko_submarine_world_3 OR flow_oreko_submarine_world_4 AND flow_oreko_deadhole"
+flow_oreko_hospital = "M243 S260=OFF"
+flow_oreko_orange_maze_1 = "M81 X=0:10 Y=37:49"
+flow_oreko_orange_maze_2 = "M99 X=8:20 Y=7:19"
+flow_oreko_submarine_world_1 = "M25 V33=13:14 X=17:28 Y=53:63"
+flow_oreko_submarine_world_2 = "M25 V33=10 X=3:11 Y=36:44"
+flow_oreko_submarine_world_3 = "M25 V33=12 X=68:77 Y=13:21"
+flow_oreko_submarine_world_4 = "M28 V33>=6"
+flow_oreko_deadhole = "M262 X=18:41 Y=60:60 S339=ON"
+
+[lang.en]
+name = "Every Version of Her"
+condition = "See Oreko in the Hospital, Orange Maze, Submarine World, and in the Deadhole sub-area of Hole"
+
+[lang.en.checkbox]
+"flow_oreko_hospital" = "Hospital"
+"flow_oreko_orange_maze_1|flow_oreko_orange_maze_2" = "Orange Maze"
+"flow_oreko_submarine_world_1|flow_oreko_submarine_world_2|flow_oreko_submarine_world_3|flow_oreko_submarine_world_4" = "Submarine World"
+"flow_oreko_deadhole" = "Deadhole sub-area of Hole"

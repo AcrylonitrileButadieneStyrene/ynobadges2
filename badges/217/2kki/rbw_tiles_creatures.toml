@@ -1,0 +1,20 @@
+[badge]
+animated = true
+map = 1102
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+rbw_tiles_creatures_green = "M1102 E3 E6 E7 E63"
+rbw_tiles_creatures_red = "M1102 E45 E46 E47 E49 E50 E62"
+rbw_tiles_creatures_yellow = "M1102 E39 E40 E41 E42 E43 E44 E61"
+rbw_tiles_creatures_blue = "M1102 E9 E10 E11 E12 E13 E14 E56"
+rbw_tiles_creatures_gray = "M1102 E33 E34 E35 E36 E37 E38 E60"
+rbw_tiles_creatures_cyan = "M1102 E16 E17 E18 E19 E20 E57"
+rbw_tiles_creatures_orange = "M1102 E21 E22 E23 E24 E25 E26 E58"
+rbw_tiles_creatures_pink = "M1102 E27 E28 E30 E31 E32 E59"
+
+[lang.en]
+name = "Colorful Critters"
+description = "Not all who wander are truly lost."
+condition = "Interact with every creature in Rainbow Tiles Maze"

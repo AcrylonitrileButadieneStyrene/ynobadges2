@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 10
+points = 10
+art = "DreamBird"
+
+[conditions]
+default = "M10 S49=ON"
+
+[lang.en]
+name = "Old Blood and Steel"
+description = "I loved you, but now I hate you..."
+condition = "Obtain the Meat Cleaver effect. If you have already unlocked it, return to Copper World."
