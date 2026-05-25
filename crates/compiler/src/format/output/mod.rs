@@ -61,10 +61,14 @@ pub enum BadgeReqType {
 #[allow(clippy::struct_excessive_bools)]
 pub struct Condition {
     pub map: Option<u16>,
-    pub map_x1: Option<u16>,
-    pub map_x2: Option<u16>,
-    pub map_y1: Option<u16>,
-    pub map_y2: Option<u16>,
+    #[serde(default, skip_serializing_if = "default")]
+    pub map_x1: u16,
+    #[serde(default, skip_serializing_if = "default")]
+    pub map_y1: u16,
+    #[serde(default, skip_serializing_if = "default")]
+    pub map_x2: u16,
+    #[serde(default, skip_serializing_if = "default")]
+    pub map_y2: u16,
     pub switch_id: Option<u16>,
     #[serde(default, skip_serializing_if = "default")]
     pub switch_value: bool,

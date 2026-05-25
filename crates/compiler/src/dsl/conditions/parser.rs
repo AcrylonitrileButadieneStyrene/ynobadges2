@@ -57,8 +57,8 @@ impl Parser {
                 }
                 Token::X => {
                     let (x1, x2) = self.equals_range()?;
-                    self.condition.map_x1 = Some(x1 as _);
-                    self.condition.map_x2 = x2.map(|x| x as _);
+                    self.condition.map_x1 = x1 as _;
+                    self.condition.map_x2 = x2.unwrap_or_default() as _;
                     if self.condition.trigger.is_none() && !self.state.has_trigger {
                         self.condition.trigger =
                             Some(crate::format::output::ConditionTrigger::Coords);
@@ -66,8 +66,8 @@ impl Parser {
                 }
                 Token::Y => {
                     let (y1, y2) = self.equals_range()?;
-                    self.condition.map_y1 = Some(y1 as _);
-                    self.condition.map_y2 = y2.map(|x| x as _);
+                    self.condition.map_y1 = y1 as _;
+                    self.condition.map_y2 = y2.unwrap_or_default() as _;
                     if self.condition.trigger.is_none() && !self.state.has_trigger {
                         self.condition.trigger =
                             Some(crate::format::output::ConditionTrigger::Coords);

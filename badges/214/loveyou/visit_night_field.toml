@@ -5,7 +5,8 @@ points = 10
 art = "Masky1977"
 
 [conditions]
-default = "M94"
+requirements = "visit_night_field OR visit_night_field_after_event"
+visit_night_field = "M94"
 
 [lang.en]
 name = "Midnight Fields"

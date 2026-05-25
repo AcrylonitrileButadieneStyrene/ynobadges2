@@ -5,7 +5,9 @@ points = 15
 art = "LittleCherry"
 
 [conditions]
-default = "M126 E16"
+requirements = "cold_a_effect OR cold_a_effect_after_event"
+cold_a_effect = "M126 E16"
+cold_a_effect_after_event = "M131 S270=ON"
 
 [lang.en]
 name = "A"

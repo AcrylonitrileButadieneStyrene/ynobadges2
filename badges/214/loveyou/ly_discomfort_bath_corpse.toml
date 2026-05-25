@@ -5,7 +5,8 @@ points = 20
 art = "Anju"
 
 [conditions]
-default = "M31 E3"
+requirements = "ly_discomfort_bath_corpse OR ly_discomfort_bath_corpse_after"
+ly_discomfort_bath_corpse = "M31 E3"
 
 [lang.en]
 name = "Worthless"

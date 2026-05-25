@@ -1,8 +1,12 @@
 [badge]
 animated = true
-map = 1308
 points = 20
 art = "Paraverdant"
+
+[badge.map]
+id = 1308
+x = 42
+y = 52
 
 [conditions]
 default = "M1308 X=21:38 Y=99:101 S5031=ON"
