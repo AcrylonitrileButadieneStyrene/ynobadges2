@@ -3,7 +3,7 @@ group = "2_ts"
 animated = true
 map = 539
 points = 15
-art = "Witness the Screaming Monster Event in Freezing Point"
+art = "Tanjunebi"
 
 [conditions]
 default = "M539 E2 E6 S192=ON X=27:28 Y=58:58"

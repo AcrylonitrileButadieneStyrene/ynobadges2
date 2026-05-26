@@ -4,7 +4,7 @@ points = 10
 art = "Kantyo"
 
 [conditions]
-default = "M20 S170=ON"
+requirements = "bouquet_chrysanthemum"
 
 [lang.en]
 name = "Chrysanthemums Adrift in Tranquility"

@@ -4,7 +4,7 @@ points = 15
 art = "vena"
 
 [conditions]
-default = "M2983"
+requirements = "beach_rockbound"
 
 [lang.en]
 name = "Rocky Islands"

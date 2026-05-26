@@ -4,7 +4,7 @@ points = 10
 art = "Ticks"
 
 [conditions]
-default = "M17 S167=ON"
+requirements = "bouquet_sunflower"
 
 [lang.en]
 name = "Sun Petals"

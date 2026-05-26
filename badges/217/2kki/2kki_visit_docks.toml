@@ -9,11 +9,11 @@ id = 187
 secret = true
 
 [conditions]
-requirements = "visit_docks AND visit_lezaxzasea_docks AND visit_streetlight_docks AND visit_flooded_docks AND visit_barley_docks AND visit_dreadful_docks AND visit_rainy_docks AND visit_blinking_docks AND visit_serene_docks AND wan_lotus_docks AND visit_white_pillar_docks AND visit_birch_tree_docks AND visit_sweet_pink_docks"
-visit_docks = "M187"
-visit_lezaxzasea_docks = "M3403"
+requirements = "the_docks AND lezaxzasea_docks AND visit_streetlight_docks AND flooded_docks AND visit_barley_docks AND visit_dreadful_docks AND visit_rainy_docks AND visit_blinking_docks AND visit_serene_docks AND wan_lotus_docks AND visit_white_pillar_docks AND visit_birch_tree_docks AND visit_sweet_pink_docks"
+# reusing `the_docks`
+# reusing `lezaxzasea_docks`
 visit_streetlight_docks = "M1824"
-visit_flooded_docks = "M2887"
+# reusing `flooded_docks`
 visit_barley_docks = "M3459"
 visit_dreadful_docks = "M1302 X=0:126 Y=0:136"
 visit_rainy_docks = "M846"
@@ -30,10 +30,10 @@ description = "Either you love maritime infrastructure, or you may be a boat. Ei
 condition = "Visit the following worlds themed around docks: Docks, Lezaxzasea Docks, Streetlight Docks, Flooded Docks, Barley Docks, Dreadful Docks, Rainy Docks, Blinking Docks, Serene Docks, Wan Lotus Docks, White Pillar Docks, Birch Tree Docks, and Sweet Pink Docks"
 
 [lang.en.combo]
-visit_docks = "Docks"
-visit_lezaxzasea_docks = "Lezaxzasea Docks"
+the_docks = "Docks"
+lezaxzasea_docks = "Lezaxzasea Docks"
 visit_streetlight_docks = "Streetlight Docks"
-visit_flooded_docks = "Flooded Docks"
+flooded_docks = "Flooded Docks"
 visit_barley_docks = "Barley Docks"
 visit_dreadful_docks = "Dreadful Docks"
 visit_rainy_docks = "Rainy Docks"

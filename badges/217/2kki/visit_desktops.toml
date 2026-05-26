@@ -10,11 +10,10 @@ id = 3591
 secret = true
 
 [conditions]
-requirements = "visit_the_desktop AND file_viewer AND visit_azure_overdose_zone AND visit_sink_catalog AND visit_ascii_symbol_zone AND tranquil_park"
+requirements = "visit_the_desktop AND file_viewer AND visit_azure_overdose_zone AND sink_catalog AND visit_ascii_symbol_zone AND tranquil_park"
 visit_the_desktop = "M3591"
 # reusing `file_viewer`
 visit_azure_overdose_zone = "M2879"
-visit_sink_catalog = "M3634"
 visit_ascii_symbol_zone = "M3219"
 # reusing `tranquil_park`
 
@@ -27,6 +26,6 @@ condition = "Visit the following worlds themed around desktops: The Desktop, Fil
 visit_the_desktop = "The Desktop"
 file_viewer = "File Viewer"
 visit_azure_overdose_zone = "Azure Overdose Zone"
-visit_sink_catalog = "Sink Catalog"
+sink_catalog = "Sink Catalog"
 visit_ascii_symbol_zone = "ASCII Symbol Zone"
 tranquil_park = "Tranquil Park"

@@ -1,7 +1,7 @@
 [badge]
 map = 295
 points = 10
-art = "Catsalotl "
+art = "Catsalotl"
 
 [conditions]
 default = "M295 S67=ON"
