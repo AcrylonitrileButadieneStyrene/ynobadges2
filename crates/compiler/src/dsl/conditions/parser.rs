@@ -133,8 +133,17 @@ impl Parser {
                         return Err(Error::Expected("number"));
                     };
 
-                    self.condition.value = Some(id.to_string());
-                    self.condition.trigger = Some(ConditionTrigger::EventAction);
+                    let id = id.to_string();
+
+                    if let Some(values) = &mut self.condition.values {
+                        values.push(id);
+                    } else if let Some(prev_value) = &self.condition.value {
+                        self.condition.values = Some(vec![prev_value.clone(), id]);
+                        self.condition.value = None;
+                    } else {
+                        self.condition.value = Some(id);
+                        self.condition.trigger = Some(ConditionTrigger::EventAction);
+                    }
                 }
                 Token::Delayed => match self.state.last_delayable {
                     Some(DelayTarget::Switch) => {
