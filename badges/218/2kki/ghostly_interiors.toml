@@ -15,9 +15,6 @@ condition = "Enter the spirit mansion in the Haunted Forest Town"
 [lang.fr]
 condition = "Entrer dans le Manoir des Âmes dans l'Haunted Forest Town"
 
-[lang.ja]
-condition = "森屋敷に到達する"
-
 [lang.ko]
 condition = "Haunted Forest Town의 Spirit Mansion 서브 에리어를 방문하기"
 

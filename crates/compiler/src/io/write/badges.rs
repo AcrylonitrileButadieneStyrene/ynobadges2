@@ -69,17 +69,28 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             Request::TagArray(ids) => (None, None, Some(ids), BadgeReqType::TagArrays, None),
         };
 
+        let group = config.groups.get(game_id).and_then(|game| {
+            let filtered = bundle
+                .badge
+                .group
+                .clone()
+                .filter(|group| game.list.contains(group));
+            if bundle.badge.group.is_some() && filtered.is_none() {
+                log::warn!(
+                    "Invalid group {} for badge {batch}/{game_id}/{badge_id}.toml",
+                    bundle.badge.group.as_ref().unwrap()
+                );
+            }
+
+            filtered.or_else(|| game.default.clone())
+        });
+
         let out = output::Badge {
             animated: bundle.badge.animated,
             art: bundle.badge.art.clone(),
             batch: *batch,
             bp: NonZeroU16::new(bundle.badge.points).map(Into::into), // todo: temporary
-            group: bundle.badge.group.clone().or_else(|| {
-                config
-                    .groups
-                    .get(game_id)
-                    .and_then(|group| group.default.clone())
-            }),
+            group,
             hidden: bundle.badge.hidden,
             map: Some(map_id),
             map_order: None,
