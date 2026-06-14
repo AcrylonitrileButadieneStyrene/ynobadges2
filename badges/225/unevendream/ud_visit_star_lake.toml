@@ -1,0 +1,12 @@
+[badge]
+map = 511
+points = 15
+art = "Catsalotl"
+
+[conditions]
+default = "M511"
+
+[lang.en]
+name = "Starlight Reflections"
+description = "Is this where shooting stars go when they want to sleep?"
+condition = "Visit Star Lake"

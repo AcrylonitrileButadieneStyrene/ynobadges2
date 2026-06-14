@@ -1,0 +1,12 @@
+[badge]
+map = 3707
+points = 20
+art = "Paraverdant"
+
+[conditions]
+default = "M3707"
+
+[lang.en]
+name = "Astral Chroma"
+description = "...on the edge of oblivion."
+condition = "Visit Neon Spacewalk"

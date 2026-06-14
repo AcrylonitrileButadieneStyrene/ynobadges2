@@ -1,0 +1,12 @@
+[badge]
+map = 2199
+points = 15
+art = "aukse"
+
+[conditions]
+default = "M2199"
+
+[lang.en]
+name = "Someone Familiar"
+description = "There's a resemblance between us..."
+condition = "Visit Someone's Room that leads to the Mini-Nexus"

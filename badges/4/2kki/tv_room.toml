@@ -1,0 +1,37 @@
+[badge]
+animated = true
+map = 482
+points = 10
+art = "Michi"
+
+[conditions]
+default = "M482 X=0:20 Y=78:99"
+
+[lang.en]
+name = "TV Time"
+description = "TV, it knows what I want!"
+condition = "Enter the TV Room at the Highway"
+
+[lang.fr]
+condition = "Entrer dans la TV Room de l'Highway"
+
+[lang.ja]
+condition = "高速道路の果て:館内エリアに到達する"
+
+[lang.ko]
+condition = "Highway에 있는 TV room에 입장하기"
+
+[lang.pl]
+condition = "Wejdź do TV Room na Highway"
+
+[lang.pt]
+condition = "Entre em TV Room localizado no Highway"
+
+[lang.ru]
+condition = "Войдите в TV Room на Highway."
+
+[lang.vt]
+condition = "Đến TV Room ở Highway"
+
+[lang.zh]
+condition = "进入Highway的TV Room"

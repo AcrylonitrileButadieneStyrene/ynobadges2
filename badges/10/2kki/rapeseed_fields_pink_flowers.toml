@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 667
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+default = "M667 S3=ON"
+
+[lang.en]
+name = "Raveseeds"
+description = "There's a party in my garden!"
+condition = "See the patch of pink flowers in the Rapeseed Fields"

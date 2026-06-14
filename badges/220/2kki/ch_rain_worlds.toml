@@ -1,0 +1,43 @@
+[badge]
+animated = true
+points = 35
+art = "thatdolphin"
+
+[badge.map]
+id = 2987
+secret = true
+
+[conditions]
+requirements = "visit_rainfall_forest AND rainy_day_residence AND visit_frozen_disco AND visit_downpour AND visit_english_thundershower AND autumn_pastel_plains AND shrouded_arcadia AND visit_lavender_park AND visit_limestone_dam AND visit_rainy_bridges_a OR visit_rainy_bridges_b AND visit_rice_paddy AND visit_rainfall_ruins"
+visit_rainfall_forest = "M2987"
+# reusing `rainy_day_residence`
+visit_frozen_disco = "M1557"
+visit_downpour = "M2631"
+visit_english_thundershower = "M3110"
+# reusing `autumn_pastel_plains`
+# reusing `shrouded_arcadia`
+visit_lavender_park = "M881"
+visit_limestone_dam = "M4082"
+visit_rainy_bridges_a = "M4088 X=0:96 Y=80:293"
+visit_rainy_bridges_b = "M4088 X=97:123 Y=208:293"
+visit_rice_paddy = "M2773"
+visit_rainfall_ruins = "M1142"
+
+[lang.en]
+name = "On our Better Days"
+description = "Collapse the umbrella, and let's go home in the rain."
+condition = "Visit the following worlds themed around rain: Rainfall Forest, Rainy Apartments, Frozen Disco, Downpour, English Thundershower, Autumn Pastel Plains, Shrouded Arcadia, Lavender Park, Rice Paddy, Rainy Bridges, Limestone Dam and Rainfall Ruins"
+
+[lang.en.checkbox]
+"visit_rainfall_forest" = "Rainfall Forest"
+"rainy_day_residence" = "Rainy Apartments"
+"visit_frozen_disco" = "Frozen Disco"
+"visit_downpour" = "Downpour"
+"visit_english_thundershower" = "English Thundershower"
+"autumn_pastel_plains" = "Autumn Pastel Plains"
+"shrouded_arcadia" = "Shrouded Arcadia"
+"visit_lavender_park" = "Lavender Park"
+"visit_limestone_dam" = "Rice Paddy"
+"visit_rainy_bridges_a|visit_rainy_bridges_b" = "Rainy Bridges"
+"visit_rice_paddy" = "Limestone Dam"
+"visit_rainfall_ruins" = "Rainfall Ruins"

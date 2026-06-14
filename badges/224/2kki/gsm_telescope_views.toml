@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 927
+points = 20
+art = "Sheanicc"
+
+[conditions]
+gsm_telescope_view_1 = "M972 E38 E39"
+gsm_telescope_view_2 = "M973 E04 E30"
+
+[lang.en]
+name = "Beholder of what lies beyond"
+description = "Wander through the lens and see what lies above. The moon, with its beautiful craters, and the distant Pleiades, an elegant star cluster. From wanderer of worlds to seeker of stars."
+condition = "See both views from the telescope in Grand Scientific Museum"

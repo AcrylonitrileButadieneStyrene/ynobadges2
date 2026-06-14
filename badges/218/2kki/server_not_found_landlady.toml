@@ -9,4 +9,4 @@ default = "M3657 E43"
 [lang.en]
 name = "The Twin Eyes that Hold Two Worlds"
 description = "Beneath shadowed white, two colors awaken."
-condition = "Interact with Landlady in Server Not Found "
+condition = "Interact with Landlady in Server Not Found"

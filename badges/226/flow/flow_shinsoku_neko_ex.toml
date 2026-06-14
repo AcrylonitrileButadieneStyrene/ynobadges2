@@ -1,0 +1,13 @@
+[badge]
+map = 23
+points = 10
+art = "Catsalotl"
+secret = true
+
+[conditions]
+default = "M23 S111=ON S105=ON"
+
+[lang.en]
+name = "OVER NYAN-THOUSAND!!!!!"
+description = "This doesn't make the game much easier though…"
+condition = "Play the secret mode of Shinsoku Neko"

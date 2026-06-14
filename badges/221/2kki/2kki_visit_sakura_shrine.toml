@@ -1,0 +1,12 @@
+[badge]
+map = 1596
+points = 10
+art = "Canio"
+
+[conditions]
+default = "M1596"
+
+[lang.en]
+name = "Nokoriga (残り香)"
+description = "In black graffiti, the wind howls through the trees, heralding the arrival of an omen..."
+condition = "Visit Sakura Shrine"

@@ -1,0 +1,16 @@
+[badge]
+animated = true
+points = 10
+art = "Somsnosna"
+
+[badge.map]
+id = 3
+secret = true
+
+[conditions]
+default = "M3 V10001>15"
+
+[lang.en]
+name = "A Healing Beverage"
+description = "I think this might be flat... how long has this been in there?"
+condition = "Buy 15 drinks from any of the 3 vending machines (granted upon waking up)"

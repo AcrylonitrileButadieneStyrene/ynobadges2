@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1826
+points = 15
+art = "3heart"
+
+[conditions]
+default = "M1826 E58"
+
+[lang.en]
+name = "Thirsty Dolphin"
+description = "You're not drinking that coffee... right?"
+condition = "Interact with the dolphin in the isolated section of Hexagonal Pillar Passage"

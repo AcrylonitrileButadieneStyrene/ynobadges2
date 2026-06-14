@@ -1,0 +1,12 @@
+[badge]
+map = 4041
+points = 15
+art = "Catsalotl"
+
+[conditions]
+default = "M4041 E236 S135=ON"
+
+[lang.en]
+name = "One fish two fish..."
+description = "...three fish, four fish, five fish, six fish, sev-"
+condition = "Interact with the fishing bucket while wearing the penguin effect in Nonogram Sands"

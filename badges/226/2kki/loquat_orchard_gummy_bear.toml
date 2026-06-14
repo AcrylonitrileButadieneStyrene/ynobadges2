@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 3149
+points = 10
+art = "CoolKid95"
+
+[conditions]
+default = "M3149 E7"
+
+[lang.en]
+name = "Oh I'm a gummy bear"
+condition = "Interact with the gummy bear like creature in Loquat Orchard"

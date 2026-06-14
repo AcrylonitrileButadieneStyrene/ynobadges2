@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 81
+points = 15
+art = "FlauiPuk"
+
+[conditions]
+default = "M81 S23=ON"
+
+[lang.en]
+name = "How are things Dracula"
+description = "I like to drink blood. . . and smoke the weed!"
+condition = "Visit Dracula and have a nice conversation about blood and weed together"

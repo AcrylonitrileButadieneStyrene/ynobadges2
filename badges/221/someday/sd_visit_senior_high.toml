@@ -1,0 +1,12 @@
+[badge]
+map = 295
+points = 20
+art = "summersn0w"
+
+[conditions]
+default = "M295"
+
+[lang.en]
+name = "All Great Things..."
+description = "Take a look back at what you've lost."
+condition = "Visit Senior High"

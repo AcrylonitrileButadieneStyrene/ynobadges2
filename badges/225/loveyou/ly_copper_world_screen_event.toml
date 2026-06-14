@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 21
+points = 10
+art = "HenryAutumn"
+
+[conditions]
+default = "M21"
+
+[lang.en]
+name = "Copper Man"
+description = "Miraculously, your gallery did not immediately crumble in his presence."
+condition = "See the fullscreen event in Copper World"

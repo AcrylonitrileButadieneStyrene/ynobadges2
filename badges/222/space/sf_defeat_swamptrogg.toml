@@ -1,0 +1,12 @@
+[badge]
+map = 9
+points = 10
+art = "Flakeohelk"
+
+[conditions]
+default = "M9 V2>=2"
+
+[lang.en]
+name = "Beast Slayer BLOOD Collector"
+description = "The Swamptrogg hoards a treasure trove of items!"
+condition = "Defeat the Swamptrogg"

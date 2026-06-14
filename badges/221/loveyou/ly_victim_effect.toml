@@ -1,0 +1,12 @@
+[badge]
+map = 65
+points = 10
+art = "systemaciel"
+
+[conditions]
+default = "M65 S45=ON"
+
+[lang.en]
+name = "You Smell So Red"
+description = "What did you do?"
+condition = "Obtain the Victim effect. If you have already unlocked it, return where it can be found in Sacrificial Ground."

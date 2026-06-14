@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 96
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M96"
+
+[lang.en]
+name = "Darkest Cave Smoke"
+description = "Mushroom grow and vibing here."
+condition = "Enter the Mushroom Cave in Mycotoxin Marsh"

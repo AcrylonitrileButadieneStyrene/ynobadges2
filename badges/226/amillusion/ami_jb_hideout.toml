@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 342
+points = 10
+art = "Michi & tophat"
+
+[conditions]
+default = "M342"
+
+[lang.en]
+name = "Eggstatic Oasis"
+description = "You can get this from an egg!"
+condition = "Visit JB's Hideout"

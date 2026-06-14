@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 451
+points = 15
+art = "yayoimaika"
+
+[conditions]
+requirements = "trash_bag_mask_a OR trash_bag_mask_b"
+trash_bag_mask_a = "M451 V3930=157"
+trash_bag_mask_b = "M1521 X=0:59 Y=33:44 V3930=157"
+
+[lang.en]
+name = "The Journey of a Trash Bag"
+description = "I want to go out…"
+condition = "Equip the Trash Bag mask in one of the mask shops"

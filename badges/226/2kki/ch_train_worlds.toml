@@ -1,0 +1,51 @@
+[badge]
+points = 40
+art = "Staghouse33"
+
+[badge.map]
+id = 312
+secret = true
+
+[conditions]
+# reusing `promnesic_terminal_visit`
+visit_old_train_station = "M545"
+visit_train_tracks = "M312"
+# reusing `visit_amplitude`
+# reusing `forgotten_station`
+visit_crimson_district = "M3700"
+visit_dark_forest = "M388"
+visit_fragmented_station = "M3133"
+visit_crossing_forest = "M3244"
+visit_labyrinth_of_dread = "M2122"
+visit_stereo_station = "M3093"
+visit_frozen_smile_world = "M2141"
+visit_underground_subway = "M2298"
+visit_rice_field = "M2063"
+visit_ogh_colorless_pier = "M1328"
+visit_wooded_lakeside_a_a = "M1882 X=20:207 Y=0:21"
+visit_wooded_lakeside_a_b = "M1882 X=0:21 Y=160:176"
+visit_ticking_blackout_zone = "M2452"
+
+[lang.en]
+name = "Memories, Dreams, and Railways"
+description = "Recalling the journey took while observing various trains and railways for a long time from morning till night, move forward toward the end of that journey."
+condition = "Visit the following areas with trains and railways: Promnesic Terminal, Old Train Station, Train Tracks, Amplitude, Forgotten Station, Crimson District, Dark Forest, Fragmented Station, Crossing Forest, Labyrinth of Dread, Stereo Station, Frozen Smile World, Underground Subway, Rice Field, Wooded Lakeside A, Ticking Blackout Zone, and Octagonal Grid Hub (Colorless Pier)"
+
+[lang.en.checkbox]
+promnesic_terminal_visit = "Promnesic Terminal"
+visit_old_train_station = "Old Train Station"
+visit_train_tracks = "Train Tracks"
+visit_amplitude = "Amplitude"
+forgotten_station = "Forgotten Station"
+visit_crimson_district = "Crimson District"
+visit_dark_forest = "Dark Forest"
+visit_fragmented_station = "Fragmented Station"
+visit_crossing_forest = "Crossing Forest"
+visit_labyrinth_of_dread = "Labyrinth of Dread"
+visit_stereo_station = "Stereo Station"
+visit_frozen_smile_world = "Frozen Smile World"
+visit_underground_subway = "Underground Subway"
+visit_rice_field = "Rice Field"
+visit_ogh_colorless_pier = "Wooded Lakeside A"
+"visit_wooded_lakeside_a_a|visit_wooded_lakeside_a_b" = "Ticking Blackout Zone"
+visit_ticking_blackout_zone = "Octagonal Grid Hub (Colorless Pier)"

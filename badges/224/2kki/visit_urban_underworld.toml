@@ -1,0 +1,12 @@
+[badge]
+map = 3451
+points = 15
+art = "Paraverdant"
+
+[conditions]
+default = "M3451"
+
+[lang.en]
+name = "Towering Urbanism"
+description = "Shady..."
+condition = "Visit Urban Underworld"

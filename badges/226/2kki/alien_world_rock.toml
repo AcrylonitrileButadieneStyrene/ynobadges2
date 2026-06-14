@@ -1,0 +1,12 @@
+[badge]
+map = 
+points = 15
+art = "tophat"
+
+[conditions]
+default = ""
+
+[lang.en]
+name = "Rocky-Looking Thing"
+description = "But here's the uhh...uhhhhhhh.....Whatever this is."
+condition = "See the rocky-like alien in Alien World"

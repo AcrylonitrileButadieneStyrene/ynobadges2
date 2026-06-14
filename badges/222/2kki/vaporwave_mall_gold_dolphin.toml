@@ -1,0 +1,12 @@
+[badge]
+map = 1845
+points = 10
+art = "Paraverdant"
+
+[conditions]
+default = "M1845 X=89:105 Y=158:169"
+
+[lang.en]
+name = "W a v e s"
+description = "Vapor and waves."
+condition = "See the gold dolphin in Vaporwave Mall"

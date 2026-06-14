@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 11
+points = 10
+art = "HenryAutumn"
+
+[conditions]
+default = "M11"
+
+[lang.en]
+name = "Disco Hand"
+description = "Limbs on The Dance Floor!"
+condition = "Visit the Hand Hub"

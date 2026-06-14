@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 4086
+points = 20
+art = "Michi"
+
+[conditions]
+default = "M4086 X=0:19 Y=147:161"
+secret = true
+
+[lang.en]
+name = "Distorted Familiarity"
+description = "A corrupted ruin of what once was."
+condition = "Visit the mountain outlook area of Dreadful City"

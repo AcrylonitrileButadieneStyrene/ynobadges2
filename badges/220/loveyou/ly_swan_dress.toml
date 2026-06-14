@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 117
+points = 15
+art = "SamsungFridg & Staghouse33"
+
+[conditions]
+default = "M117 E3"
+
+[lang.en]
+name = "Waltz of the Swan Princess"
+description = "Do you remember the steps, the turns, the grand memories of this fleeting performance of the pursuit of love?"
+condition = "Equip the swan dress in Theatre"

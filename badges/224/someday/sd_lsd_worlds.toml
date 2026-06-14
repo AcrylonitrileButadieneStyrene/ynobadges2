@@ -1,0 +1,16 @@
+[badge]
+animated = true
+map = 163
+points = 20
+art = "three33"
+
+[conditions]
+sd_lsd_world_1 = "M163"
+sd_lsd_world_2 = "M164"
+sd_lsd_world_3 = "M165"
+sd_lsd_world_4 = "M166"
+
+[lang.en]
+name = "In Limbo, the Silent Dream ; In Life, the Sensuous Dream ; In Logic, the Symbolic Dream ; In Leisure, the Sonorous Dream ; In Laughter, the Spiritual Dream ; In Lunacy, the Savage Dream ; In Linking, the Sapient Dream"
+description = "So, I'm gonna go into your right ear for a moment, right? And then I tell you some things, and then I'm gonna go to your left. I'm going to get you prepared. This is LSD, an experience, of all experiences. Now, I did not do drugs during the BRP, I just started the game. Now that the oven is wet, we can continue."
+condition = "Visit all four versions of LSD World"

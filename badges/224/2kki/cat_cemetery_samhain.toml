@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 843
+points = 10
+art = "elliotzZz"
+
+[conditions]
+default = "M843 S124=ON X=100:113 Y=4:8"
+
+[lang.en]
+name = "The princess."
+description = "An eater.. I need HER..."
+condition = "See Samhain in the Cat Cemetery halloween forest area and equip the Chainsaw near her"

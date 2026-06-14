@@ -1,0 +1,12 @@
+[badge]
+map = 109
+points = 15
+art = "Amadeus"
+
+[conditions]
+default = "M109"
+
+[lang.en]
+name = "Between the glowing clouds in the darkness"
+description = "Stained black"
+condition = "Visit Black Streets"

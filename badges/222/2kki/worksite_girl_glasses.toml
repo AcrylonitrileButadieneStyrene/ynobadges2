@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2295
+points = 15
+art = "AduriteStar"
+
+[conditions]
+default = "M2295 X=154:169 Y=238:238"
+
+[lang.en]
+name = "Silly Disguise"
+description = "Pump it up kitty! Just pump it up kitty cat. Where you at? There you go, put two paws on the floor Two in the air and then just.. Go kitty Go kitty Go kitty go! And just Ride kitty Ride kitty Ride kitty roll!"
+condition = "See the girl in Worksite with the Glasses effect"

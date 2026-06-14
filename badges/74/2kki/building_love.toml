@@ -1,0 +1,34 @@
+[badge]
+animated = true
+map = 853
+points = 20
+art = "Takofuusen"
+
+[conditions]
+default = "M853 X=139:148 Y=31:36"
+
+[lang.en]
+name = "Building Relationships"
+description = "So wholesome."
+condition = "View the hugging buildings in the Purple Forest Path of Sculpture Park"
+
+[lang.fr] 
+condition = "Voir les bâtiments se calinant dans le Passage de la Forêt Violette du Sculpture Park"
+
+[lang.ja] 
+condition = "彫刻庭園の雨の小道で抱き合う目付き建物を見る"
+
+[lang.ko] 
+condition = "Sculpture Park의 Purple Forest Path 서브 에리어에서 서로 껴안고 있는 건물을 발견하기"
+
+[lang.pt] 
+condition = "Veja os edifícios que se abraçam no Purple Forest Path no Sculpture Park"
+
+[lang.ru] 
+condition = "Посмотрите на обнимающиеся постройки на Тропе в Фиолетовом Лесу, что в Sculpture Park."
+
+[lang.vt] 
+condition = "Xem những tòa nhà ôm nhau ở Purple Forest Path trong Sculpture Park"
+
+[lang.zh] 
+condition = "找到Sculpture Park: Purple Forest Path里拥抱的建筑。"

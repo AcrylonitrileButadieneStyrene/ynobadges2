@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3724
+points = 15
+art = "Staghouse33"
+
+[conditions]
+default = "M3724 X=31:47 Y=54:66"
+
+[lang.en]
+name = "The dying words of the fading light"
+description = "The shining human-shaped figure was expressing its unjust death by emitting an intense light for the person who would find it in the deserted place."
+condition = "See the flashing corpse in Shattered Glass Trail"

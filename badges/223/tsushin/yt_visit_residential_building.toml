@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 163
+points = 15
+art = "Sachir0"
+
+[conditions]
+default = "M163"
+
+[lang.en]
+name = "TV FISH!!!"
+description = "what a strange place for an aquarium.."
+condition = "Visit Residential Building"

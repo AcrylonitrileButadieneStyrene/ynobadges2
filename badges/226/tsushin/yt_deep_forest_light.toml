@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 108
+points = 10
+art = "Komaki"
+
+[conditions]
+default = "M108 S23=ON"
+
+[lang.en]
+name = "Lights adorning the early summer night"
+description = "It's dark in here, please bring a light source."
+condition = "Use the Light Bug Effect in the passageway from Deep Forest A to Plush Grave"

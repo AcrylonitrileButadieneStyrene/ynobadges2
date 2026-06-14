@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3139
+points = 15
+art = "Komaki"
+
+[conditions]
+default = "M3139"
+
+[lang.en]
+name = "Hello... hello..."
+description = "Shadow in all the light"
+condition = "Enter the phone room of Floating Window World"

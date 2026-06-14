@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 805
+points = 10
+art = "FlauiPuk"
+
+[conditions]
+default = "M805 X=150:165 Y=26:26"
+
+[lang.en]
+name = "Did you forget your head at home?"
+description = "I think I did..."
+condition = "Visit the room with the decapitated creature in Parking Garage"

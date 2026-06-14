@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 96
+points = 10
+art = "Ticks"
+
+[conditions]
+default = "M96 E3"
+secret = true
+
+[lang.en]
+name = "I See You."
+description = "Always watching..."
+condition = "See the &&&&& event in Palliative Ward"

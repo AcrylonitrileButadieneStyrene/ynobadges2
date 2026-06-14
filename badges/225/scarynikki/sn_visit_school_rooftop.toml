@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 17
+points = 15
+art = "Etikals"
+
+[conditions]
+default = "M17"
+
+[lang.en]
+name = "Bloodied rooftop"
+description = "All of that work for this view."
+condition = "Visit the rooftop of School"

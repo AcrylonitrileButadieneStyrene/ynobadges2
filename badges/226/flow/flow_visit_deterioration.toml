@@ -1,0 +1,12 @@
+[badge]
+map = 
+points = 15
+art = "tophat"
+
+[conditions]
+default = ""
+
+[lang.en]
+name = "Peeling, Rotting, Deteriorating"
+description = "A memory so rusty inside your head it hurts to remember. But even yet, it's beautiful to remember, isn't it?"
+condition = "Visit Deterioration"

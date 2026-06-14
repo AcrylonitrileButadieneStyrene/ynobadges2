@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1795
+points = 15
+art = "Catsalotl"
+
+[conditions]
+default = "M1795 V1>=9 S155=ON"
+
+[lang.en]
+name = "Wormly remembered"
+description = "The cycle goes on, the world moves forward, but you will never be forgotten."
+condition = "See the ghost silkworms with the Grave effect in Silkworm Forest"

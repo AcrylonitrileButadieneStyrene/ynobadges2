@@ -1,0 +1,19 @@
+[badge]
+animated = true
+map = 1676
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+requirements = "visit_glyphic_mausoleum_a OR visit_glyphic_mausoleum_b OR visit_glyphic_mausoleum_c OR visit_glyphic_mausoleum_d OR visit_glyphic_mausoleum_e OR visit_glyphic_mausoleum_f"
+visit_glyphic_mausoleum_a = "M1676"
+visit_glyphic_mausoleum_b = "M1677"
+visit_glyphic_mausoleum_c = "M1678"
+visit_glyphic_mausoleum_d = "M1679"
+visit_glyphic_mausoleum_e = "M1680"
+visit_glyphic_mausoleum_f = "M1681"
+
+[lang.en]
+name = "Monochrome Tomb"
+description = "This glyphic labyrinth will claim you as its own if you lose your way..."
+condition = "Visit Glyphic Mausoleum"

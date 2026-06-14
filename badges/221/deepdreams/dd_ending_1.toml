@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 91
+points = 30
+art = "Pats"
+
+[conditions]
+default = "M91 Picture='endtitle1'"
+
+[lang.en]
+name = "First Line Escape"
+description = "There's still other different scenarios to see..."
+condition = "See the Ending #1"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 903
+points = 15
+art = "emocore"
+
+[conditions]
+default = "M903"
+
+[lang.en]
+name = "Lone Thoughts"
+description = "Everything in your head may seem like a pit of negative thoughts but sometimes the light comes and shines down on you when it's needed."
+condition = "Visit the main area of Monochrome Mansion"

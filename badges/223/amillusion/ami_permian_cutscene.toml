@@ -1,0 +1,12 @@
+[badge]
+map = 313
+points = 15
+art = "Snoocola"
+
+[conditions]
+default = "M313"
+
+[lang.en]
+name = "Lucky Catching"
+description = "The bait is already gone and it's only been a minute in the water..."
+condition = "Finish the fishing minigame and see the cutscene in Permian World"

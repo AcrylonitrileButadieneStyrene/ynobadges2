@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2289
+points = 10
+art = "Flakeohelk"
+
+[conditions]
+default = "M2289 X=22:41 Y=1:15 S5=ON"
+
+[lang.en]
+name = "Ultimate Betrayal"
+description = "The wounds are still healing."
+condition = "Chainsaw the giant green fluffy creature in Graffiti Waterfront"

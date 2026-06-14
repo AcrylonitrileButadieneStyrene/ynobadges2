@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 1521
+points = 15
+art = "Rennatalia"
+
+[conditions]
+requirements = "deluxe_mask_shop_purchase OR deluxe_mask_shop_purchase_b"
+deluxe_mask_shop_purchase = "M1521 S3=ON DELAYED"
+deluxe_mask_shop_purchase_b = "M1521 V3930=157"
+
+[lang.en]
+name = "The Mask Counter"
+description = "Where identities can be bought and worn."
+condition = "Buy masks in the Deluxe Mask Shop"

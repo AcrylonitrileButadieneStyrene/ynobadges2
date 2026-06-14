@@ -1,0 +1,31 @@
+[badge]
+animated = true
+map = 268
+points = 15
+art = "emocore"
+
+[conditions]
+default = "M268"
+
+[lang.en]
+name = "My Mistress"
+description = "Welcome, Mistress! Table for two? We're going on a date, duh! Kyuuun! <3"
+condition = "Visit Colly Maid Cafe"
+
+[lang.fr]
+condition = "Visiter le Colly Maid Cafe"
+
+[lang.ja]
+condition = "Colly Maid Cafeに到達する"
+
+[lang.ko]
+condition = "Colly Maid Cafe를 방문하기"
+
+[lang.pt]
+condition = "Visite o Colly Maid Cafe"
+
+[lang.ru]
+condition = "Посетите Кафе горничных Колли."
+
+[lang.zh]
+condition = "抵达Colly Maid Cafe。"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 13
+points = 10
+art = "Tanjunebi"
+
+[conditions]
+default = "M13 E14"
+
+[lang.en]
+name = "Yippee!"
+description = "\"I don't want to talk to him\""
+condition = "Interact with the creature in School"

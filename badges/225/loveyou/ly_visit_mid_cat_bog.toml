@@ -1,0 +1,12 @@
+[badge]
+map = 127
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M127"
+
+[lang.en]
+name = "Lovely, Isn't it?"
+description = "The amount of stars are the love I feel for you. Even now."
+condition = "Visit Midnight Cattail Bog"

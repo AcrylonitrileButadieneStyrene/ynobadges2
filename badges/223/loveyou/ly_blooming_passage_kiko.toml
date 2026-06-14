@@ -1,0 +1,12 @@
+[badge]
+map = 105
+points = 10
+art = "Somsnosna"
+
+[conditions]
+default = "M105 E21"
+
+[lang.en]
+name = "Fleeting Company"
+description = "Gone, but not forgotten, it seems."
+condition = "Interact with Kiko in Blooming Passage"

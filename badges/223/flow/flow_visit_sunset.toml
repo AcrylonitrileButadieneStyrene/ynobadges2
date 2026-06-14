@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 198
+points = 15
+art = "mina"
+
+[conditions]
+default = "M198"
+
+[lang.en]
+name = "Rusted Sunset"
+condition = "Reach Sunset"

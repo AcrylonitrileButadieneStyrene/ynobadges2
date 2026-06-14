@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 840
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+default = "M840"
+
+[lang.en]
+name = "Party Reef"
+description = "Let's dance! (if we could since we're underwater)"
+condition = "Visit Neon Sea"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1883
+points = 20
+art = "HenryAutumn"
+
+[conditions]
+default = "M1883 X=68:75 Y=0:8"
+
+[lang.en]
+name = "Butterfly Guardian"
+description = "She watches over her home to block the entry of the unworthy."
+condition = "View the lone female statue in Oblique Hell"

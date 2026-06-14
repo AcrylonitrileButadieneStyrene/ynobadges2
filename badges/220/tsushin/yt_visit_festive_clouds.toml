@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 147
+points = 10
+art = "w"
+
+[conditions]
+default = "M147"
+
+[lang.en]
+name = "Pastel Lights"
+description = "It feels warm even in winter."
+condition = "Visit Festive Clouds"

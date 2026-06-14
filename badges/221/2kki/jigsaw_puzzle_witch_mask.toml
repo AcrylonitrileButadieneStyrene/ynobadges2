@@ -1,0 +1,12 @@
+[badge]
+map = 412
+points = 20
+art = "Catsalotl"
+
+[conditions]
+default = "M412 S3910=ON"
+
+[lang.en]
+name = "Bewitch"
+description = "There's no place like... IWANNABEAWITCH!"
+condition = "Equip the Akama Witch mask in Jigsaw Puzzle World"

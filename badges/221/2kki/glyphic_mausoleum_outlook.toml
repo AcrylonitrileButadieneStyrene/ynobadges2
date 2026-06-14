@@ -1,0 +1,12 @@
+[badge]
+map = 1681
+points = 10
+art = "aukse"
+
+[conditions]
+default = "M1681"
+
+[lang.en]
+name = "Glyphic Highlands"
+description = "Could this path have lead beyond the mountains?"
+condition = "Visit the outlook in Glyphic Mausoleum"

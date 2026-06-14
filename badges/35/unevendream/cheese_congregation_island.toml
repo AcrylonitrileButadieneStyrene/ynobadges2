@@ -1,0 +1,32 @@
+[badge]
+animated = true
+map = 206
+points = 20
+art = "Michi"
+
+[conditions]
+default = "M206 S443=ON"
+secret = true
+
+[lang.en]
+name = "Parmesan Pursuit"
+description = "Try and reach it, if you cheddare."
+condition = "Escape the cheese chaser area in Congregation Island"
+
+[lang.fr]
+condition = "S'échapper de la zone des chasseurs fromage dans la Congregation Island"
+
+[lang.ja]
+condition = "Congregation Islandのチーズが追いかけてくるエリアから脱出する"
+
+[lang.ko]
+condition = "Congregation Island의 Cheese Chaser 서브 에리어를 탈출하기"
+
+[lang.pt]
+condition = "Escape da área de caça ao queijo em Congregation Island."
+
+[lang.ru]
+condition = "Сбегите из Зоны сырных преследователей на Населённом Острове."
+
+[lang.zh]
+condition = "逃离Congregation Island的芝士追逐者。"

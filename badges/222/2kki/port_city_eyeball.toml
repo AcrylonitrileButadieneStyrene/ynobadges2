@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2184
+points = 20
+art = "Tanjunebi"
+
+[conditions]
+default = "M2184 E288 E289 E290 E291 E292 V44>=220 S152=ON"
+
+[lang.en]
+name = "Seven Eyed Kasa-obake"
+description = "...The structures at its feet seem dry."
+condition = "See the giant Teru Teru Eyeball with its eye open in Port City"

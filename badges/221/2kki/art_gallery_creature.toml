@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 13
+points = 10
+art = "Limbs"
+
+[conditions]
+default = "M13 E22"
+
+[lang.en]
+name = "Egghead"
+description = "What a guy, look at him go."
+condition = "Interact with the creature in the Art Gallery"

@@ -10,7 +10,7 @@ secret = true
 [conditions]
 requirements = "glitch_world_kondo AND tubes_kondo AND purple_crystal AND corrupted_art_gallery_sh_e AND lsd_world AND kondo_ending_room OR kondo_ending_room_2"
 glitch_world_kondo = "M53 E3"
-tubes_kondo = "M31 X=34:54 Y=25:31 S171=OFF"
+tubes_kondo = "M31 X=34:54 Y=25:31 S171=ON"
 purple_crystal = "M262"
 corrupted_art_gallery_sh_e = "M271 Picture='paintkondo'"
 lsd_world = "M166"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1915
+points = 10
+art = "thatdolphin"
+
+[conditions]
+default = "M1915 S5016=ON"
+
+[lang.en]
+name = "Flowers that Bloom in Isolation"
+description = "Don't get too close!"
+condition = "Make the flowers pull back in Smooth Coastline"

@@ -1,0 +1,12 @@
+[badge]
+map = 3186
+points = 20
+art = "SamsungFridg"
+
+[conditions]
+default = "M3186 V3930=500501"
+
+[lang.en]
+name = "Through the Lens of the Locksmith"
+description = "I am long gone, but my presence continues to linger in this train station."
+condition = "Equip the Keyfinder mask in Fragmented Station B"

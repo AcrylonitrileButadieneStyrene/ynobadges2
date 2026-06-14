@@ -1,0 +1,12 @@
+[badge]
+map = 313
+points = 10
+art = "Catsalotl"
+
+[conditions]
+default = "M313 X=27:44 Y=56:56 V44>=128"
+
+[lang.en]
+name = "Rat by the track"
+description = "Now we just need four turtles…"
+condition = "See the rat in Train Tracks"

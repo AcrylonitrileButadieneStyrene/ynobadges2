@@ -1,0 +1,12 @@
+[badge]
+map = 14
+points = 20
+art = "three33"
+
+[conditions]
+default = "M14 V3>=2"
+
+[lang.en]
+name = "Equus Ferus Caballus"
+description = "\"From now on you shall obey my every command!\""
+condition = "Recruit Leg Horse to your party"

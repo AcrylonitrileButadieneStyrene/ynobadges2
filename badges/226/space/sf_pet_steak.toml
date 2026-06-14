@@ -1,0 +1,12 @@
+[badge]
+map = 36
+points = 15
+art = "dawnchorrus"
+
+[conditions]
+default = "M36 S10=ON"
+
+[lang.en]
+name = "Best Friends Forever"
+description = "My delicious little friend"
+condition = "Purchase a pet steak at the Steak Farm"

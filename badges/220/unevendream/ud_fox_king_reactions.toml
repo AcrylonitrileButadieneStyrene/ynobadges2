@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 452
+points = 15
+art = "Jameson, Michi, & tophat"
+
+[conditions]
+ud_fox_king_reaction_1 = "M452 Picture='julius- fox king'"
+ud_fox_king_reaction_2 = "M452 V4=27"
+ud_fox_king_reaction_3 = "M452 V4=28"
+
+[lang.en]
+name = "His Royal Fluffiness"
+description = "If you tame me, it will be as if the sun came to shine on my life."
+condition = "Visit the giant Fox King and see his reaction to the Music Box and Lily of the Valley effects in Fox Fortress"

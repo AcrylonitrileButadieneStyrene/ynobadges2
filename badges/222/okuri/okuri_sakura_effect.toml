@@ -1,0 +1,12 @@
+[badge]
+map = 14
+points = 10
+art = "Kantyo"
+
+[conditions]
+default = "M14 S164=ON"
+
+[lang.en]
+name = "Bloom Beneath the Spring Sky"
+description = "Wrapped in sunlight, painted in sakura."
+condition = "Obtain the Sakura effect. If already obtained, return to where you have done so."

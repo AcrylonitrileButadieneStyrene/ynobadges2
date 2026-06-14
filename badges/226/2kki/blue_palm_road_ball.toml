@@ -1,0 +1,12 @@
+[badge]
+map = 2333
+points = 15
+art = "Necrotic"
+
+[conditions]
+default = "M2333 S3=ON"
+
+[lang.en]
+name = "Beach Ball Golf"
+description = "So uh... Where's the hole??"
+condition = "Roll the ball into the hole in Blue Palm Road"

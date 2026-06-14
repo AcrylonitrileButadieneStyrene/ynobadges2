@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 25
+points = 15
+art = "aronek"
+
+[conditions]
+requirements = "ly_wingman_effect OR ly_wingman_effect_b"
+ly_wingman_effect = "M25 S61=ON"
+ly_wingman_effect_b = "M25 E2"
+
+[lang.en]
+name = "Up and Away"
+description = "Enjoy your flight!"
+condition = "Obtain the Wingman effect. If you already obtained it, return to the Crimson Dunes."

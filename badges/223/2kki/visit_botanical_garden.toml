@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 497
+points = 15
+art = "mina"
+
+[conditions]
+default = "M497"
+
+[lang.en]
+name = "Underwater Garden"
+condition = "Visit Botanical Garden"

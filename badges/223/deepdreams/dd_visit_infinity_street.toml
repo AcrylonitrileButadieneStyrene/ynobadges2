@@ -1,0 +1,12 @@
+[badge]
+map = 38
+points = 10
+art = "Pho & Komaki"
+
+[conditions]
+default = "M38"
+
+[lang.en]
+name = "Infinity Street"
+description = "Luckily there's no demon here."
+condition = "Visit Infinity Street"

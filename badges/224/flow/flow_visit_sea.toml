@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 71
+points = 15
+art = "Catsalotl"
+
+[conditions]
+default = "M71"
+
+[lang.en]
+name = "Sea of Dreams"
+description = "Have you ever seen the sea?"
+condition = "Visit Sea"

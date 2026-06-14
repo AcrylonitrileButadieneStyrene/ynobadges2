@@ -9,5 +9,5 @@ default = "M66"
 
 [lang.en]
 name = "Life Isn't a Highway, Unfortunately"
-description = "Nights at the highway shine brighter. "
+description = "Nights at the highway shine brighter."
 condition = "Visit Highway"

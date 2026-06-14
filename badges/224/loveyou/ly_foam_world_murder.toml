@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 5
+points = 15
+art = "vena"
+
+[conditions]
+default = "M5 S15=ON V14=1 X=93:107 Y=81:87"
+
+[lang.en]
+name = "Smeared Toothpaste"
+description = "Brush your teeth every day!"
+condition = "Equip the Meat Cleaver effect near the TV after killing Hamigaki-san in Foam World"

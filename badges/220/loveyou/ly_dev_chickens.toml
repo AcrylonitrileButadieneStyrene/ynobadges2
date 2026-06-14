@@ -1,0 +1,12 @@
+[badge]
+map = 19
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+default = "M19 E3"
+
+[lang.en]
+name = "Pecking Coder"
+description = "What came first, the chicken or the laptop?"
+condition = "View the Love You Developer's Chickens in Copper Pipe Maze"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1094
+points = 10
+art = "3heart"
+
+[conditions]
+default = "M1094 Picture='ROKU95_Picture10'"
+
+[lang.en]
+name = "Big Silly Fish"
+description = "Is that a tuna... in the lake?"
+condition = "See the big fish float past in Underground Lake"

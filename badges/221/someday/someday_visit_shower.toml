@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 140
+points = 20
+art = "HenryAutumn"
+
+[conditions]
+default = "M140"
+
+[lang.en]
+name = "Shower Time"
+description = "What do you mean? We're already clean!"
+condition = "Visit the Shower"

@@ -1,0 +1,12 @@
+[badge]
+map = 2873
+points = 10
+art = "thatdolphin"
+
+[conditions]
+default = "M2873 X=0:99 Y=13:99"
+
+[lang.en]
+name = "Flawless Wings"
+description = "Ah, so that's where she fell."
+condition = "Visit Metallic Pathway"

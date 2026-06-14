@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2161
+points = 15
+art = "Sheanicc"
+
+[conditions]
+default = "M2161"
+
+[lang.en]
+name = "Mirage of the Moons"
+description = "Count how many moons there are!"
+condition = "Visit Overlapping Moons"

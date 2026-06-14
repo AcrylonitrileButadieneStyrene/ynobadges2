@@ -1,0 +1,12 @@
+[badge]
+map = 3046
+points = 10
+art = "3heart"
+
+[conditions]
+default = "M3046 X=98:100 Y=9:10"
+
+[lang.en]
+name = "Aisumimasen"
+description = "What are you doing standing here?"
+condition = "Find Aisumimasen in Auburn Villa"

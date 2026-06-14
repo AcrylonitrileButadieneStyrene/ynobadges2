@@ -1,0 +1,18 @@
+[badge]
+map = 176
+points = 10
+art = "Canto Mk. 6"
+
+[conditions]
+dressing_room_area_1 = "M176 X=207:230 Y=59:71"
+dressing_room_area_2 = "M176 X=159:179 Y=29:41"
+dressing_room_area_3 = "M176 X=110:123 Y=3:3"
+dressing_room_area_4 = "M176 X=57:81 Y=59:71"
+dressing_room_area_5 = "M176 X=107:128 Y=86:100"
+dressing_room_area_6 = "M176 X=61:76 Y=33:44"
+dressing_room_area_7 = "M176 X=111:121 Y=36:44"
+
+[lang.en]
+name = "Midori To Kuro"
+description = "Tailor of distant dreams..."
+condition = "Visit all areas of the Dressing Room"

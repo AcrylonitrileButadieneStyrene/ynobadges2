@@ -1,0 +1,17 @@
+[badge]
+animated = true
+map = 3101
+points = 15
+art = "Kantyo"
+
+[conditions]
+pollution_district_reaction_1 = "M3101 X=236:245 Y=206:214 S124=ON" # Chainsaw
+pollution_district_reaction_2 = "M3101 X=236:245 Y=206:214 S128=ON" # Glasses
+pollution_district_reaction_3 = "M3101 X=236:245 Y=206:214 S153=ON" # Marginal
+pollution_district_reaction_4 = "M3101 X=236:245 Y=206:214 S151=ON" # Polygon
+pollution_district_reaction_5 = "M3101 X=236:245 Y=206:214 S170=ON" # Wolf action
+
+[lang.en]
+name = "The Watching Crimson Pulse"
+description = "Violence means nothing before her."
+condition = "See all the effect reactions from Cara in Pollution District"

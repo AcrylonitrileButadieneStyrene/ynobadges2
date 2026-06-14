@@ -1,0 +1,38 @@
+[badge]
+animated = true
+points = 30
+art = "3heart"
+
+[badge.map]
+id = 1700
+secret = true
+
+[conditions]
+requirements = "visit_strawberry_outskirts AND visit_strawberry_fields AND eyeball_cherry_fields AND visit_apple_prison AND visit_lemon_world AND visit_citrus_springs AND visit_blueberry_farm AND visit_grape_mall AND violent_fruit_district AND visit_fruit_carpet_plaza"
+visit_strawberry_outskirts = "M3503"
+visit_strawberry_fields = "M1166"
+# reusing `eyeball_cherry_fields`
+visit_apple_prison = "M2265"
+visit_lemon_world = "M1700 X=200:279 Y=0:79"
+visit_citrus_springs = "M3368 X=135:248 Y=6:153"
+visit_blueberry_farm = "M2074"
+visit_grape_mall = "M1093"
+# reusing `violent_fruit_district`
+visit_fruit_carpet_plaza = "M3033"
+
+[lang.en]
+name = "Fruit Parfait"
+description = "Delicious!"
+condition = "Visit the following fruit themed worlds: Strawberry Outskirts, Strawberry Fields, Eyeball Cherry Fields, Apple Prison, Lemon World, Citrus Springs, Blueberry Farm, Grape Mall, Violent Fruit District, and Fruit Carpet Plaza"
+
+[lang.en.checkbox]
+visit_strawberry_outskirts = "Strawberry Outskirts"
+visit_strawberry_fields = "Strawberry Fields"
+eyeball_cherry_fields = "Eyeball Cherry Fields"
+visit_apple_prison = "Apple Prison"
+visit_lemon_world = "Lemon World"
+visit_citrus_springs = "Citrus Springs"
+visit_blueberry_farm = "Blueberry Farm"
+visit_grape_mall = "Grape Mall"
+violent_fruit_district = "Violent Fruit District"
+visit_fruit_carpet_plaza = "Fruit Carpet Plaza"

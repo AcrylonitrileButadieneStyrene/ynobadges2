@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 3503
+points = 15
+art = "AduriteStar"
+
+[conditions]
+blossom_board_npc_reaction_1 = "M3503 X=194:213 Y=4:18 S124=ON" # Chainsaw equipped
+blossom_board_npc_reaction_2 = "M3503 X=194:213 Y=4:18 S196=ON" # Crossing action
+blossom_board_npc_reaction_3 = "M3503 X=194:213 Y=4:18 S153=ON" # Marginal equipped
+
+[lang.en]
+name = "Variety of Interactions."
+description = "What would they represent?"
+condition = "Interact with the NPC in Blossom Boardwalk with all the effects they react to"

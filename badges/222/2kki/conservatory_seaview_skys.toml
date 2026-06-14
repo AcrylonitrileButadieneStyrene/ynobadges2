@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 4084
+points = 15
+art = "thatdolphin & Rennatalia"
+
+[conditions]
+conservatory_seaview_sky_a = "M4084 X=59:78 Y=23:29 V4=16"
+conservatory_seaview_sky_b = "M4084 X=59:78 Y=23:29 V4!=16"
+
+[lang.en]
+name = "Somewhere Near the Sea"
+description = "A calm ocean view wrapped in pastel light."
+condition = "See both versions of the sky at Conservatory's seaview"

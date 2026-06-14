@@ -1,0 +1,12 @@
+[badge]
+map = 167
+points = 15
+art = "taintedeve"
+
+[conditions]
+default = "M167 S168=ON"
+
+[lang.en]
+name = "Click, Click, Boom"
+description = "Who just throws away a perfectly good gun?"
+condition = "Obtain the Revolver effect. If you have already unlocked it, return where it can be found in Hole."

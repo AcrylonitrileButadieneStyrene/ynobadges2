@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 3414
+points = 15
+art = "mina"
+
+[conditions]
+default = "M3414"
+
+[lang.en]
+name = "Farewell, and Rest in Peace"
+condition = "Visit Stellar Cemetery"

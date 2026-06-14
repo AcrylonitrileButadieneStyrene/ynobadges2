@@ -1,0 +1,12 @@
+[badge]
+map = 40
+points = 15
+art = "Kantyo"
+
+[conditions]
+default = "M40 S171=ON"
+
+[lang.en]
+name = "Dressed in Scarlet Leaves"
+description = "Slip your sleeves into crimson autumn."
+condition = "Obtain the Maple effect. If already obtained, return to where you have done so."

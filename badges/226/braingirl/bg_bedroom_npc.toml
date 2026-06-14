@@ -1,0 +1,12 @@
+[badge]
+map = 
+points = 20
+art = "tophat"
+
+[conditions]
+default = ""
+
+[lang.en]
+name = "The Weirdo That Comes Out At Midnight"
+description = "What was that"
+condition = "See the Midnight Yellowman in Mikan's Bedroom during midnight."

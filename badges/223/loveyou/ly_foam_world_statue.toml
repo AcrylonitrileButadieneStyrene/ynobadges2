@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4
+points = 10
+art = "ShinyLurantis"
+
+[conditions]
+default = "M4 E51 V14=1"
+
+[lang.en]
+name = "Bubble Bloodbath"
+description = "Stab the statue in the foam world."
+condition = "Stab the statue in Foam World"

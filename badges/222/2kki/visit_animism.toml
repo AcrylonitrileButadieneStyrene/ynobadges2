@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3221
+points = 15
+art = "Anju"
+
+[conditions]
+default = "M3221"
+
+[lang.en]
+name = "Animistic spirits"
+description = "Yeehaw! Strange and mysterious but fun, right?"
+condition = "Visit Animism"

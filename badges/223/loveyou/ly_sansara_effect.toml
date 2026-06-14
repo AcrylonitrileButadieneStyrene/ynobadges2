@@ -1,0 +1,12 @@
+[badge]
+map = 126
+points = 15
+art = "SamsungFridg"
+
+[conditions]
+default = "M126 X=24:63 Y=122:136 S54=ON"
+
+[lang.en]
+name = "Karmic cycle"
+description = "wandering through, flowing on…"
+condition = "Obtain the Sansara effect. If you have already unlocked it, return where it can be found in Palliative Ward."

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2517
+points = 15
+art = "Aurora"
+
+[conditions]
+default = "M2517 X=73:79 Y=2:11"
+
+[lang.en]
+name = "Unwashable Blood"
+description = "Will all great Neptune's ocean wash this blood clean from my eyes?"
+condition = "See the bloody couch in Eyeberry Orchard"

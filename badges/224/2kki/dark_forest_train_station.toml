@@ -1,0 +1,11 @@
+[badge]
+map = 387
+points = 15
+art = "JSG5"
+
+[conditions]
+default = "M387 X=0:93 Y=22:39"
+
+[lang.en]
+name = "The Lost Station"
+condition = "Reach the train station area in the Dark Forest"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 35
+points = 15
+art = "LittleCherry & Komaki"
+
+[conditions]
+default = "M35 E87"
+
+[lang.en]
+name = "Fox Chase"
+description = "\"I'm like Munny\", Irving said calmly."
+condition = "Interact with the fox boy in Waterworks Office after completing the fox chase event"

@@ -1,0 +1,50 @@
+[badge]
+points = 25
+art = "denji9099"
+
+[badge.map]
+id = 81
+secret = true
+
+[conditions]
+visit_garden_world = "M81"
+visit_bottom_garden = "M525"
+visit_tesla_garden = "M834"
+visit_bleeding_heads_garden = "M858"
+visit_ruined_garden = "M954"
+# reusing `streetlight`
+# reusing `originator_garden`
+visit_spiked_fence_garden = "M1658"
+visit_garden_of_treachery = "M1590"
+# reusing `azure_garden`
+# reusing `blossoming_brooch`
+visit_mansion_garden = "M2039 X=84:230 Y=104:199"
+visit_abyssal_garden = "M2512"
+visit_pocket_garden = "M2563 X=0:199 Y=172:199"
+visit_ethereal_garden = "M3122"
+# reusing `visit_dazzling_garden`
+visit_snowdrop_garden = "M3501"
+
+[lang.en]
+name = "Flowered"
+description = "To the places of the promises from that day, until it's dyed in flowers."
+condition = "Visit the following garden worlds: Garden World, Bottom Garden, Tesla Garden, Bleeding Heads Garden, Ruined Garden, Streetlight Garden, Originator Garden, Spiked Fence Garden, Garden Of Treachery, Azure Garden, Adabana Gardens, Mansion Garden, Abyssal Garden, Pocket Garden, Ethereal Garden, Dazzling Garden, Snowdrop Garden"
+
+[lang.en.checkbox]
+visit_garden_world = "Garden World"
+visit_bottom_garden = "Bottom Garden"
+visit_tesla_garden = "Tesla Garden"
+visit_bleeding_heads_garden = "Bleeding Heads Garden"
+visit_ruined_garden = "Ruined Garden"
+streetlight = "Streetlight Garden"
+originator_garden = "Originator Garden"
+visit_spiked_fence_garden = "Spiked Fence Garden"
+visit_garden_of_treachery = "Garden Of Treachery"
+azure_garden = "Azure Garden"
+blossoming_brooch = "Adabana Gardens"
+visit_mansion_garden = "Mansion Garden"
+visit_abyssal_garden = "Abyssal Garden"
+visit_pocket_garden = "Pocket Garden"
+visit_ethereal_garden = "Ethereal Garden"
+visit_dazzling_garden = "Dazzling Garden"
+visit_snowdrop_garden = "Snowdrop Garden"

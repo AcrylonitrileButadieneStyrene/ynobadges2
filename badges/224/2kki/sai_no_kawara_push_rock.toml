@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1913
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M1913 E12 INDIRECT"
+
+[lang.en]
+name = "RUDE!!!!!"
+description = "Would be a shame if someone pushed those over- HEY THERE!!!!!"
+condition = "Push any of the rocks over in Sai No Kawara"

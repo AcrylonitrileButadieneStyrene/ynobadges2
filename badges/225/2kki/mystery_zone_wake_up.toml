@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4142
+points = 20
+art = "Komaki"
+
+[conditions]
+default = "M4142 V5=7 E5"
+
+[lang.en]
+name = "Fabricate Childhood"
+description = "Lying from photo to reality."
+condition = "See the wake up event in the Playground of Mystery Zone B"

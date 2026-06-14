@@ -8,5 +8,5 @@ default = "M2121"
 
 [lang.en]
 name = "Paradise, Paradise"
-description = "Built perfectly just for you. "
+description = "Built perfectly just for you."
 condition = "Visit Peaceful Shoal"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3889
+points = 15
+art = "deadsquid"
+
+[conditions]
+default = "M3889 X=49:62 Y=0:14"
+
+[lang.en]
+name = "A Heavenly Reprieve in Hell"
+description = "See what blooms in the depths of heat and pressure."
+condition = "See the flower in Pit to Hell"

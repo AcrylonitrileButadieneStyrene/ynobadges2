@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4087
+points = 15
+art = "Jameson & HenryAutumn"
+
+[conditions]
+default = "M4087"
+
+[lang.en]
+name = "Steam Machine"
+description = "Let's get these tunnels HUMID!"
+condition = "Visit Humid Tunnels"

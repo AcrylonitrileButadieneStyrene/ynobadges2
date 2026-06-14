@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 380
+points = 15
+art = "IronCam & Jameson"
+
+[conditions]
+default = "M380 S344=ON"
+
+[lang.en]
+name = "Half-Awake Generosity"
+description = "Just take your part of the gold and let me sleep, please."
+condition = "Earn some money from the sleeping dragon in Violet Caves"

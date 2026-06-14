@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 1864
+points = 10
+art = "CoolKid95"
+
+[conditions]
+default = "M1864 X=69:83 Y=97:109"
+
+[lang.en]
+name = "Fox Fisher"
+condition = "See the fishing fox in Kitsune Residence"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 86
+points = 15
+art = "HenryAutumn"
+
+[conditions]
+default = "M86"
+
+[lang.en]
+name = "ly_construct"
+description = "Aitsuki's Very Own Mod."
+condition = "Visit Sunset Skyscapers"

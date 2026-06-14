@@ -1,0 +1,12 @@
+[badge]
+map = 11
+points = 15
+art = "three33"
+
+[conditions]
+default = "M11"
+
+[lang.en]
+name = "PSYcHoSIS"
+description = "Why [are] [yo]u so crazy[,] Aruben[?]"
+condition = "Visit Crazy"
