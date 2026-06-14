@@ -1,5 +1,4 @@
 #![feature(iterator_try_collect)]
-#![feature(bool_to_result)]
 #![warn(clippy::nursery)]
 #![warn(clippy::pedantic)]
 #![allow(clippy::missing_panics_doc)]
