@@ -8,9 +8,9 @@ id = 2987
 secret = true
 
 [conditions]
-requirements = "visit_rainfall_forest AND rainy_day_residence AND visit_frozen_disco AND visit_downpour AND visit_english_thundershower AND autumn_pastel_plains AND shrouded_arcadia AND visit_lavender_park AND visit_limestone_dam AND visit_rainy_bridges_a OR visit_rainy_bridges_b AND visit_rice_paddy AND visit_rainfall_ruins"
+requirements = "visit_rainfall_forest AND rainy_apartments AND visit_frozen_disco AND visit_downpour AND visit_english_thundershower AND autumn_pastel_plains AND shrouded_arcadia AND visit_lavender_park AND visit_limestone_dam AND visit_rainy_bridges_a OR visit_rainy_bridges_b AND visit_rice_paddy AND visit_rainfall_ruins"
 visit_rainfall_forest = "M2987"
-# reusing `rainy_day_residence`
+# reusing `rainy_apartments`
 visit_frozen_disco = "M1557"
 visit_downpour = "M2631"
 visit_english_thundershower = "M3110"
@@ -30,7 +30,7 @@ condition = "Visit the following worlds themed around rain: Rainfall Forest, Rai
 
 [lang.en.checkbox]
 "visit_rainfall_forest" = "Rainfall Forest"
-"rainy_day_residence" = "Rainy Apartments"
+"rainy_apartments" = "Rainy Apartments"
 "visit_frozen_disco" = "Frozen Disco"
 "visit_downpour" = "Downpour"
 "visit_english_thundershower" = "English Thundershower"
