@@ -1,10 +1,10 @@
 [badge]
-map = 
+map = 19
 points = 20
 art = "tophat"
 
 [conditions]
-default = ""
+default = "M19 V66=1"
 
 [lang.en]
 name = "The Weirdo That Comes Out At Midnight"

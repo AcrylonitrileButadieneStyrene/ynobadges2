@@ -1,10 +1,10 @@
 [badge]
-map = 
+map = 1
 points = 15
 art = "tophat"
 
 [conditions]
-default = ""
+default = "M1"
 
 [lang.en]
 name = "Sampuru 96"

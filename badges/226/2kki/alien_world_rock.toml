@@ -1,10 +1,10 @@
 [badge]
-map = 
+map = 2483
 points = 15
 art = "tophat"
 
 [conditions]
-default = ""
+default = "M2483 X=120:131 Y=82:87"
 
 [lang.en]
 name = "Rocky-Looking Thing"
