@@ -7,6 +7,7 @@ id = 81
 secret = true
 
 [conditions]
+requirements = "visit_garden_world AND visit_bottom_garden AND visit_tesla_garden AND visit_bleeding_heads_garden AND visit_ruined_garden AND streetlight AND originator_garden AND visit_spiked_fence_garden AND visit_garden_of_treachery AND azure_garden AND blossoming_brooch AND visit_mansion_garden AND visit_abyssal_garden AND visit_pocket_garden AND visit_ethereal_garden AND visit_dazzling_garden AND snowdrop_garden"
 visit_garden_world = "M81"
 visit_bottom_garden = "M525"
 visit_tesla_garden = "M834"
@@ -23,7 +24,7 @@ visit_abyssal_garden = "M2512"
 visit_pocket_garden = "M2563 X=0:199 Y=172:199"
 visit_ethereal_garden = "M3122"
 # reusing `visit_dazzling_garden`
-visit_snowdrop_garden = "M3501"
+# reusing `snowdrop_garden`
 
 [lang.en]
 name = "Flowered"
@@ -47,4 +48,4 @@ visit_abyssal_garden = "Abyssal Garden"
 visit_pocket_garden = "Pocket Garden"
 visit_ethereal_garden = "Ethereal Garden"
 visit_dazzling_garden = "Dazzling Garden"
-visit_snowdrop_garden = "Snowdrop Garden"
+snowdrop_garden = "Snowdrop Garden"

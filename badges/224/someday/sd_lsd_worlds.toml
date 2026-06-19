@@ -5,10 +5,11 @@ points = 20
 art = "three33"
 
 [conditions]
+requirements = "sd_lsd_world_1 AND sd_lsd_world_2 AND sd_lsd_world_3 AND lsd_world"
 sd_lsd_world_1 = "M163"
 sd_lsd_world_2 = "M164"
 sd_lsd_world_3 = "M165"
-sd_lsd_world_4 = "M166"
+# reusing `lsd_world`
 
 [lang.en]
 name = "In Limbo, the Silent Dream ; In Life, the Sensuous Dream ; In Logic, the Symbolic Dream ; In Leisure, the Sonorous Dream ; In Laughter, the Spiritual Dream ; In Lunacy, the Savage Dream ; In Linking, the Sapient Dream"
