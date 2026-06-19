@@ -1,7 +1,11 @@
 [badge]
-map = 4088
 points = 15
 art = "Michi"
+
+[badge.map]
+id = 4088
+x = 283
+y = 252
 
 [conditions]
 default = "M4088 E1855 INDIRECT"
