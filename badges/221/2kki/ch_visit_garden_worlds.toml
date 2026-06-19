@@ -7,18 +7,18 @@ id = 81
 secret = true
 
 [conditions]
-requirements = "visit_garden_world AND visit_bottom_garden AND visit_tesla_garden AND visit_bleeding_heads_garden AND visit_ruined_garden AND streetlight AND originator_garden AND visit_spiked_fence_garden AND visit_garden_of_treachery AND azure_garden AND blossoming_brooch AND visit_mansion_garden AND visit_abyssal_garden AND visit_pocket_garden AND visit_ethereal_garden AND visit_dazzling_garden AND snowdrop_garden"
+requirements = "visit_garden_world AND visit_bottom_garden AND visit_tesla_garden AND visit_bleeding_heads_garden AND visit_ruined_garden AND streetlight_garden AND originator_garden AND visit_spiked_fence_garden AND visit_garden_of_treachery AND azure_garden AND adabana_gardens AND visit_mansion_garden AND visit_abyssal_garden AND visit_pocket_garden AND visit_ethereal_garden AND visit_dazzling_garden AND snowdrop_garden"
 visit_garden_world = "M81"
 visit_bottom_garden = "M525"
 visit_tesla_garden = "M834"
 visit_bleeding_heads_garden = "M858"
 visit_ruined_garden = "M954"
-# reusing `streetlight`
+# reusing `streetlight_garden`
 # reusing `originator_garden`
 visit_spiked_fence_garden = "M1658"
 visit_garden_of_treachery = "M1590"
 # reusing `azure_garden`
-# reusing `blossoming_brooch`
+# reusing `adabana_gardens`
 visit_mansion_garden = "M2039 X=84:230 Y=104:199"
 visit_abyssal_garden = "M2512"
 visit_pocket_garden = "M2563 X=0:199 Y=172:199"
@@ -37,12 +37,12 @@ visit_bottom_garden = "Bottom Garden"
 visit_tesla_garden = "Tesla Garden"
 visit_bleeding_heads_garden = "Bleeding Heads Garden"
 visit_ruined_garden = "Ruined Garden"
-streetlight = "Streetlight Garden"
+streetlight_garden = "Streetlight Garden"
 originator_garden = "Originator Garden"
 visit_spiked_fence_garden = "Spiked Fence Garden"
 visit_garden_of_treachery = "Garden Of Treachery"
 azure_garden = "Azure Garden"
-blossoming_brooch = "Adabana Gardens"
+adabana_gardens = "Adabana Gardens"
 visit_mansion_garden = "Mansion Garden"
 visit_abyssal_garden = "Abyssal Garden"
 visit_pocket_garden = "Pocket Garden"
