@@ -6,14 +6,14 @@ art = "Kantyo & awoaa"
 
 [conditions]
 requirements = "ami_painting_1 AND ami_painting_2 AND ami_painting_3 AND ami_painting_4 AND ami_painting_5 AND ami_painting_6 AND ami_painting_7 AND ami_painting_8"
-ami_painting_1 = "M391 S606=ON V142>=50"
-ami_painting_2 = "M391 S606=ON V143>=50"
-ami_painting_3 = "M391 S606=ON V144>=50"
-ami_painting_4 = "M391 S606=ON V145>=50"
-ami_painting_5 = "M391 S606=ON V146>=50"
-ami_painting_6 = "M391 S606=ON V147>=50"
-ami_painting_7 = "M391 S606=ON V148>=50"
-ami_painting_8 = "M391 S606=ON V149>=50"
+ami_painting_1 = "M391 S606=ON V142>=35"
+ami_painting_2 = "M391 S606=ON V143>=35"
+ami_painting_3 = "M391 S606=ON V144>=35"
+ami_painting_4 = "M391 S606=ON V145>=35"
+ami_painting_5 = "M391 S606=ON V146>=35"
+ami_painting_6 = "M391 S606=ON V147>=35"
+ami_painting_7 = "M391 S606=ON V148>=35"
+ami_painting_8 = "M391 S606=ON V149>=35"
 
 [lang.en]
 name = "Painted Memories"

@@ -4,7 +4,7 @@ points = 10
 art = "3heart"
 
 [conditions]
-default = "M3046 X=98:100 Y=9:10"
+default = "M3046 X=98:110 Y=9:10"
 
 [lang.en]
 name = "Aisumimasen"

@@ -1,4 +1,5 @@
 [badge]
+group = "4_ch"
 points = 40
 art = "Staghouse33"
 
@@ -7,6 +8,7 @@ id = 312
 secret = true
 
 [conditions]
+requirements = "promnesic_terminal_visit AND visit_old_train_station AND visit_train_tracks AND visit_amplitude AND forgotten_station AND visit_crimson_district AND visit_dark_forest AND visit_fragmented_station AND visit_crossing_forest AND visit_labyrinth_of_dread AND visit_stereo_station AND visit_frozen_smile_world AND visit_underground_subway AND visit_rice_field AND visit_ogh_colorless_pier AND visit_wooded_lakeside_a_a OR visit_wooded_lakeside_a_b AND visit_ticking_blackout_zone"
 # reusing `promnesic_terminal_visit`
 visit_old_train_station = "M545"
 visit_train_tracks = "M312"
@@ -46,6 +48,6 @@ visit_stereo_station = "Stereo Station"
 visit_frozen_smile_world = "Frozen Smile World"
 visit_underground_subway = "Underground Subway"
 visit_rice_field = "Rice Field"
-visit_ogh_colorless_pier = "Wooded Lakeside A"
-"visit_wooded_lakeside_a_a|visit_wooded_lakeside_a_b" = "Ticking Blackout Zone"
-visit_ticking_blackout_zone = "Octagonal Grid Hub (Colorless Pier)"
+visit_ogh_colorless_pier = "Octagonal Grid Hub (Colorless Pier)"
+"visit_wooded_lakeside_a_a|visit_wooded_lakeside_a_b" = "Wooded Lakeside A"
+visit_ticking_blackout_zone = "Ticking Blackout Zone"
