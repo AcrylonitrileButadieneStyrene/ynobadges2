@@ -5,7 +5,13 @@ points = 10
 art = "tophat"
 
 [conditions]
-default = "M1913 E12 INDIRECT"
+requirements = "sai_no_kawara_rock_1 OR sai_no_kawara_rock_2 OR sai_no_kawara_rock_3 OR sai_no_kawara_rock_4 OR sai_no_kawara_rock_5 OR sai_no_kawara_rock_6"
+sai_no_kawara_rock_1 = "M1913 E201"
+sai_no_kawara_rock_2 = "M1913 E204"
+sai_no_kawara_rock_3 = "M1913 E207"
+sai_no_kawara_rock_4 = "M1913 E210"
+sai_no_kawara_rock_5 = "M1913 E213"
+sai_no_kawara_rock_6 = "M1913 E216"
 
 [lang.en]
 name = "RUDE!!!!!"
