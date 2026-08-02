@@ -1,7 +1,7 @@
 [badge]
 map = 13
 points = 10
-art = "vena"
+art = ""
 
 [conditions]
 default = "M13 S23=ON"

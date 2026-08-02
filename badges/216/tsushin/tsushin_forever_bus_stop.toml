@@ -2,7 +2,7 @@
 animated = true
 map = 168
 points = 10
-art = "Rennatalia & Komaki"
+art = "Rennatalia & Risena"
 
 [conditions]
 default = "M168 X=0:27 Y=0:31"

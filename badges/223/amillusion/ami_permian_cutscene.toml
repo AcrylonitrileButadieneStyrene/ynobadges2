@@ -1,10 +1,10 @@
 [badge]
-map = 313
+map = 274
 points = 15
 art = "Snoocola"
 
 [conditions]
-default = "M313"
+default = "M274 S426=ON"
 
 [lang.en]
 name = "Lucky Catching"

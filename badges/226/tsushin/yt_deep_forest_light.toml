@@ -2,7 +2,7 @@
 animated = true
 map = 108
 points = 10
-art = "Komaki"
+art = "Risena"
 
 [conditions]
 default = "M108 S23=ON"

@@ -5,6 +5,7 @@ points = 10
 art = "Ticks"
 
 [conditions]
+requirements = "ly_palliative_ward OR ly_palliative_ward_after_event"
 default = "M96 E3"
 secret = true
 

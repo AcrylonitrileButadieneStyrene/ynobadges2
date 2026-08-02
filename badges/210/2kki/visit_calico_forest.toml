@@ -1,7 +1,7 @@
 [badge]
 points = 20
 map = 2290
-art = "vena"
+art = ""
 
 [conditions]
 default = "M2290"

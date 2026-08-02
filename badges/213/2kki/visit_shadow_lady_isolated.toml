@@ -2,7 +2,7 @@
 animated = true
 map = 1777
 points = 15
-art = "Komaki"
+art = "Risena"
 
 [conditions]
 default = "M1777 X=158:176 Y=231:239"

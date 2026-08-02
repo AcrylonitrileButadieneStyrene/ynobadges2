@@ -4,6 +4,7 @@ points = 15
 art = "SamsungFridg"
 
 [conditions]
+requirements = "ly_sansara_effect OR ly_sansara_effect_equip"
 default = "M126 X=24:63 Y=122:136 S54=ON"
 
 [lang.en]

@@ -2,7 +2,7 @@
 animated = true
 map = 5
 points = 15
-art = "vena"
+art = ""
 
 [conditions]
 default = "M5 S15=ON V14=1 X=93:107 Y=81:87"

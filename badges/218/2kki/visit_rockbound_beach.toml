@@ -1,7 +1,7 @@
 [badge]
 map = 2983
 points = 15
-art = "vena"
+art = ""
 
 [conditions]
 requirements = "beach_rockbound"

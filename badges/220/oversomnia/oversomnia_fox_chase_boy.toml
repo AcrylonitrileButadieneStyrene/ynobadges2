@@ -2,7 +2,7 @@
 animated = true
 map = 35
 points = 15
-art = "LittleCherry & Komaki"
+art = "LittleCherry & Risena"
 
 [conditions]
 default = "M35 E87"

@@ -2,7 +2,7 @@
 animated = true
 map = 198
 points = 15
-art = "Moumekie"
+art = ""
 
 [conditions]
 default = "M198 E110 S124=ON"

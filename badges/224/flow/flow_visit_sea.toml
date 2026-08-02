@@ -9,5 +9,4 @@ default = "M71"
 
 [lang.en]
 name = "Sea of Dreams"
-description = "Have you ever seen the sea?"
 condition = "Visit Sea"

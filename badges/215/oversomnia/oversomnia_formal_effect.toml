@@ -2,7 +2,7 @@
 animated = true
 map = 31
 points = 15
-art = "Komaki"
+art = "Risena"
 
 [conditions]
 default = "M31 S25=ON"

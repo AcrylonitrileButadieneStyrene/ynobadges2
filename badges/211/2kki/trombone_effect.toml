@@ -2,7 +2,7 @@
 animated = true
 map = 265
 points = 15
-art = "vena"
+art = ""
 
 [conditions]
 requirements = "trombone_baddies_bar OR trombone_acoustic_lounge"
