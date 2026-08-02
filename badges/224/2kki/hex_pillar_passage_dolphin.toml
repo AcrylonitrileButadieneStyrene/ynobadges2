@@ -1,8 +1,11 @@
 [badge]
 animated = true
-map = 1826
 points = 15
 art = "3heart"
+
+[badge.map]
+id = 1826
+y = 120
 
 [conditions]
 default = "M1826 E58"

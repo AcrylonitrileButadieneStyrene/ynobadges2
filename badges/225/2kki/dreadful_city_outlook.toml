@@ -5,7 +5,7 @@ points = 20
 art = "Michi"
 
 [conditions]
-default = "M4086 X=0:19 Y=147:161"
+default = "M4086 X=295:314 Y=87:101"
 secret = true
 
 [lang.en]
