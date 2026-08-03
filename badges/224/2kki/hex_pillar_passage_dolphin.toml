@@ -8,9 +8,9 @@ id = 1826
 y = 120
 
 [conditions]
-default = "M1826 E58"
+default = "M1826 S5012=ON"
 
 [lang.en]
 name = "Thirsty Dolphin"
 description = "You're not drinking that coffee... right?"
-condition = "Interact with the dolphin in the isolated section of Hexagonal Pillar Passage"
+condition = "Interact with the dolphin in Hexagonal Pillar Passage's isolated section"

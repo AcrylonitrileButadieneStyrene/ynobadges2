@@ -9,4 +9,4 @@ default = "M1"
 [lang.en]
 name = "Sampuru 96"
 description = "Scary, retro, and samples."
-condition = "Visit the Vaporwave Area."
+condition = "Visit the Vaporwave Area"
