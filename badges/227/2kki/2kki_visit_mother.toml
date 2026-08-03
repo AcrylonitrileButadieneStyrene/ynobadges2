@@ -1,0 +1,11 @@
+[badge]
+map = 174
+points = 15
+art = "Ticks"
+
+[conditions]
+default = "M174"
+
+[lang.en]
+name = "Mother"
+condition = "Enter Mother's room in Urotsuki's Dream Apartments"

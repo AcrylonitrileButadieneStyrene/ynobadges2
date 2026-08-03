@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 5
+points = 10
+art = "elliotzZz"
+
+[conditions]
+default = "M5 X=82:103 Y=6:11"
+
+[lang.en]
+name = "Aww! Soap cube!"
+condition = "Visit the house of Hamigaki-san in Foam World"

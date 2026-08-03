@@ -1,0 +1,11 @@
+[badge]
+map = 1915
+points = 15
+art = ""
+
+[conditions]
+default = "M1915 X=99:115 Y=77:89"
+
+[lang.en]
+name = "Castle on The Coast"
+condition = "Find the sand castle in Smooth Coastline"

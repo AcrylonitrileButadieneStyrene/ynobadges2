@@ -1,0 +1,12 @@
+[badge]
+map = 341
+points = 10
+art = "Ticks"
+
+[conditions]
+default = "M341"
+
+[lang.en]
+name = "Christmas Spirit"
+description = "Save on everything on Christmas in July!"
+condition = "Visit Christmas World"

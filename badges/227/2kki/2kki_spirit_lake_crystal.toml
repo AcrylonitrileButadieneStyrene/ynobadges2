@@ -1,0 +1,12 @@
+[badge]
+map = 4085
+points = 15
+art = "Michi"
+
+[conditions]
+default = "M4085 X=105:124 Y=136:149"
+
+[lang.en]
+name = "Crystallic Phantasia"
+description = "Your eyes are gems shining in their full brilliance, beautiful, but cold and hard."
+condition = "Enter the crystal room leading to Kaleidoscope in Sprite Lake"

@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 4094
+points = 15
+art = "Ticks"
+
+[conditions]
+# 2nd switch sounds like interacting with her while already chainsawed
+# but i'll assume jameson know's what he is doing
+default = "M4094 E1 S124=ON S240=ON"
+
+[lang.en]
+name = "Little Sister"
+description = "What are you doing in this large labyrinth?"
+condition = "Chainsaw the Sister in Auguries of Innocence"

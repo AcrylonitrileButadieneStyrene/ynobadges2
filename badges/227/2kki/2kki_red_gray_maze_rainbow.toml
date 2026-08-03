@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4150
+points = 15
+art = "Jameson"
+
+[conditions]
+default = "M4150 Picture='ic_rainbow'"
+
+[lang.en]
+name = "Prideful Rave Event"
+description = "Don't stare at it for too long or you'll be vomiting rainbows later."
+condition = "Witness the Rainbow Circle Event in Red-Gray Maze"

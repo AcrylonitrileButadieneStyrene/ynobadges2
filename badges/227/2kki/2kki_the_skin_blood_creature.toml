@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2481
+points = 15
+art = "w"
+
+[conditions]
+default = "M2481 X=64:78 Y=16:28"
+
+[lang.en]
+name = "Crawling in my skin"
+description = "\"STOP STARING AT ME!!!!\""
+condition = "See the creature near the blood pile in The Skin"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1729
+points = 20
+art = "Amadeus"
+
+[conditions]
+default = "M1729 X=178:187 Y=12:20 V3930=500302"
+
+[lang.en]
+name = "Plant Maiden"
+description = "Scars covered in ivy"
+condition = "Equip the plant maiden mask in the isolated section of Forest Cavern accessible from Shrouded Arcadia"

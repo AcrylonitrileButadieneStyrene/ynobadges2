@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4088
+points = 15
+art = "VoxSilentii"
+
+[conditions]
+default = "M4088 X=97:299 Y=18:207"
+
+[lang.en]
+name = "The Forest Has Eyes"
+description = "Lost in the forest's gaze, the little dreamer followed the path inwards to it's lamplit heart."
+condition = "Visit both sections of Watching Forest"

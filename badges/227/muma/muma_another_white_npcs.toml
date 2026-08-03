@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 92
+points = 10
+art = "Coolkid95"
+
+[conditions]
+muma_another_white_npc_1 = "M92 E291" # Maki
+muma_another_white_npc_2 = "M92 E293" # Saki
+muma_another_white_npc_3 = "M92 E294" # Kaki
+
+[lang.en]
+name = "The Mono Trio"
+description = "Our groove cannot be stopped!"
+condition = "Interact with Kaki, Saki, and Maki in Another White"

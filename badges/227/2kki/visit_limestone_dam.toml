@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4082
+points = 15
+art = "Sheanicc"
+
+[conditions]
+default = "M4082"
+
+[lang.en]
+name = "Drizzling Dam"
+description = "A structure made of limestone enduring even in a never ending rain."
+condition = "Visit Limestone Dam"
