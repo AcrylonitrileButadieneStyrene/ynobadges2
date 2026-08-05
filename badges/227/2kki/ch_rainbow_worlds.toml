@@ -9,9 +9,9 @@ id = 1350
 secret = true
 
 [conditions]
-requirements = "rainbow_ruins AND visit_rainbow_towers AND rainbow_axis AND visit_rainbow_pottery_zone AND visit_rainbow_silhouette AND rainbow_snow_plateau AND sealed_rainbow_pillars AND visit_rainbow_tiles_maze AND radiant_rainbow_reef AND visit_rainbow_road AND visit_house_over_rainbow"
+requirements = "rainbow_ruins AND rainbow_towers AND rainbow_axis AND visit_rainbow_pottery_zone AND visit_rainbow_silhouette AND rainbow_snow_plateau AND sealed_rainbow_pillars AND visit_rainbow_tiles_maze AND radiant_rainbow_reef AND visit_rainbow_road AND visit_house_over_rainbow"
 # reusing `rainbow_ruins`
-visit_rainbow_towers = "M1656" # (Rainbow Towers)
+# reusing `rainbow_towers`
 # reusing `rainbow_axis`
 visit_rainbow_pottery_zone = "M1730 X=0:84 Y=0:80" # (Rainbow Pottery Zone)
 visit_rainbow_silhouette = "M549"            # (Rainbow Silhouette World)
@@ -30,7 +30,7 @@ condition = "Visit the following rainbow worlds: Rainbow Ruins (Bright Forest), 
 [lang.en.checkbox]
 sealed_rainbow_pillars = "Sealed Rainbow Pillars"
 rainbow_ruins = "Rainbow Ruins (Bright Forest)"
-visit_rainbow_towers = "Rainbow Towers"
+rainbow_towers = "Rainbow Towers"
 rainbow_axis = "Rainbow Axis"
 visit_rainbow_pottery_zone = "Rainbow Pottery Zone"
 ch_rainbow_worlds_e = "Rainbow Silhouette World"
