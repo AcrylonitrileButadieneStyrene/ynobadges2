@@ -2,7 +2,7 @@
 animated = true
 map = 92
 points = 10
-art = "Coolkid95"
+art = "CoolKid95"
 
 [conditions]
 muma_another_white_npc_1 = "M92 E291" # Maki

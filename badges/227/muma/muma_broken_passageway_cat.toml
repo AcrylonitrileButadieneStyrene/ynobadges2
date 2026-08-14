@@ -1,12 +1,12 @@
 [badge]
-map = 1562
+map = 162
 points = 15
 art = "Catsalotl"
 
 [conditions]
 # "Careful, this map is mostly white when opened in RPG Maker 2003.\nCheck coordinates again to make sure it's fine."
 # ^ i don't feel like it
-default = "M1562 E731 X=53:60 Y=162:169"
+default = "M162 X=53:60 Y=162:169"
 
 [lang.en]
 name = "Personmeowl Space"

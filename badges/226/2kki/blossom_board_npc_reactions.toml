@@ -1,8 +1,12 @@
 [badge]
 animated = true
-map = 3503
 points = 15
 art = "AduriteStar"
+
+[badge.map]
+id = 3503
+x = 194
+y = 18
 
 [conditions]
 blossom_board_npc_reaction_1 = "M3503 X=194:213 Y=4:18 S124=ON" # Chainsaw equipped
