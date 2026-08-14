@@ -5,15 +5,15 @@ points = 10
 art = "Flakeohelk"
 
 [conditions]
-2kki_cloud_mirror_reaction_1 = "M3861 E166 X=5:16 Y=10:15 S126=ON" # (Fairy equip)
-2kki_cloud_mirror_reaction_2 = "M3861 E166 X=5:16 Y=10:15 S127=ON" # (Spacesuit equip)
+2kki_cloud_mirror_reaction_1 = "M3861 X=5:16 Y=10:15 S126=ON" # (Fairy equip)
+2kki_cloud_mirror_reaction_2 = "M3861 X=5:16 Y=10:15 S127=ON" # (Spacesuit equip)
 2kki_cloud_mirror_reaction_3 = "M3861 E166 X=5:16 Y=10:15 S147=ON" # (Child equip)
 2kki_cloud_mirror_reaction_4 = "M3861 E166 X=5:16 Y=10:15 S148=ON" # (Red Riding Hood equip)
 2kki_cloud_mirror_reaction_5 = "M3861 E166 X=5:16 Y=10:15 S150=ON" # (Bat equip)
 2kki_cloud_mirror_reaction_6 = "M3861 E166 X=5:16 Y=10:15 S124=ON" # (Chainsaw equip)
-2kki_cloud_mirror_reaction_7 = "M3861 E166 X=5:16 Y=10:15 S196=ON" # (Crossing used)
-2kki_cloud_mirror_reaction_8 = "M3861 E166 X=5:16 Y=10:15 S153=ON" # (Marginal equip)
-2kki_cloud_mirror_reaction_9 = "M3861 E166 X=5:16 Y=10:15 S133=ON" # (Maiko equip)
+2kki_cloud_mirror_reaction_7 = "M3861 X=5:16 Y=10:15 S196=ON" # (Crossing used)
+2kki_cloud_mirror_reaction_8 = "M3861 X=5:16 Y=10:15 S153=ON" # (Marginal equip)
+2kki_cloud_mirror_reaction_9 = "M3861 X=5:16 Y=10:15 S133=ON" # (Maiko equip)
 
 [lang.en]
 name = "A Batty Interaction!"
