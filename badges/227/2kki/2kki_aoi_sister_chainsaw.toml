@@ -7,7 +7,8 @@ art = "Ticks"
 [conditions]
 # 2nd switch sounds like interacting with her while already chainsawed
 # but i'll assume jameson know's what he is doing
-default = "M4094 E1 S124=ON S240=ON"
+# you would never guess what happened
+default = "M4094 E1 S124=ON" # S240=ON
 
 [lang.en]
 name = "Little Sister"
