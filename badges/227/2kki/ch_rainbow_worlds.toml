@@ -14,13 +14,13 @@ requirements = "rainbow_ruins AND rainbow_towers AND rainbow_axis AND visit_rain
 # reusing `rainbow_towers`
 # reusing `rainbow_axis`
 visit_rainbow_pottery_zone = "M1730 X=0:84 Y=0:80" # (Rainbow Pottery Zone)
-visit_rainbow_silhouette = "M549"            # (Rainbow Silhouette World)
+visit_rainbow_silhouette = "M549"                  # (Rainbow Silhouette World)
 # reusing `rainbow_snow_plateau`
 # reusing `sealed_rainbow_pillars`
 visit_rainbow_tiles_maze = "M1102" # (Rainbow Tiles Maze)
 # reusing `radiant_rainbow_reef`
-visit_rainbow_road = "M1990" # (Rainbow Road)
-visit_house_over_rainbow = "M812"  # (House Over The Rainbow)
+visit_rainbow_road = "M1990"      # (Rainbow Road)
+visit_house_over_rainbow = "M812" # (House Over The Rainbow)
 
 [lang.en]
 name = "Sunshine and Rainbows"
@@ -33,7 +33,7 @@ rainbow_ruins = "Rainbow Ruins (Bright Forest)"
 rainbow_towers = "Rainbow Towers"
 rainbow_axis = "Rainbow Axis"
 visit_rainbow_pottery_zone = "Rainbow Pottery Zone"
-ch_rainbow_worlds_e = "Rainbow Silhouette World"
+visit_rainbow_silhouette = "Rainbow Silhouette World"
 rainbow_snow_plateau = "Rainbow Snow Plateau"
 visit_rainbow_tiles_maze = "Rainbow Tiles Maze"
 radiant_rainbow_reef = "Radiant Rainbow Reef"
