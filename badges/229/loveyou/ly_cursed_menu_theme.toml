@@ -1,0 +1,12 @@
+[badge]
+map = 97
+points = 20
+art = "Michi"
+
+[conditions]
+default = "M97 S21=ON"
+
+[lang.en]
+name = "A Benevolent Cryptid"
+description = "I had that dream again, about the horse behind the rock. I saw the destruction its presence warned of, then we parted ways and I told it that it would always be welcome here."
+condition = "Obtain the Cursed Menu Theme. If you have already unlocked it, return where it can be found in Macabre Forest."

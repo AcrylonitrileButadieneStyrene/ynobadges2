@@ -1,0 +1,21 @@
+[badge]
+animated = true
+map = 2991
+points = 25
+art = "Paraverdant"
+
+[conditions]
+dream_tropics_island_1 = "M2991 X=1:026 Y=1:023"
+dream_tropics_island_2 = "M2991 X=1:025 Y=33:050"
+dream_tropics_island_3 = "M2991 X=37:057 Y=1:019"
+dream_tropics_island_4 = "M2991 X=36:054 Y=31:047"
+dream_tropics_island_5 = "M2991 X=68:101 Y=1:036"
+dream_tropics_island_6 = "M2991 X=112:148 Y=1:043"
+dream_tropics_island_7 = "M2991 X=159:184 Y=1:022"
+dream_tropics_island_8 = "M2991 X=159:197 Y=34:055"
+dream_tropics_island_9 = "M2991 X=195:220 Y=1:022"
+
+[lang.en]
+name = "Island Hopping!"
+description = "From the nugget islets, passing though the twin isles, heading towards lilypad island..."
+condition = "Visit every island of Dream Tropics"

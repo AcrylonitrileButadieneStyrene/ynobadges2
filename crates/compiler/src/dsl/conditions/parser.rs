@@ -172,6 +172,9 @@ impl Parser {
                     self.condition.value = Some(string.clone());
                     self.condition.trigger = Some(ConditionTrigger::Picture);
                 }
+                Token::TimeTrial => {
+                    self.condition.time_trial = true;
+                }
                 _ => return Err(Error::Expected("start of instruction")),
             }
         }

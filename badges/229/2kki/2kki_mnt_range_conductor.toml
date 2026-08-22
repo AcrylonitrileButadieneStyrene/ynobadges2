@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 2455
+points = 15
+art = "Anju"
+
+[conditions]
+default = "M2455 X=203:217 Y=96:108 S5=ON"
+
+[lang.en]
+name = "The Desolate Microcosm"
+condition = "See the conductor in Mountain Range"

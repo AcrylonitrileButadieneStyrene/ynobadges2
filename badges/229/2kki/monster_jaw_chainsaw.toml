@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 311
+points = 15
+art = "Aring"
+
+[conditions]
+default = "M311 S124=ON E3"
+
+[lang.en]
+name = "Good nap, Aojiru!"
+description = "Wait in nap, I'm going to hurt you!"
+condition = "Use the Chainsaw Effect on the Monster's Jaw to view a cutscene of Aojiru asleep"

@@ -21,6 +21,7 @@ pub struct Badge {
     pub secret: bool,
     #[serde(default)]
     pub hidden: bool,
+    pub attributes: Option<Attributes>,
 }
 
 #[derive(Debug, serde::Deserialize)]
@@ -34,6 +35,11 @@ pub enum Map {
         #[serde(default)]
         secret: bool,
     },
+}
+
+#[derive(Debug, serde::Deserialize)]
+pub struct Attributes {
+    pub time_limit: Option<u16>,
 }
 
 #[derive(Debug, serde::Deserialize)]

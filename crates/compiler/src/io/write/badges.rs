@@ -34,7 +34,8 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             continue;
         };
 
-        let (req_string, req_strings, req_string_arrays, req_type, req_count) = match reqs {
+        let mut req_int = None;
+        let (req_string, req_strings, req_string_arrays, mut req_type, req_count) = match reqs {
             Request::All => {
                 let mut conditions = bundle.conditions.rest.keys().cloned().collect::<Vec<_>>();
                 match conditions.len() {
@@ -69,6 +70,13 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             Request::TagArray(ids) => (None, None, Some(ids), BadgeReqType::TagArrays, None),
         };
 
+        if let Some(attributes) = &bundle.badge.attributes
+            && let Some(time_limit) = attributes.time_limit
+        {
+            req_type = BadgeReqType::TimeTrial;
+            req_int = Some(time_limit);
+        }
+
         let group = config.groups.get(game_id).and_then(|game| {
             let filtered = bundle
                 .badge
@@ -100,7 +108,7 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
             overlay_type: None,
             parent: None,
             req_count,
-            req_int: None,
+            req_int,
             req_string,
             req_string_arrays,
             req_strings,

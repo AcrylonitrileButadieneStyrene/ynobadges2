@@ -1,0 +1,12 @@
+[badge]
+map = 2302
+points = 15
+art = "RaiSe"
+
+[conditions]
+default = "M2302"
+
+[lang.en]
+name = "A Round Universe"
+description = "The universe is always in motion!"
+condition = "Visit Colorful Spheres World"

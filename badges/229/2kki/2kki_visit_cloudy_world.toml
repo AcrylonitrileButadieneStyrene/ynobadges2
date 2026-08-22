@@ -1,0 +1,12 @@
+[badge]
+map = 673
+points = 15
+art = "RaiSe"
+
+[conditions]
+default = "M673"
+
+[lang.en]
+name = "The white wind is howling..."
+description = "The Harmony of White and Water"
+condition = "Visit Cloudy World"

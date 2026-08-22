@@ -1,0 +1,16 @@
+[badge]
+animated = true
+map = 3612
+points = 30
+art = "denji9099 & Canio"
+
+[badge.attributes]
+time_limit = 540
+
+[conditions]
+default = "M3612 TimeTrial"
+
+[lang.en]
+name = "Gateway Edge"
+description = "A penumbral threshold... of darkness."
+condition = "Reach the final room in Water's Edge in {TIME} or less in Time Trial Mode"

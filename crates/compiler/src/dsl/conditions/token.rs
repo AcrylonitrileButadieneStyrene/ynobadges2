@@ -58,6 +58,9 @@ pub enum Token {
     #[token("Picture")]
     Picture,
 
+    #[token("TimeTrial")]
+    TimeTrial,
+
     #[regex("'[^']*'", |lex| {
         let text = lex.slice();
         text[1..text.len() - 1].to_string()

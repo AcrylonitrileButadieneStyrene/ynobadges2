@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1466
+points = 10
+art = "RaiSe"
+
+[conditions]
+default = "M1466"
+
+[lang.en]
+name = "Red and Writhing"
+description = "That reddish-black thing."
+condition = "Visit Amorphous Maroon Space"

@@ -28,7 +28,13 @@
         "animated": { "type": "boolean" },
         "secret": { "type": "boolean" },
         "hidden": { "type": "boolean" },
-        "overlay": { "type": "number" }
+        "overlay": { "type": "number" },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "time_limit": { "type": "number" }
+          }
+        }
       },
       "required": ["map", "art"],
       "additionalProperties": false

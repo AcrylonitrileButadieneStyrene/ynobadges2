@@ -1,0 +1,16 @@
+[badge]
+animated = true
+map = 62
+points = 15
+art = "sleepysky"
+
+[conditions]
+# i'm not going to check it but i get the feeling that these two are meant to be
+# contiguous in the switch list and one of them gained or lost a 1 digit
+nost_pastel_space_effect_1 = "M62 S35=ON" # Zero Gravity
+nost_pastel_space_effect_2 = "M62 S134=ON" # Unicorn
+
+[lang.en]
+name = "Floating into Dreamscape"
+description = "I drift through imagination, scattering into anything I could become. I could wander beyond the sky, but I only wish to dissolve somewhere beautiful."
+condition = "Equip the Zero Gravity effect and the Unicorn Effect in Pastel Space, where both can be found at the same place."

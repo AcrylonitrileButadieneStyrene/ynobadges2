@@ -1,0 +1,13 @@
+[badge]
+map = 2241
+points = 20
+art = "Kantyo"
+
+[conditions]
+sunlit_winter_chasers_a = "M2241"
+sunlit_winter_chasers_b = "M4094 X=43:52 Y=234:240"
+
+[lang.en]
+name = "Thought You Could Get Away?"
+description = "You're my little doll. You can't run away from me."
+condition = "Get caught by the sister chasers in Sunlit Winter Woods"

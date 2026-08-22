@@ -1,0 +1,14 @@
+[badge]
+map = 2306
+points = 15
+art = "Kantyo"
+
+[conditions]
+requirements = "2kki_visit_crystal_water_a OR 2kki_visit_crystal_water_b"
+2kki_visit_crystal_water_a = "M2306"
+2kki_visit_crystal_water_b = "M2307"
+
+[lang.en]
+name = "The Crystals That Remember the Sky"
+description = "Reflecting the starlight, the crystals shine on forever."
+condition = "Visit Crystal Waters"

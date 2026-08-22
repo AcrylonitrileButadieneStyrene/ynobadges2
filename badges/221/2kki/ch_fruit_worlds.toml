@@ -17,7 +17,7 @@ visit_apple_prison = "M2265"
 visit_lemon_world = "M1700 X=200:279 Y=0:79"
 visit_citrus_springs = "M3368 X=135:248 Y=6:153"
 visit_blueberry_farm = "M2074"
-visit_grape_mall = "M1093"
+visit_grape_mall = "M1096"
 # reusing `violent_fruit_district`
 visit_fruit_carpet_plaza = "M3033"
 

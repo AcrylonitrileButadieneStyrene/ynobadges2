@@ -1,0 +1,12 @@
+[badge]
+map = 13
+points = 15
+art = "SamsungFridg"
+
+[conditions]
+default = "M13 S163=ON"
+
+[lang.en]
+name = "Blooming bud of early spring"
+description = "I hope this young plant grows to be healthy and strong....."
+condition = "Obtain the Fuki Shoot effect. If you have already obtained it, return to where it can be found in the Garden."

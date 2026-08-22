@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 14
+points = 20
+art = "tophat"
+
+[conditions]
+default = "M14 X=75:86 Y=1:10 S126=ON"
+
+[lang.en]
+name = "But Please."
+description = "This heart of mine still beats just for you. Every drip of blood I'll spill will show you just how much I loved you... So, please... Please love me again..."
+condition = "Obtain the Heart effect. If you have already obtained it, return to where it can be found in Love Drains."

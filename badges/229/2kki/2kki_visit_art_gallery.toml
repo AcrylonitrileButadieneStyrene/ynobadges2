@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 13
+points = 10
+art = "Limbs"
+
+[conditions]
+default = "M13"
+
+[lang.en]
+name = "True Painter's Exhibit"
+description = "The abstract catalogue of works designed by the masked painter."
+condition = "Visit Art Gallery"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1374
+points = 15
+art = "3heart"
+
+[conditions]
+default = "M1374 S2745=ON V4784=0"
+
+[lang.en]
+name = "Deja Vu!"
+description = "I've just been in this place before."
+condition = "Get in a car at Blue House Road"

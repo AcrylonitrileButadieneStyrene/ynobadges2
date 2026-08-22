@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 68
+points = 15
+art = "sleepysky"
+
+[conditions]
+default = "M68 X=13:44 Y=9:12"
+
+[lang.en]
+name = "\"A Universe upon your Glasses\n\""
+description = "\"May your light reflected in the glass find its way back to you.\n\""
+condition = "Visit the balcony of Water Fountain Campus"
