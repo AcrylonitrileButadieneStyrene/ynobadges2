@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 ariadne = "0.6.0"
+async-scoped = { version = "0.9.0", features = ["use-tokio"] }
 clap = { version = "4.6.6", features = ["derive"] }
 git2 = { version = "0.21.0", features = ["https", "openssl-probe", "openssl-sys"] }
 indexmap = { version = "2.14.1", features = ["serde"] }
