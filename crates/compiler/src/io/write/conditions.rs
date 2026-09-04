@@ -1,19 +1,17 @@
-use std::sync::Arc;
-
 use crate::{
     Badge,
     dsl::conditions,
     format::{input, output},
 };
 
-pub async fn conditions(badges: Arc<[Badge]>) {
+pub async fn conditions(badges: &[Badge]) {
     for Badge {
         batch,
         id: badge_id,
         game_id,
         bundle: input::Bundle { conditions, .. },
         ..
-    } in &*badges
+    } in badges
     {
         let conditions = conditions
             .rest

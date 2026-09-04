@@ -1,11 +1,11 @@
-use std::{collections::HashMap, sync::Arc};
+use std::collections::HashMap;
 
 use crate::{
     Badge,
     format::{config::Config, input, output},
 };
 
-pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
+pub async fn lang(config: &Config, badges: &[Badge]) {
     let mut languages: HashMap<String, output::Lang> = config
         .lang
         .list
@@ -23,7 +23,7 @@ pub async fn lang(config: Arc<Config>, badges: Arc<[Badge]>) {
         game_id,
         bundle: input::Bundle { lang, .. },
         ..
-    } in &*badges
+    } in badges
     {
         let base = lang.get(&config.lang.base).unwrap();
         for (language_id, language) in &mut languages {
