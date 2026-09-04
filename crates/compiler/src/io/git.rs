@@ -33,10 +33,9 @@ pub fn reset(repo: &git2::Repository) {
     .unwrap();
 
     // git clean -fd
-    for entry in repo
+    for entry in &repo
         .statuses(Some(git2::StatusOptions::new().include_untracked(true)))
         .unwrap()
-        .iter()
     {
         if entry.status().contains(git2::Status::WT_NEW) {
             let path = std::path::PathBuf::from("ynobadges").join(entry.path().unwrap());

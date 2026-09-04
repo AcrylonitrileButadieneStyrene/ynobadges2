@@ -43,7 +43,7 @@ pub fn push_variable(parser: &mut super::parser::Parser, id: u16, op: String, va
             .unwrap_or_else(|| "=".to_string());
 
         parser.condition.var_ids = Some(vec![existing_id, id]);
-        parser.condition.var_ops = Some(vec![existing_op.clone(), op]);
+        parser.condition.var_ops = Some(vec![existing_op, op]);
         parser.condition.var_values = Some(vec![existing_value, value]);
 
         parser.condition.var_id = None;

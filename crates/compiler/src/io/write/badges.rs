@@ -10,6 +10,7 @@ use crate::{
     },
 };
 
+#[allow(clippy::too_many_lines)]
 pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
     for Badge {
         id: badge_id,
@@ -83,11 +84,10 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                 .group
                 .clone()
                 .filter(|group| game.list.contains(group));
-            if bundle.badge.group.is_some() && filtered.is_none() {
-                log::warn!(
-                    "Invalid group {} for badge {batch}/{game_id}/{badge_id}.toml",
-                    bundle.badge.group.as_ref().unwrap()
-                );
+            if let Some(group) = &bundle.badge.group
+                && filtered.is_none()
+            {
+                log::warn!("Invalid group {group} for badge {batch}/{game_id}/{badge_id}.toml");
             }
 
             filtered.or_else(|| game.default.clone())
@@ -132,13 +132,11 @@ pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
                     }
                 }
                 Err(err) => {
-                    log::warn!("Error parsing original badge @ badges/{game_id}/{badge_id}: {err}")
+                    log::warn!("Error parsing original badge @ badges/{game_id}/{badge_id}: {err}");
                 }
             }
-        } else {
-            if !tokio::fs::try_exists(&game).await.unwrap_or_default() {
-                tokio::fs::create_dir(&game).await.unwrap();
-            }
+        } else if !tokio::fs::try_exists(&game).await.unwrap_or_default() {
+            tokio::fs::create_dir(&game).await.unwrap();
         }
 
         tokio::fs::write(path, serde_json::to_string_pretty(&out).unwrap())

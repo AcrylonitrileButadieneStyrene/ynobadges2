@@ -21,6 +21,7 @@ enum State {
 }
 
 #[must_use]
+#[allow(clippy::too_many_lines)]
 pub fn parse(input: &str) -> Option<Request> {
     Token::lexer(input)
         .spanned()
@@ -131,7 +132,7 @@ pub fn parse(input: &str) -> Option<Request> {
 mod tests {
     #[test]
     fn none() {
-        assert_eq!(super::parse(""), Some(super::Request::All))
+        assert_eq!(super::parse(""), Some(super::Request::All));
     }
 
     #[test]
@@ -139,7 +140,7 @@ mod tests {
         assert_eq!(
             super::parse("test"),
             Some(super::Request::Tag("test".to_string()))
-        )
+        );
     }
 
     #[test]
@@ -150,7 +151,7 @@ mod tests {
                 "test1".to_string(),
                 "test2".to_string()
             ]))
-        )
+        );
     }
 
     #[test]
@@ -161,7 +162,7 @@ mod tests {
                 vec!["test1".to_string()],
                 vec!["test2".to_string(), "test3".to_string()],
             ]))
-        )
+        );
     }
 
     #[test]
@@ -172,7 +173,7 @@ mod tests {
                 vec!["test1".to_string(), "test2".to_string()],
                 vec!["test3".to_string()],
             ]))
-        )
+        );
     }
 
     #[test]
@@ -188,7 +189,7 @@ mod tests {
                 ],
                 vec!["test5".to_string()],
             ]))
-        )
+        );
     }
 
     #[test]
@@ -209,6 +210,6 @@ mod tests {
                     "test8".to_string()
                 ],
             ]))
-        )
+        );
     }
 }
