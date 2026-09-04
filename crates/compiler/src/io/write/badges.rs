@@ -1,4 +1,4 @@
-use std::{num::NonZeroU16, sync::Arc};
+use std::num::NonZeroU16;
 
 use crate::{
     Badge,
@@ -10,14 +10,13 @@ use crate::{
     },
 };
 
-#[allow(clippy::too_many_lines)]
-pub async fn badges(config: Arc<Config>, badges: Arc<[Badge]>) {
+pub async fn badges(config: &Config, badges: &[Badge]) {
     for Badge {
         id: badge_id,
         game_id,
         batch,
         bundle,
-    } in &*badges
+    } in badges
     {
         let (map_id, map_x, map_y, map_secret) = match bundle.badge.map {
             input::Map::Plain(id) => (id, None, None, false),

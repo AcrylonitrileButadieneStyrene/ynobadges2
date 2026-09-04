@@ -5,8 +5,6 @@
 #![allow(clippy::cast_sign_loss)]
 #![allow(clippy::cast_possible_truncation)]
 
-use std::sync::Arc;
-
 mod args;
 pub mod dsl;
 pub mod format;
@@ -38,15 +36,19 @@ fn main() {
     tokio::runtime::Builder::new_multi_thread()
         .build()
         .unwrap()
-        .block_on(async_main(Arc::new(config), Arc::from(badges)));
+        .block_on(async_main(config, badges));
 
     io::git::fix_staging(&repo);
 }
 
-async fn async_main(config: Arc<format::config::Config>, badges: Arc<[Badge]>) {
-    let mut set = tokio::task::JoinSet::new();
-    set.spawn(io::write::badges(config.clone(), badges.clone()));
-    set.spawn(io::write::conditions(badges.clone()));
-    set.spawn(io::write::lang(config, badges));
-    set.join_all().await;
+async fn async_main(config: format::config::Config, badges: Vec<Badge>) {
+	// SAFETY: the future returned by scope_and_collect NEEDS to be driven to completion, which it is here
+    unsafe {
+        async_scoped::TokioScope::scope_and_collect(|scope| {
+            scope.spawn(io::write::badges(&config, &badges));
+            scope.spawn(io::write::conditions(&badges));
+            scope.spawn(io::write::lang(&config, &badges));
+        })
+    }
+    .await;
 }
