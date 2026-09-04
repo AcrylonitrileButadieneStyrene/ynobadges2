@@ -45,6 +45,7 @@ impl Parser {
             .map_err(|err| (self.tokens[self.position].1.clone(), err))
     }
 
+    #[allow(clippy::too_many_lines)]
     fn eval_inner(&mut self) -> Result<(), Error> {
         while let Some(token) = self.next() {
             match token {

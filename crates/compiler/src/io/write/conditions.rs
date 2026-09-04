@@ -42,7 +42,7 @@ pub async fn conditions(badges: &[Badge]) {
                     }
                 }
                 Err(err) => panic!("{err}"),
-            };
+            }
 
             tokio::fs::write(&path, serde_json::to_string_pretty(&condition).unwrap())
                 .await
