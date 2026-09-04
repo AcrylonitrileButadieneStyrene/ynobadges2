@@ -9,7 +9,7 @@ fn test() {
             map_y1: 11,
             switch_id: Some(13),
             switch_value: true,
-            trigger: Some(crate::format::output::ConditionTrigger::Coords),
+            trigger: None,
             ..Default::default()
         })
     );
