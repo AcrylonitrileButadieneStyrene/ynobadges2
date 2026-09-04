@@ -7,7 +7,18 @@ pub fn open_or_init() -> Result<git2::Repository, (git2::Error, git2::Error)> {
         Ok(repo) => Ok(repo),
         Err(left) => {
             log::info!("Cloning ynobadges...");
-            git2::Repository::clone("https://github.com/ynoproject/ynobadges", "ynobadges")
+            let mut repo_builder = git2::build::RepoBuilder::new();
+            let mut fetch_options = git2::FetchOptions::new();
+            fetch_options.depth(1); // only download the latest commit
+            // prune deleted branches from the remote, they are kept for safety reasons
+            // https://stackoverflow.com/a/17833002
+            fetch_options.prune(git2::FetchPrune::On);
+            repo_builder.fetch_options(fetch_options);
+            repo_builder
+                .clone(
+                    "https://github.com/ynoproject/ynobadges",
+                    &std::path::PathBuf::from("ynobadges"),
+                )
                 .map_err(|right| (left, right))
         }
     }
