@@ -44,7 +44,7 @@ pub async fn conditions(badges: Arc<[Badge]>) {
                     }
                 }
                 Err(err) => panic!("{err}"),
-            };
+            }
 
             tokio::fs::write(&path, serde_json::to_string_pretty(&condition).unwrap())
                 .await
