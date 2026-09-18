@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3867
+points = 15
+art = "Amadeus"
+
+[conditions]
+default = "M3867 X=155:174 Y=126:140 E1415"
+
+[lang.en]
+name = "Short break"
+description = "So, how about playing a board game with me?"
+condition = "Visit the red bat person at Late Summer"

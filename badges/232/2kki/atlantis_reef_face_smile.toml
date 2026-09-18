@@ -1,0 +1,13 @@
+[badge]
+map = 289
+points = 10
+art = "Limbs"
+secret = true
+
+[conditions]
+default = "M289 X=1:11 Y=34:43 S131=ON"
+
+[lang.en]
+name = "Don'tLookAway"
+description = "ILoveWhenTheyStare,KeepWatching"
+condition = "Make the face in the Atlantis reef smile"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4100
+points = 20
+art = "Etikals"
+
+[conditions]
+default = "M4100"
+
+[lang.en]
+name = "Snow Grave"
+description = "An everlasting snow, like an impossible spell..."
+condition = "Visit Arctic"

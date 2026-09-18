@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 179
+points = 15
+art = "Dawnchorrus"
+
+[conditions]
+default = "M179 V3930=500001"
+
+[lang.en]
+name = "I'm a kitty Cat!"
+condition = "Interact with the Cat costume with the lantern effect equiped in Dressing Room"

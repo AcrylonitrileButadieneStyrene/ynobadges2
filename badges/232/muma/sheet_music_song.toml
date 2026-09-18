@@ -1,0 +1,37 @@
+[badge]
+animated = true
+points = 15
+map = 67
+art = "sleepysky"
+
+[conditions]
+# this really doesn't seem right...
+# oh well :shrug:
+muma_sheet_music_pt1 = "M67 S561=ON"   
+muma_sheet_music_pt2 = "M67 S562=ON"
+muma_sheet_music_pt3 = "M67 S563=ON"
+muma_sheet_music_pt4 = "M67 S564=ON"
+muma_sheet_music_pt5 = "M67 S565=ON"
+muma_sheet_music_pt6 = "M67 S566=ON"
+muma_sheet_music_pt7 = "M67 S567=ON"
+muma_sheet_music_pt8 = "M67 S568=ON"
+muma_sheet_music_pt9 = "M67 S569=ON"
+muma_sheet_music_pt10 = "M67 S570=ON"
+muma_sheet_music_pt11 = "M67 S571=ON"
+muma_sheet_music_pt12 = "M67 S572=ON"
+muma_sheet_music_pt13 = "M67 S573=ON"
+muma_sheet_music_pt14 = "M67 S574=ON"
+muma_sheet_music_pt15 = "M67 S575=ON"
+muma_sheet_music_pt16 = "M67 S576=ON"
+muma_sheet_music_pt17 = "M67 S577=ON"
+muma_sheet_music_pt18 = "M67 S578=ON"
+muma_sheet_music_pt19 = "M67 S579=ON"
+muma_sheet_music_pt20 = "M67 S580=ON"
+muma_sheet_music_pt21 = "M67 S581=ON"
+muma_sheet_music_pt22 = "M67 S582=ON"
+muma_sheet_music_pt23 = "M67 S583=ON"
+
+[lang.en]
+name = "Footsteps in Melody"
+description = "Each step becomes a music note, from daybreak to nightfall."
+condition = "Listen to the whole song in Sheet Music"

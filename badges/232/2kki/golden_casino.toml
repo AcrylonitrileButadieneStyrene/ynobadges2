@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1630
+points = 10
+art = "valkvv"
+
+[conditions]
+default = "M1630"
+
+[lang.en]
+name = "Million Dollar Dreamers"
+description = "Place your bets, dreamers."
+condition = "Visit the Golden Casino in Playing Card Dungeon"
