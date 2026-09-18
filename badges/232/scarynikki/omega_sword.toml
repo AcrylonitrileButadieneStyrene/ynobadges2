@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 38
+points = 15
+art = "mycringeswag7"
+
+[conditions]
+default = "M38 V19=4"
+
+[lang.en]
+name = "My Omega-COOL Sword!"
+description = "This is just a Sanpuru of my true power, heheh.."
+condition = "Obtain the omega sword (equip the omega sword near where it is obtained)"

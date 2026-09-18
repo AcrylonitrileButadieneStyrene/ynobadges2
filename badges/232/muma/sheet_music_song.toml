@@ -1,0 +1,18 @@
+[badge]
+animated = true
+points = 15
+map = 67
+art = "sleepysky"
+
+[conditions]
+# this really doesn't seem right...
+# oh well :shrug:
+muma_sheet_music_pt1 = "M67 S561=ON"   
+muma_sheet_music_pt2 = "M67 S562=ON"
+muma_sheet_music_pt3 = "M67 S563=ON"
+muma_sheet_music_pt23 = "M67 S583=ON"
+
+[lang.en]
+name = "Footsteps in Melody"
+description = "Each step becomes a music note, from daybreak to nightfall."
+condition = "Listen to the whole song in Sheet Music"

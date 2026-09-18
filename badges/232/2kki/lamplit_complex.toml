@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 3555
+points = 10
+art = "Antarlik"
+
+[conditions]
+default = "M3555"
+
+[lang.en]
+name = "Guiding Lights"
+condition = "Visit the main area of Lamplit Complex"

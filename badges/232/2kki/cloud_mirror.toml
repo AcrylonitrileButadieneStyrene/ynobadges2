@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3861
+points = 15
+art = "tophat"
+
+[conditions]
+default = "M3861"
+
+[lang.en]
+name = "Birch Lakes"
+description = "The wind spreads the colors throughout."
+condition = "Visit Cloud Mirror"

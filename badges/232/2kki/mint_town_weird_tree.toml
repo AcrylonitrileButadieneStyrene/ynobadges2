@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1593
+points = 10
+art = "Aurora"
+
+[conditions]
+default = "M1593 X=36:44 Y=9:16"
+
+[lang.en]
+name = "Cure Mint"
+description = "The green earth of tranquility is my strength, you should try it sometime. ♡"
+condition = "See the weird tree in Mint Town"

@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 3158
+points = 20
+art = "Catsalotl"
+
+[conditions]
+default = "M3158 S1062=ON"
+secret = true
+
+[lang.en]
+name = "Warm-toned paintings"
+description = "*orange you glad you took this long journey?*"
+condition = "Obtain the menu type 106. If you have already unlocked it, return where it can be found in Painted Landscape."
