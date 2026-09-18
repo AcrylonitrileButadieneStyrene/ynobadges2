@@ -1,7 +1,7 @@
 [badge]
 map = 289
 points = 10
-art = "limbs"
+art = "Limbs"
 secret = true
 
 [conditions]
