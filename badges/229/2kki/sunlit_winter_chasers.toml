@@ -4,8 +4,7 @@ points = 20
 art = "Kantyo"
 
 [conditions]
-sunlit_winter_chasers_a = "M2241"
-sunlit_winter_chasers_b = "M4094 X=43:52 Y=234:240"
+sunlit_winter_chasers = "M4094 X=43:52 Y=234:240"
 
 [lang.en]
 name = "Thought You Could Get Away?"

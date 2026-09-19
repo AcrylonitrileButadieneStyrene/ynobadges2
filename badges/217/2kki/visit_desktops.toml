@@ -20,7 +20,7 @@ visit_ascii_symbol_zone = "M3219"
 [lang.en]
 name = "Window to the Past"
 description = "Nostalgia is a beautiful but melancholic feeling."
-condition = "Visit the following worlds themed around desktops: The Desktop, File Viewer, Azure Overdose Zone, Sink Catalog, ASCII Symbol World, and Tranquil Park"
+condition = "Visit the following worlds themed around desktops: The Desktop, File Viewer, Azure Overdose Zone, Sink Catalog, ASCII Symbol Zone, and Tranquil Park"
 
 [lang.en.checkbox]
 visit_the_desktop = "The Desktop"

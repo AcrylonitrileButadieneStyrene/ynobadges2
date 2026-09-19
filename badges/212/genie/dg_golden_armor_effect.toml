@@ -2,7 +2,7 @@
 animated = true
 map = 108
 points = 10
-art = "IronCam"
+art = "violetsita"
 
 [conditions]
 default = "M108 X=21:37 Y=58:67 S20=OFF"

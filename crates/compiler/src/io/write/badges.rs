@@ -131,7 +131,7 @@ pub async fn badges(config: &Config, badges: &[Badge]) {
                     }
                 }
                 Err(err) => {
-                    log::warn!("Error parsing original badge @ badges/{game_id}/{badge_id}: {err}");
+                    log::warn!("Error parsing original badge @ {path}: {err}");
                 }
             }
         } else if !tokio::fs::try_exists(&game).await.unwrap_or_default() {

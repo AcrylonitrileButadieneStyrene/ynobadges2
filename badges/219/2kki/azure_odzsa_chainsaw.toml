@@ -2,12 +2,12 @@
 animated = true
 map = 2879
 points = 15
-art = "Risena"
+art = "aronek"
 
 [conditions]
 default = "M2873 S124=ON X=0:22 Y=0:12"
 
 [lang.en]
-name = "My Small Place"
-description = "Tiring of life, sleep in the dark small place in the web"
+name = "Was it an Accident?"
+description = "You do it to yourself, and that's what really hurts."
 condition = "Equip the Chainsaw in the subarea where Sniper-San is in Azure Overdose Zone"

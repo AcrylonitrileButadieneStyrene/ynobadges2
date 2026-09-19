@@ -4,7 +4,7 @@ map = 3473
 points = 20
 art = "sleepysky & Sheanicc"
 
-[condition]
+[conditions]
 default = "M3473 X=34:45 Y=105:106 V44<=128"
 
 [lang.en]

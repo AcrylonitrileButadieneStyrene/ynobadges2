@@ -1,7 +1,7 @@
 [badge]
 map = 2189
 points = 10
-art = "IronCam"
+art = "violetsita"
 
 [conditions]
 default = "M2189 X=186:212 Y=39:54"

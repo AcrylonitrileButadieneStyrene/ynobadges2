@@ -2,7 +2,7 @@
 animated = true
 map = 1244
 points = 20
-art = "IronCam"
+art = "violetsita"
 
 [conditions]
 requirements = "robotic_inst_glitch_event_a OR robotic_inst_glitch_event_b"

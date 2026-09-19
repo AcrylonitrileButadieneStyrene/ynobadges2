@@ -1,11 +1,12 @@
 [badge]
+animated = true
 map = 13
 points = 10
-art = ""
+art = "desktopghost"
 
 [conditions]
 default = "M13 S23=ON"
 
 [lang.en]
-name = "Bioluminescent Seashells"
-condition = "Use the Light Bug effect in the night version of Seaside"
+name = "Glittering Seashells"
+condition = "Use the Light Bug effect in the Night version of Seaside"

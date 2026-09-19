@@ -2,7 +2,7 @@
 animated = true
 map = 4069
 points = 10
-art = "IronCam"
+art = "violetsita"
 
 [conditions]
 default = "M4069"
