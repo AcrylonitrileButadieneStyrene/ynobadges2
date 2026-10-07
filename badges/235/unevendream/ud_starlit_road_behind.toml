@@ -1,0 +1,12 @@
+[badge]
+map = 150
+points = 15
+art = "Kantyo"
+
+[conditions]
+default = "M150"
+
+[lang.en]
+name = "The Star Beyond the Ruins"
+description = "Even where no one remained, the stars had not gone dark."
+condition = "Visit the area behind the Geschäft in Starlit Road"

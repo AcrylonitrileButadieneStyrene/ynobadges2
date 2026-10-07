@@ -1,0 +1,13 @@
+[badge]
+map = 2265
+points = 15
+art = "Catsalotl"
+
+[conditions]
+# "art usage: apple"
+default = "M2265 X=8:10 Y=6:8"
+
+[lang.en]
+name = "You’re the Apple of my Eye"
+description = "And I’ll never let you go…"
+condition = "Visit the Apple Prison and get inside the jail cell"

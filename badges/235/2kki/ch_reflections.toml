@@ -1,0 +1,22 @@
+[badge]
+group = "4_ch"
+points = 25
+art = "Kasatate"
+
+[badge.map]
+id = 1257
+secret = true
+
+[conditions]
+# "no reservation :(, 
+# i decided to do this badge though bc i realised that the condition was a 'visit location' badge rather than a 'see event' badge"
+requirements = "water_lantern AND visit_shattered_lake AND visit_blood_cell_sea AND glowing_gemstone_cave"
+# reusing `water_lantern`
+visit_shattered_lake = "M1914"
+visit_blood_cell_sea = "M1393"
+# reusing `glowing_gemstone_cave`
+
+[lang.en]
+name = "Urotuki in the Water Mirror"
+description = "The reflection of \"me\" on the water's surface"
+condition = "\"Visit the following locations where you can see Urotsukis reflection in water. \nWater Lantern World, Shattered Lake, The tree subarea in Blood Cell Sea and the glowing part of Gemstone Cave\""

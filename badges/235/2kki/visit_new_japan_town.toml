@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3596
+points = 15
+art = "VoxSilentii"
+
+[conditions]
+default = "M3596"
+
+[lang.en]
+name = "Dream-Runner 2099"
+description = "Streetkid, Corpo-Rat, Nomad, Dreamer- Everyone's got something to find here in the City of Tomorrow."
+condition = "Visit New Japan Town"

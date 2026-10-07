@@ -18,6 +18,7 @@ const games: { [key: string]: string } = {
     "Okuri": "okuri",
     ".flow": "flow",
     "Space Funeral": "space",
+    "Braingirl": "braingirl",
 };
 
 const encoder = new TextEncoder();

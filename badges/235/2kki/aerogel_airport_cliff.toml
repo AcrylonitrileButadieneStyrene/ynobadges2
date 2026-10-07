@@ -1,0 +1,12 @@
+[badge]
+map = 4458
+points = 15
+art = "aukse"
+
+[conditions]
+default = "M4458"
+
+[lang.en]
+name = "Sorrowful Winter"
+description = "A lonely cliff beneath an endless winter sky"
+condition = "Visit the cliff subarea in Aerogel Airport"

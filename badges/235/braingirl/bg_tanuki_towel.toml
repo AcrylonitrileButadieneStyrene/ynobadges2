@@ -1,0 +1,15 @@
+[badge]
+map = 1
+points = 15
+art = "Kantyo"
+
+[conditions]
+# 1 if you get the towel, 2 if you put it away, when the swimsuit is on.
+requirements = "bg_tanuki_towel_1 OR bg_tanuki_towel_2"
+bg_tanuki_towel_1 = "M1 E62 V22=1"
+bg_tanuki_towel_2 = "M1 E64 V22=1"
+
+[lang.en]
+name = "Fluffy Towel, Cozy Onsen~"
+description = "Towel? Check. Swimsuit? Check. Cozy bath time? Absolutely!"
+condition = "Wear a towel on your head at the Tanuki Woods Hot Springs"

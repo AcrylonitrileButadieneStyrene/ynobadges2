@@ -1,0 +1,14 @@
+[badge]
+map = 697
+points = 15
+art = "Kantyo"
+
+[conditions]
+# Not sure if 124 (Chainsaw) can count for this one. BUT NO MAX YUME THING!
+ninetails_reaction_fairy = "M697 E26 S126=ON"
+ninetails_reaction_child = "M697 E26 S147=ON"
+
+[lang.en]
+name = "Nine Tails of Silver"
+description = "Amidst a lake of crimson lilies, only the white fox shone."
+condition = "Interact with Ninetails with the Fairy and Child effect in Red Lily Lake"

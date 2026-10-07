@@ -1,0 +1,14 @@
+[badge]
+# by putting it in snowy pipe organ everyone should get it
+map = 53
+points = 5
+art = "Chocoskittle"
+
+[conditions]
+2kki_beret_twin_a = "M52 E11" # Dark Room
+2kki_beret_twin_b = "M53 E10" # Snowy Pipe Organ
+
+[lang.en]
+name = "The Twins of the Dark & Snow"
+description = "Despite the Snowfall, we will still be together in our hearts"
+condition = "Interact with both of the Beret Twins "
