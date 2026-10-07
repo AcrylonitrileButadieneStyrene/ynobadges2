@@ -1,13 +1,12 @@
 [badge]
-animated = true
 map = 109
 points = 15
-art = "Risena"
+art = "tophat"
 
 [conditions]
 default = "M109"
 
 [lang.en]
-name = "Sky of the Past"
-description = "The past flashing before your eye but you can't do anything about it."
+name = "Part of My Memory"
+description = "I still remember that day."
 condition = "Reach Rooftop in the School"

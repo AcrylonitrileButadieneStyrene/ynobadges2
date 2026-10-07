@@ -1,11 +1,11 @@
 [badge]
 animated = true
-map = 179
+map = 176
 points = 15
-art = "Dawnchorrus"
+art = "dawnchorrus"
 
 [conditions]
-default = "M179 V3930=500001"
+default = "M176 V3930=500001"
 
 [lang.en]
 name = "I'm a kitty Cat!"

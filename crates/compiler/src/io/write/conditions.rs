@@ -30,12 +30,18 @@ pub async fn conditions(badges: &[Badge]) {
             let path = format!("{game}/{condition_id}.json");
 
             match tokio::fs::read(&path).await {
-                Ok(bytes) => {
-                    let original: output::Condition = serde_json::from_slice(&bytes).unwrap();
-                    if original != condition {
-                        log::warn!("Desync detected: {batch}/{game_id}/{badge_id}.toml != {path}");
+                Ok(bytes) => match serde_json::from_slice::<output::Condition>(&bytes) {
+                    Ok(original) => {
+                        if original != condition {
+                            log::warn!(
+                                "Desync detected: {batch}/{game_id}/{badge_id}.toml != {path}"
+                            );
+                        }
                     }
-                }
+                    Err(reason) => {
+                        log::error!("Failed to parse: {path} ({reason})");
+                    }
+                },
                 Err(err) if matches!(err.kind(), std::io::ErrorKind::NotFound) => {
                     if !tokio::fs::try_exists(&game).await.unwrap_or_default() {
                         tokio::fs::create_dir(&game).await.unwrap();

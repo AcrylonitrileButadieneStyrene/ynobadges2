@@ -1,10 +1,14 @@
 [badge]
-map = 1826
 points = 15
 art = "dawnchorrus"
 
+[badge.map]
+id = 1826
+x = 1
+y = 18
+
 [conditions]
-default = "M1826 S6=ON"
+default = "M1826 X=29:42 Y=56:62 S6=ON"
 
 [lang.en]
 name = "Coffee, Coming Right Up!"

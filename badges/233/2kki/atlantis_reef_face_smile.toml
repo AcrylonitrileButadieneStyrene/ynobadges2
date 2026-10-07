@@ -1,11 +1,11 @@
 [badge]
-map = 289
+map = 202
 points = 10
 art = "Limbs"
 secret = true
 
 [conditions]
-default = "M289 X=1:11 Y=34:43 S131=ON"
+default = "M202 X=1:11 Y=34:43 S131=ON"
 
 [lang.en]
 name = "Don'tLookAway"

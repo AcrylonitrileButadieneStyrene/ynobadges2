@@ -5,7 +5,8 @@ points = 15
 art = "Canio & Zaakarias"
 
 [conditions]
-default = "M1900 X=20:47 Y=52"
+# what the hell is this?
+default = "M1900 X=0:-1 Y=52:52"
 
 [lang.en]
 name = "Tessera Continuum"

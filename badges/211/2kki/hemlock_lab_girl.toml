@@ -1,5 +1,6 @@
 [badge]
-art = "Staghouse33"
+animated = true
+art = "aronek & emocore"
 hidden = true
 
 [badge.map]
@@ -10,6 +11,6 @@ y = 250
 default = "M3368 X=271:287 Y=272:278"
 
 [lang.en]
-name = "Research Log-00000"
-description = "65 98 115 111 108 117 116 101 108 121 32 100 111 32 110 111 116 32 108 101 116 32 116 104 97 116 32 100 97 116 97 32 98 101 32 108 101 97 107 101 100 32 116 111 32 116 104 101 32 111 117 116 115 105 100 101 46"
+name = "Lonely Experiment"
+description = "Do not allow unauthorized personnel to enter the ██████████ ████. DO NOT allow anyone to see ███ ████. You must remember that ███ ██ ███ ██████ ██████████. Failure to comply will result in ██████ ██████████. "
 condition = "Find the girl in the Hemlock Lab"

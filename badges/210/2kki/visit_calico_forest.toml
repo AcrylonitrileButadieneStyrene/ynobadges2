@@ -1,12 +1,12 @@
 [badge]
 points = 20
 map = 2290
-art = ""
+art = "Catsalotl"
 
 [conditions]
 default = "M2290"
 
 [lang.en]
-name = "Meowing Forest"
-description = "Home is where the cats are."
+name = "Purradise"
+description = "Meow? Meow."
 condition = "Visit Calico Forest"

@@ -2,13 +2,13 @@
 animated = true
 map = 148
 points = 15
-art = "Risena"
+art = "Catsalotl"
 
 [conditions]
 mushroom_cathedral_a = "M148 S534=OFF"
 mushroom_cathedral_b = "M148 S534=ON"
 
 [lang.en]
-name = "Mushroom Time Church"
-description = "Time really flew fast in here huh?"
+name = "Time flies by when you’re having fungi!"
+description = "There isn’t mushroom for a good pun here..."
 condition = "See both the day and night versions of Mushroom Cathedral"

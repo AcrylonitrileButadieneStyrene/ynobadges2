@@ -5,7 +5,7 @@ points = 15
 art = "Amadeus"
 
 [conditions]
-default = "M3867 X=155:174 Y=126:140 E1415"
+default = "M3867 X=155:174 Y=126:140"
 
 [lang.en]
 name = "Short break"

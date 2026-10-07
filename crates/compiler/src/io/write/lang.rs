@@ -58,7 +58,9 @@ pub async fn lang(config: &Config, badges: &[Badge]) {
             inequal |= check_conflict(&entry.condition, &condition, condition_fallback);
             inequal |= check_conflict(&entry.checkbox, &checkbox, checkbox_fallback);
             if inequal {
-                log::warn!("Mismatch between locale {language_id}/{game_id}/{badge_id}");
+                log::warn!(
+                    "Locale desync: ynobadges/lang/{language_id}.json ({game_id}/{badge_id})"
+                );
             }
         }
     }

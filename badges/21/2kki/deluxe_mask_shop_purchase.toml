@@ -1,8 +1,12 @@
 [badge]
 animated = true
-map = 1521
 points = 15
 art = "Rennatalia"
+
+[badge.map]
+id = 1521
+x = 20
+y = 42
 
 [conditions]
 requirements = "deluxe_mask_shop_purchase OR deluxe_mask_shop_purchase_b"
