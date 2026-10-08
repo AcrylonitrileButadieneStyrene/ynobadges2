@@ -10,13 +10,19 @@ secret = true
 [conditions]
 # "no reservation :(, 
 # i decided to do this badge though bc i realised that the condition was a 'visit location' badge rather than a 'see event' badge"
-requirements = "water_lantern AND visit_shattered_lake AND visit_blood_cell_sea AND glowing_gemstone_cave"
-# reusing `water_lantern`
+requirements = "water_lantern_world AND visit_shattered_lake AND visit_blood_cell_sea AND glowing_gemstone_cave_b"
+# reusing `water_lantern_world`
 visit_shattered_lake = "M1914"
 visit_blood_cell_sea = "M1393"
-# reusing `glowing_gemstone_cave`
+# reusing `glowing_gemstone_cave_b`
 
 [lang.en]
 name = "Urotuki in the Water Mirror"
 description = "The reflection of \"me\" on the water's surface"
-condition = "\"Visit the following locations where you can see Urotsukis reflection in water. \nWater Lantern World, Shattered Lake, The tree subarea in Blood Cell Sea and the glowing part of Gemstone Cave\""
+condition = "\"Visit the following locations where you can see Urotsuki's reflection in water: Water Lantern World, Shattered Lake, the tree subarea in Blood Cell Sea, and the glowing part of Gemstone Cave\""
+
+[lang.en.checkbox]
+water_lantern_world = "Water Lantern World"
+visit_shattered_lake = "Shattered Lake"
+visit_blood_cell_sea = "Blood Cell Sea"
+glowing_gemstone_cave_b = "Gemstone Cave"
