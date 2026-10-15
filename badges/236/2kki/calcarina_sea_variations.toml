@@ -1,0 +1,16 @@
+[badge]
+animated = true
+map = 1245
+points = 20
+art = "tophat"
+
+[conditions]
+calcarina_sea_dry = "M1245" S2=OFF" 
+calcarina_sea_wet = "M1245 S2=ON" 
+calcarina_sea_night = "M1255"
+calcarina_sea_snowfield = "M1223"
+
+[lang.en]
+name = "Calcarina Days"
+description = "But don't fret, you get to go to the beach during any time and season! We've got you covered."
+condition = "See all versions of Calcarina Sea."

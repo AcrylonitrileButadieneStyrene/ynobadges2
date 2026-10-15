@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2987
+points = 15
+art = "mokqz2"
+
+[conditions]
+default = "M2987"
+
+[lang.en]
+name = "Thoughts Spinning"
+description = "A sweet dream of berry sauce and white cream"
+condition = "Visit Whirl World"

@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 88
+points = 40
+art = "tophat"
+
+[conditions]
+default = "M88"
+
+[lang.en]
+name = "Skies Forever Blue"
+description = "Ever since I laid my eyes on you..."
+condition = "Defeat the Moon Boss and see the ending of Space Funeral."
