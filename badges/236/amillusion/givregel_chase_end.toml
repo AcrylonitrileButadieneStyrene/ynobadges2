@@ -4,7 +4,7 @@ points = 20
 art = "Kantyo"
 
 [conditions]
-default = "M264, S287=ON"
+default = "M264 S287=ON"
 
 [lang.en]
 name = "Blade of the Azure Flame"
