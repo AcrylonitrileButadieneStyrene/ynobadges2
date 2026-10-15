@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 753
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M753"
+
+[lang.en]
+name = "Urotsuki And The Tale of Space"
+description = "It is only with the heart that one can see rightly."
+condition = "Visit the Dojo's space area."

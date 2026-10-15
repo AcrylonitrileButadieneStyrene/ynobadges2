@@ -1,0 +1,13 @@
+[badge]
+animated = true 
+map = 2773
+points = 15
+art = "mokqz2"
+
+[conditions]
+default = "M2773"
+
+[lang.en]
+name = "Walking along the furrows"
+description = "Being out in this rain brings back memories of those days."
+condition = "Visit Rice paddy"
