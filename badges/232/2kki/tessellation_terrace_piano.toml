@@ -1,0 +1,12 @@
+[badge]
+map = 1900
+points = 15
+art = "Canio"
+
+[conditions]
+default = "M1900 V4=17"
+
+[lang.en]
+name = "Op. 18: II. Adagio Sostenuto"
+description = "An invitation from the Rose Church to a requiem for a simulacrum."
+condition = "Play the piano in Tessellation Terrace subarea"

@@ -1,0 +1,12 @@
+[badge]
+map = 1826
+points = 15
+art = "dawnchorrus"
+
+[conditions]
+default = "M1826 S6=ON"
+
+[lang.en]
+name = "Coffee, Coming Right Up!"
+description = "Have some of the finest coffee the dream world has to offer!"
+condition = "Drink coffee at the Critter Village cafe"

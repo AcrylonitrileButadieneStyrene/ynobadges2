@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3473
+points = 20
+art = "sleepysky & Sheanicc"
+
+[condition]
+default = "M3473 X=34:45 Y=105:106 V44<=128"
+
+[lang.en]
+name = "Path of light to you"
+description = "Shine a path to solitude; listen by the water while gazing at the moon."
+condition = "Find the girl in Moonlit Pier"

@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 45
+points = 15
+art = "Michi"
+secret = true
+
+[conditions]
+default = "M45"
+
+[lang.en]
+name = "Waves of Starless Sea"
+description = "Beyond the dark and rolling sea of doubt, there is a beacon of light that never goes out."
+condition = "Visit the seaside area of Noir"
