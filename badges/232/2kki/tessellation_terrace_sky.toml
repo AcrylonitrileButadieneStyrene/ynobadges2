@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 1900
+points = 15
+art = "Canio & Zaakarias"
+
+[conditions]
+default = "M1900 X=20:47 Y=52"
+
+[lang.en]
+name = "Tessera Continuum"
+description = "It will all return to dust, and only memories will remain..."
+condition = "View the sky area in Tessellation Terrace subarea"
