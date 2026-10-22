@@ -5,7 +5,7 @@ points = 15
 art = "mokqz2"
 
 [conditions]
-default = "M2773"
+requirements = "visit_rice_paddy"
 
 [lang.en]
 name = "Walking along the furrows"

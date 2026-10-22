@@ -1,0 +1,47 @@
+[badge]
+group = "4_ch"
+animated = true 
+points = 35
+art = "Aurora"
+
+[badge.map]
+id = 1143
+secret = true
+
+[conditions]
+requirements = "aurora_lake AND crystal_lake_2kki AND dark_pagoda_lake AND firefly_lake AND fossil_lake AND lake_of_bones AND luminous_lake AND red_lily_lake AND rotten_fish_lake AND visit_shattered_lake AND shell_lake AND visit_sprite_lake AND underground_lake AND weeping_lake"
+# reuse `aurora_lake` 
+# reuse `crystal_lake_2kki`
+dark_pagoda_lake = "M777"
+firefly_lake = "M3594"
+fossil_lake = "M1138"
+# reuse `lake_of_bones`
+luminous_lake = "M1471"
+red_lily_lake = "M697"
+# reuse `rotten_fish_lake`
+# reuse `visit_shattered_lake`
+shell_lake = "M1230"
+# reuse `visit_sprite_lake`
+# reuse `underground_lake`
+# reuse `weeping_lake`
+
+[lang.en]
+name = "Golden Reed and Little Droplet"
+description = "I'm half crazy, all for the lakes of you."
+condition = "Visit the following lake worlds: Aurora Lake, Crystal Lake, Dark Pagoda Lake, Firefly Lake, Fossil Lake, Lake of Bones, Luminous Lake, Red Lily Lake, Rotten Fish Lake, Shattered Lake, Shell Lake, Sprite Lake, Underground Lake, & Weeping Lake"
+
+[lang.en.checkbox] 
+aurora_lake = "Aurora Lake"
+crystal_lake_2kki = "Crystal Lake"
+dark_pagoda_lake = "Dark Pagoda Lake"
+firefly_lake = "Firefly Lake"
+fossil_lake = "Fossil Lake"
+lake_of_bones = "Lake of Bones"
+luminous_lake = "Luminous Lake"
+red_lily_lake = "Red Lily Lake"
+rotten_fish_lake = "Rotten Fish Lake"
+visit_shattered_lake = "Shattered Lake"
+shell_lake = "Shell Lake"
+visit_sprite_lake = "Sprite Lake"
+underground_lake = "Underground Lake"
+weeping_lake = "Weeping Lake"

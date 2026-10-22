@@ -8,7 +8,7 @@ art = "tophat"
 calcarina_sea_dry = "M1245 S2=OFF"
 calcarina_sea_wet = "M1245 S2=ON"
 calcarina_sea_night = "M1255"
-calcarina_sea_snowfield = "M1223"
+calcarina_sea_snowfield = "M1023"
 
 [lang.en]
 name = "Calcarina Days"

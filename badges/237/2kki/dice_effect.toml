@@ -1,0 +1,12 @@
+[badge]
+map = 1504
+points = 15
+art = "mycringeswag7"
+
+[conditions]
+default = "M1504 S78=ON"
+
+[lang.en]
+name = "Dice To Meet You"
+description = "I’ll roll and i’ll roll, till I change my luck.."
+condition = "Obtain the dice effect. If you have already unlocked it, return to Acerola World"
