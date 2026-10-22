@@ -1,0 +1,14 @@
+[badge]
+group = "2_ts"
+animated = true
+map = 561
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M561 X=14:65 Y=124:149"
+
+[lang.en]
+name = "Weird House"
+description = "Once upon a time, lived a little Totsu in a very weird, little house."
+condition = "Visit the Weirdhaus in Berdplace"

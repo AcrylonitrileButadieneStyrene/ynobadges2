@@ -1,0 +1,16 @@
+[badge]
+animated = true
+points = 20
+art = "Tanjunebi"
+
+[badge.map]
+id = 60
+secret = true
+
+[conditions]
+default = "M60 S20=ON"
+
+[lang.en]
+name = "Phish"
+description = "And now, time for your SUITABLY IRONIC PUNISHMENT!"
+condition = "Get turned into a fish by the Genie in Space Funeral"

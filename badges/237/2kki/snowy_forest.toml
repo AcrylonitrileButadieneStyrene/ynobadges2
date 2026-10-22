@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 892
+points = 15
+art = "z1krispy & Somsnosna"
+secret = true # optional
+
+[conditions]
+default = "M892"
+
+[lang.en]
+name = "Rough Winter"
+description = "Why is the winter so rough here.."
+condition = "Visit the main area of Snowy Forest"

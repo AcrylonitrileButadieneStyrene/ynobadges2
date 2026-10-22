@@ -1,0 +1,12 @@
+[badge]
+map = 4311
+points = 15
+art = "Michi"
+
+[conditions]
+default = "M4311"
+
+[lang.en]
+name = "The Great Gingerbread Adventure"
+description = "Sugary dreams and licorice schemes"
+condition = "Visit Candyland"

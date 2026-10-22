@@ -4,9 +4,9 @@ points = 15
 art = "RaiSe"
 
 [conditions]
-default = "M2773 S2=ON"
+default = "M4454 S2=ON"
 
 [lang.en]
 name = "Sparkling Night View"
 description = "Enjoy the view from a special seat!"
-condition = "Veiw the cockpit in Aerogel Airport"
+condition = "View the cockpit in Aerogel Airport"

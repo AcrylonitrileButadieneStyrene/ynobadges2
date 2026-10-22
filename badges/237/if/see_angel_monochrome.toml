@@ -1,0 +1,12 @@
+[badge]
+map = 54
+points = 25
+art = "Tanjunebi"
+secret = true
+
+[conditions]
+default = "M54 Picture='angels'"
+
+[lang.en]
+name = "Shadow Angel"
+condition = "See the Angel event in Monochrome Islands"

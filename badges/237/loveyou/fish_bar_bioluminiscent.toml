@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 8 # map 8 is bioluminiscent ocean but 100 is fish room
+points = 15
+art = "Somsnosna"
+
+[conditions]
+default = "M100"
+
+[lang.en]
+name = "Drowning in my feelings"
+description = "You are the only fish in the sea for me"
+condition = "Visit the fish room in Bioluminiscent Ocean"

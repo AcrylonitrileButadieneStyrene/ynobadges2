@@ -5,8 +5,8 @@ points = 15
 art = "501201"
 
 [conditions]
-requirements = "wine_cellar_a OR wine_cellar_b"
-wine_cellar_a = "M1277"
+requirements = "wine_cellar OR wine_cellar_b"
+# reusing wine_cellar
 wine_cellar_b = "M1278"
 
 [lang.en]
