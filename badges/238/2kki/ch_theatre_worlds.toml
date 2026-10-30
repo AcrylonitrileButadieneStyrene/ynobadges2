@@ -5,13 +5,13 @@ art = "Rita"
 
 [badge.map]
 id = 15
-secret = true 
+secret = true
 
 [conditions]
 requirements = "visit_theatre_world AND drains_theatre AND story_theatre AND dark_room_theatre AND puppet_theatre_swf AND amphitheater_chainlinklees AND planetarium_theatre"
 visit_theatre_world = "M15"
 drains_theatre_cinema = "M1973"
-story_theatre = "2545"
+story_theatre = "M2545"
 dark_room_theatre = "M52 X=63:103 Y=2:26"
 puppet_theatre_swf = "M1712"
 amphitheater_chainlinklees = "M1011"
