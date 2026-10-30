@@ -40,9 +40,14 @@ impl Parser {
     }
 
     pub fn eval(mut self) -> Result<Condition, (std::ops::Range<usize>, Error)> {
-        self.eval_inner()
-            .map(|()| self.condition)
-            .map_err(|err| (self.tokens[self.position].1.clone(), err))
+        self.eval_inner().map(|()| self.condition).map_err(|err| {
+            (
+                self.tokens[self.position.min(self.tokens.len() - 1)]
+                    .1
+                    .clone(),
+                err,
+            )
+        })
     }
 
     #[allow(clippy::too_many_lines)]
