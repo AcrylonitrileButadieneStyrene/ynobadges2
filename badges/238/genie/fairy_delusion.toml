@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 265
+points = 15
+art = "mycringeswag7"
+
+[conditions]
+default = "M265 S283=ON"
+
+[lang.en]
+name = "Faerie’s Slumber"
+description = "Through violet tides, prying eyes see the shine of silver hair, floating in the breeze, lest blonde you’d be"
+condition = "Equip the Fairy delusion where it can be obtained in Star of Wise Sea B"

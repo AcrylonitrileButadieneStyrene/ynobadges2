@@ -1,0 +1,15 @@
+[badge]
+points = 10
+art = "Kantyo"
+secret = true
+
+[badge.map]
+id = 201
+secret = true
+
+[conditions]
+default = "V119=22"
+
+[lang.en]
+name = "Gold Danette Trophy"
+condition = "Transform into Golden Danaë using the Shamrock key"
