@@ -1,0 +1,15 @@
+[badge]
+animated = true
+map = 164
+points = 10
+art = "AriTheMoth"
+
+[conditions]
+requirements = "jukebox_bug_maze_1 OR jukebox_bug_maze_2"
+jukebox_bug_maze_1 = "M164 E5"
+jukebox_bug_maze_2 = "M164 E25"
+
+[lang.en]
+name = "Great Obelisk of Tunes"
+description = "This rock knows how to rock!"
+condition = "Interact with the Jukebox Stone in Bug Maze"

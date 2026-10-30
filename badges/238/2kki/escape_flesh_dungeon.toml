@@ -1,0 +1,13 @@
+[badge]
+group = "4_ch" # made into a challenge badge as it seems fitting
+map = 4318
+points = 15
+art = "VoxSilentii"
+
+[conditions]
+default = "M4318 V232=4"
+
+[lang.en]
+name = "Tender is the Flesh, Sharp is the Fear"
+description = "Samsara of cut sinew and crushed bone."
+condition = "Escape the Flesh Dungeon before time runs out"

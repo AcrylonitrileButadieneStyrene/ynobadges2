@@ -1,0 +1,12 @@
+[badge]
+animated = true
+map = 3137
+points = 10
+art = "Wawann"
+
+[conditions]
+default = "M3137"
+
+[lang.en]
+name = "A lone candlestick in a dark, dark world..."
+condition = "Visit Candlestick World"

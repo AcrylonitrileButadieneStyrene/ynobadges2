@@ -1,0 +1,13 @@
+[badge]
+animated = true 
+map = 4123
+points = 15
+art = "AriTheMoth"
+
+[conditions]
+default = "M4123"
+
+[lang.en]
+name = "Intergalactic Jell-O Cubes!"
+description = "Now in a whole rainbow of flavors!"
+condition = "Visit Escher Path"

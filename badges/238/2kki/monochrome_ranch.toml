@@ -1,0 +1,11 @@
+[badge]
+map = 2043
+points = 10
+art = "takikomi"
+
+[conditions]
+default = "M2043"
+
+[lang.en]
+name = "Cock-a-mow-mow"
+condition = "Visit Monochrome Ranch"
