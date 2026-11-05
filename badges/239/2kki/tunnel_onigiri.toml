@@ -1,0 +1,12 @@
+[badge]
+map = 4091
+points = 15
+art = "VoxSilentii" # might become animated later
+
+[conditions]
+default = "M4091 X=1:76 Y=55:59"
+
+[lang.en]
+name = "Sushi Express!"
+description = "Well, despite these dark tunnels, the fish population is doing surprisingly well!"
+condition = "See the Onigiri in Tunnels"

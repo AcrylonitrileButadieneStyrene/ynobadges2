@@ -1,0 +1,12 @@
+[badge]
+map = 2273 # different display map
+points = 10
+art = "AduriteStar"
+
+[conditions]
+default = "M2294 X=42:56 Y=4:12"
+
+[lang.en]
+name = "Entrance To Somewhere"
+description = "I dunno what's this but I'm scared help me."
+condition = "Visit the Monochrome Room in Checkered Towers"

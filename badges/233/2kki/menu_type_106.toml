@@ -5,7 +5,7 @@ points = 20
 art = "Catsalotl"
 
 [conditions]
-default = "M3158 S1062=ON"
+default = "M3158 S1062=ON V1=2"
 secret = true
 
 [lang.en]

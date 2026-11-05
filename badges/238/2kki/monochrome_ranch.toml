@@ -4,7 +4,7 @@ points = 10
 art = "takikomi"
 
 [conditions]
-default = "M2043"
+requirements = "b_w_mono_ranch"
 
 [lang.en]
 name = "Cock-a-mow-mow"

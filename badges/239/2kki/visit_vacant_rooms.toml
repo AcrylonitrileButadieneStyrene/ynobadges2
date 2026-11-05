@@ -1,0 +1,12 @@
+[badge]
+map = 2167
+points = 20
+art = "Chocoskittle"
+
+[conditions]
+default = "M2167"
+
+[lang.en]
+name = "The Rooms of Dreamers, Just Like You."
+description = "\"Call my name through the cream, & i'll hear you scream again.\""
+condition = "Visit Vacant rooms"
