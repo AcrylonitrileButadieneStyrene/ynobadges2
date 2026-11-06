@@ -128,6 +128,7 @@ pub async fn badges(config: &Config, badges: &[Badge]) {
                     if original != out {
                         // todo: print a diff
                         log::warn!("Desync detected: {batch}/{game_id}/{badge_id}.toml != {path}");
+                        log::trace!("Original: {original:#?}, Updated: {out:#?}");
                     }
                 }
                 Err(err) => {

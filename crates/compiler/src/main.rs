@@ -21,7 +21,10 @@ struct Badge {
 fn main() {
     let args = <args::Args as clap::Parser>::parse();
 
-    tracing_subscriber::fmt().without_time().init();
+    tracing_subscriber::fmt()
+        .without_time()
+        .with_max_level(args.level_filter())
+        .init();
 
     let config: format::config::Config =
         toml::from_slice(&std::fs::read("./options.toml").unwrap()).unwrap();
@@ -42,7 +45,7 @@ fn main() {
 }
 
 async fn async_main(config: format::config::Config, badges: Vec<Badge>) {
-	// SAFETY: the future returned by scope_and_collect NEEDS to be driven to completion, which it is here
+    // SAFETY: the future returned by scope_and_collect NEEDS to be driven to completion, which it is here
     unsafe {
         async_scoped::TokioScope::scope_and_collect(|scope| {
             scope.spawn(io::write::badges(&config, &badges));

@@ -8,7 +8,7 @@ id = 15
 secret = true
 
 [conditions]
-requirements = "visit_theatre_world AND drains_theatre AND story_theatre AND dark_room_theatre AND puppet_theatre_swf AND mechanical_heart AND planetarium_theatre"
+requirements = "visit_theatre_world AND drains_theatre_cinema AND story_theatre AND dark_room_theatre AND puppet_theatre_swf AND mechanical_heart AND planetarium_theatre"
 visit_theatre_world = "M15"
 drains_theatre_cinema = "M1973"
 story_theatre = "M2545"
