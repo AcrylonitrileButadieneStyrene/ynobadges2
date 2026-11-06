@@ -26,7 +26,10 @@ const encoder = new TextEncoder();
 const copies: [string, string][] = [];
 
 const batch = parseInt(prompt("Batch?")!);
-const entries = prompt("Entries?")!.replace(/"([^"]*)"/g, match => match.replace(/\n/g, '\\n')).split("\n");
+const entries = prompt("Entries?")!
+    .replaceAll("\r\n", "\n")
+    .replace(/"([^"]*)"/g, match => match.replace(/\n/g, '\\n'))
+    .split("\n");
 
 console.clear();
 for (const entry of entries) {
