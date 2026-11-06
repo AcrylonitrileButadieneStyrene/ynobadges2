@@ -5,7 +5,7 @@ points = 15
 art = "mycringeswag7"
 
 [conditions]
-default = "M265 S283=ON"
+default = "M265 V662=18"
 
 [lang.en]
 name = "Faerie’s Slumber"

@@ -1,0 +1,12 @@
+[badge]
+map = 648
+points = 15
+art = "tophat"
+
+[conditions]
+default = "M648"
+
+[lang.en]
+name = "Electric Coulomb!!"
+description = "Make sure everything is in place before soldering!"
+condition = "Visit Circuit Board"

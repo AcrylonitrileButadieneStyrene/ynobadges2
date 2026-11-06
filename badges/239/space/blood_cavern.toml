@@ -1,0 +1,14 @@
+[badge]
+animated = true 
+map = 22
+points = 10
+art = "Rollenets & sylvonis"
+secret = true 
+
+[conditions]
+default = "M22"
+
+[lang.en]
+name = "The other side of the Swamp"
+description = "Don't let your kindness kill you..."
+condition = "Enter the evil BLOOD cavern"

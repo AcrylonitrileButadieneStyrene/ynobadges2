@@ -1,0 +1,13 @@
+[badge]
+map = 2488
+points = 15
+art = "tophat"
+secret = true
+
+[conditions]
+default = "M2488"
+
+[lang.en]
+name = "Bleeding Dove and Snow"
+description = "Who knows what they've both been through..."
+condition = "See the Bloody Scene in Spiked Storm"

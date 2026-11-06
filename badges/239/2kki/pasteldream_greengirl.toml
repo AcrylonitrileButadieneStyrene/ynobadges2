@@ -1,0 +1,20 @@
+[badge]
+map = 3364
+points = 20
+art = "yukicao"
+
+[conditions]
+requirements = "pasteldream_greengirl_a AND pasteldream_greengirl_b AND pasteldream_greengirl_c AND pasteldream_greengirl_d AND pasteldream_greengirl_e AND pasteldream_greengirl_f AND pasteldream_greengirl_g"
+pasteldream_greengirl_a = "M3364 X=132:143 Y=63:70 S2=OFF S124=ON" # chainsaw
+pasteldream_greengirl_b = "M3364 X=132:143 Y=63:70 S2=OFF S154=ON" # drum
+pasteldream_greengirl_c = "M3364 X=132:143 Y=63:70 S2=OFF S173=ON" # maiko action
+pasteldream_greengirl_d = "M3364 X=132:143 Y=63:70 S2=OFF S148=ON" # red riding hood
+pasteldream_greengirl_e = "M3364 X=132:143 Y=63:70 S2=OFF S158=ON" # dice
+pasteldream_greengirl_f = "M3364 X=132:143 Y=63:70 S2=OFF S125=ON" # lantern
+pasteldream_greengirl_g = "M3364 X=132:143 Y=63:70 S2=OFF S135=ON" # penguin
+
+
+[lang.en]
+name = "Misplaced"
+description = "What are you doing, aiyo~"
+condition = "See all the reactions of the green haired girl in Pastel Dream Sea: Sunken Ship Mansion"

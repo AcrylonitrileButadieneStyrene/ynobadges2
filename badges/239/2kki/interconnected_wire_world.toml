@@ -1,0 +1,12 @@
+[badge]
+map = 3213
+points = 10
+art = "tophat"
+
+[conditions]
+default = "M3213"
+
+[lang.en]
+name = "Sharing Connections"
+description = "It's all just wires..."
+condition = "Visit Interconnected Wire World"

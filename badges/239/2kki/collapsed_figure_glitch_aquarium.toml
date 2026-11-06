@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 3776
+points = 15
+art = "RaiSe"
+
+[conditions]
+default = "M3776 X=8:24 Y=14:21"
+
+[lang.en]
+name = "A moving white, figure?"
+description = "Struggling and suffering—how long have you been there?"
+condition = "See the Collapsed Figure in Glitched Aquarium"
