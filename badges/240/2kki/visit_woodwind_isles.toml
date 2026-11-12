@@ -1,0 +1,12 @@
+[badge]
+map = 4071
+points = 10
+art = "depipisthief"
+
+[conditions]
+default = "M4071"
+
+[lang.en]
+name = "Breezy Bliss"
+description = "Lost amongst new expanses with the harmonious sounds of woodwind echoing all around."
+condition = "Visit Woodwind Isles"

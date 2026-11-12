@@ -1,0 +1,17 @@
+[badge]
+animated = true
+points = 30
+art = "tophat & Michi"
+secret = true
+
+[badge.map]
+id = 1
+secret = true
+
+[conditions]
+default = "M1 V100>900"
+
+[lang.en]
+name = "Breaking Point"
+description = "The deeper you dwelve, the worse it'll be."
+condition = "Trigger the event in Aitsuki's Room with a Trauma level of 900 or higher"

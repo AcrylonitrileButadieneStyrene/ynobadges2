@@ -2,7 +2,7 @@
 animated = true
 map = 104
 points = 30
-art = "Amadeus"
+art = "Amamo"
 
 [conditions]
 default = "M104 S433=ON DELAYED"
