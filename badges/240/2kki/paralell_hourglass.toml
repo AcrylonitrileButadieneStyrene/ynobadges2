@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2662
+points = 10
+art = "deadsquid"
+
+[conditions]
+default = "M2662 X=57:69 Y=37:47"
+
+[lang.en]
+name = "Tempus Mortis"
+description = "Life is short; time and death go hand-in-hand."
+condition = "View the Hourglass in Parallel Graveyard"

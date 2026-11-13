@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 4141
+points = 15
+art = "Jaderabbit"
+secret = true
+
+[conditions]
+default = "M4141 S4=ON"
+
+[lang.en]
+name = "Fiddle Around and Find Out"
+description = "That's why you don't play with the lights."
+condition = "Veiw the event in Hisui's House in Arctic"

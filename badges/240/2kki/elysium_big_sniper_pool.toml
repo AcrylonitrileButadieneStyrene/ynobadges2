@@ -1,0 +1,12 @@
+[badge]
+map = 3224
+points = 15
+art = "kirieshka"
+
+[conditions]
+default = "M3224 X=50:68 Y=70:76"
+
+[lang.en]
+name = "Enjoy your eternal rest"
+description = "...but everything still hurts"
+condition = "See the laying giant Sniper-san in Elysium pools"

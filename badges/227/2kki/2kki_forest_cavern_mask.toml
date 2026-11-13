@@ -2,7 +2,7 @@
 animated = true
 map = 1729
 points = 20
-art = "Amadeus"
+art = "Amamo"
 
 [conditions]
 default = "M1729 X=178:187 Y=12:20 V3930=500302"

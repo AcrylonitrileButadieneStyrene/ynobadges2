@@ -1,0 +1,12 @@
+[badge]
+map = 2260
+points = 10
+art = "VoxSilentii"
+
+[conditions]
+default = "M2260"
+
+[lang.en]
+name = "Out of Bounds. Out of Memory."
+description = "I feel like... I'm right where I'm supposed to be..."
+condition = "Visit Back Halls"

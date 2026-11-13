@@ -2,7 +2,7 @@
 animated = true
 map = 36
 points = 15
-art = "Amadeus"
+art = "Amamo"
 
 [conditions]
 default = "M36 S170=ON"

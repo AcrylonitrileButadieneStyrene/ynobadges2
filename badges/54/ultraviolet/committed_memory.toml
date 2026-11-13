@@ -2,7 +2,7 @@
 animated = true
 map = 23
 points = 15
-art = "Amadeus"
+art = "Amamo"
 
 [conditions]
 default = "M23 V23=2"

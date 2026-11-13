@@ -1,0 +1,13 @@
+[badge]
+animated = true 
+map = 2953
+points = 15
+art = "501201"
+
+[conditions]
+default = "M2953 X=60:70 Y=58:66"
+
+[lang.en]
+name = "Wriggling away!"
+description = "Somewhere in a deserted study, there are tentacles grew from the ground waiting for you..."
+condition = "Visit the tenticle room in Forgotten Study"
