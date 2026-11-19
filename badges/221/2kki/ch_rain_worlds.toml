@@ -18,7 +18,7 @@ visit_english_thundershower = "M3110"
 # reusing `autumn_pastel_plains`
 # reusing `shrouded_arcadia`
 visit_lavender_park = "M881"
-visit_limestone_dam = "M4082"
+# reusing visit_limestone_dam
 visit_rainy_bridges_a = "M4088 X=0:96 Y=80:293"
 visit_rainy_bridges_b = "M4088 X=97:123 Y=208:293"
 visit_rice_paddy = "M2773"

@@ -1,0 +1,20 @@
+[badge]
+animated = true
+map = 2038
+points = 20
+art = "yukicao"
+
+[conditions]
+requirements = "maiden_sunset_school_reactions_a OR maiden_sunset_school_reactions_b AND maiden_sunset_school_reactions_c AND maiden_sunset_school_reactions_d AND maiden_sunset_school_reactions_e AND maiden_sunset_school_reactions_f OR maiden_sunset_school_reactions_g"
+maiden_sunset_school_reactions_a = "M2038 X=16:34 Y=48:60 S124=ON" # chainsaw
+maiden_sunset_school_reactions_b = "M2038 X=16:34 Y=48:60 S132=ON" # bike
+maiden_sunset_school_reactions_c = "M2038 X=16:34 Y=48:60 S147=ON" # child
+maiden_sunset_school_reactions_d = "M2038 X=16:34 Y=48:60 S144=ON" # trombone
+maiden_sunset_school_reactions_e = "M2038 X=16:34 Y=48:60 S142=ON" # stretch
+maiden_sunset_school_reactions_f = "M2038 X=16:34 Y=48:60 S131=ON" # eyeball bomb
+maiden_sunset_school_reactions_g = "M2038 X=16:34 Y=48:60 S168=ON" # glasses action
+
+[lang.en]
+name = "The sun sets in the west"
+description = "Are you watching the blackboard or the teacher?! Pay attention in class!!!"
+condition = "See all the reactions from the Shrine maiden teacher in Sunset School"
