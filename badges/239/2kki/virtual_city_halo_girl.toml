@@ -6,7 +6,7 @@ art = "mokqz2"
 hidden = true
 
 [conditions]
-requirements = "virtual_city_halo_a AND virtual_city_halo_b"
+requirements = "virtual_city_halo_a OR virtual_city_halo_b"
 virtual_city_halo_a = "M1898 X=54:56 Y=65:71 S1=ON S443=ON V2=32"
 virtual_city_halo_b = "M1899 V6=0 X=88:103 Y=8:14"
 # if there are going to be any broken badges this batch, it's this one

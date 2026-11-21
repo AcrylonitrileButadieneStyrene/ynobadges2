@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2591 # different display map
+points = 10
+art = "Rollenets & Sylvonis"
+
+[conditions]
+default = "M3011"
+
+[lang.en]
+name = "Mourning Light"
+description = "Such a comforting face in such an unfamiliar place... I wonder why everyone is here."
+condition = "Visit the light lady tent in Abandoned Campsite"

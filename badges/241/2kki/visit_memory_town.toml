@@ -1,0 +1,13 @@
+[badge]
+animated = true 
+map = 3279
+points = 15
+art = "501201 & w"
+
+[conditions]
+default = "M3279"
+
+[lang.en]
+name = "Reise in die Vergangenheit" # german is purposeful 
+description = "Eins, Zwei, Drei, Vier, Fünf, Sechs, Sieben, Acht, Neun, Zehn."
+condition = "Visit Memory Town"

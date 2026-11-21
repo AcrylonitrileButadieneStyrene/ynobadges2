@@ -1,7 +1,7 @@
 [badge]
 group = "4_ch"
 points = 40
-art = "Staghouse33"
+art = "Ticks"
 
 [badge.map]
 id = 312
@@ -29,8 +29,8 @@ visit_wooded_lakeside_a_b = "M1882 X=0:21 Y=160:176"
 visit_ticking_blackout_zone = "M2452"
 
 [lang.en]
-name = "Memories, Dreams, and Railways"
-description = "Recalling the journey took while observing various trains and railways for a long time from morning till night, move forward toward the end of that journey."
+name = "Railfan Girl"
+description = "Trains will never leave my heart!"
 condition = "Visit the following areas with trains and railways: Promnesic Terminal, Old Train Station, Train Tracks, Amplitude, Forgotten Station, Crimson District, Dark Forest, Fragmented Station, Crossing Forest, Labyrinth of Dread, Stereo Station, Frozen Smile World, Underground Subway, Rice Field, Wooded Lakeside A, Ticking Blackout Zone, and Octagonal Grid Hub (Colorless Pier)"
 
 [lang.en.checkbox]
