@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 51
+points = 10
+art = "VoxSilentii"
+
+[conditions]
+default = "M51 S549=ON"
+
+[lang.en]
+name = "I am going... to smoke you!"
+description = "Last words before I spark it?"
+condition = "Kill a monon with the Lantern effect in Marijuana Goddess World. If you have already done so, return to Marijuana Goddess World"

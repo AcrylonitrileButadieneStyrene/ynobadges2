@@ -2,7 +2,7 @@
 animated = true
 map = 76
 points = 10
-art = "HenryAutumn"
+art = ""
 
 [conditions]
 default = "M76 S144=ON S146=ON"

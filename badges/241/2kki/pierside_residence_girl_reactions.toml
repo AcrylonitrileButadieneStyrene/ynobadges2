@@ -1,0 +1,16 @@
+[badge]
+map = 1575
+points = 15
+art = "yukicao"
+
+[conditions]
+requirements = "pierside_girl_reacts_a AND pierside_girl_reacts_b AND pierside_girl_reacts_c AND pierside_girl_reacts_d"
+pierside_girl_reacts_a = "M1575 X=63:92 Y=8:11 S124=ON" # chainsaw
+pierside_girl_reacts_b = "M1575 X=63:92 Y=8:11 S147=ON" # child
+pierside_girl_reacts_c = "M1575 X=63:92 Y=8:11 S155=ON" # grave
+pierside_girl_reacts_d = "M1575 X=63:92 Y=8:11 S128=ON" # glasses
+
+[lang.en]
+name = "Let's play!"
+description = "This girl looks ghastly at first glance, but she’s actually creepy."
+condition = "See all the reactions of the girl in Pierside Residence"

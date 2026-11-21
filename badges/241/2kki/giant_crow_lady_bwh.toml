@@ -1,0 +1,22 @@
+[badge]
+animated = true
+map = 3585
+points = 15
+art = "Rollenets & Sylvonis"
+secret = true
+
+[conditions]
+requirements = "crow_lady_bwh_a OR crow_lady_bwh_b OR crow_lady_bwh_c OR crow_lady_bwh_d OR crow_lady_bwh_e OR crow_lady_bwh_f OR crow_lady_bwh_h OR crow_lady_bwh_i"
+crow_lady_bwh_a = "M3585 E796"
+crow_lady_bwh_b = "M3585 E797"
+crow_lady_bwh_c = "M3585 E798"
+crow_lady_bwh_d = "M3585 E799"
+crow_lady_bwh_e = "M3585 E800"
+crow_lady_bwh_f = "M3585 E801"
+crow_lady_bwh_h = "M3585 E802"
+crow_lady_bwh_i = "M3585 E803"
+
+[lang.en]
+name = "Super Coffee Drinker Crow Deity"
+description = "What separates a god from a mortal, if both can appreciate the same simple pleasures?"
+condition = "See the giant crow lady in Black Wing Heaven"

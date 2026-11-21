@@ -1,7 +1,7 @@
 [badge]
 map = 19
 points = 15
-art = "HenryAutumn"
+art = ""
 
 [conditions]
 default = "M19 E3"

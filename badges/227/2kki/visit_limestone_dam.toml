@@ -5,7 +5,7 @@ points = 15
 art = "Sheanicc"
 
 [conditions]
-default = "M4082"
+requirements = "visit_limestone_dam"
 
 [lang.en]
 name = "Drizzling Dam"

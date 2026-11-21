@@ -1,0 +1,14 @@
+[badge]
+animated = true
+map = 80
+points = 20
+art = "anonww"
+secret = true
+
+[conditions]
+default = "M80 S157=ON"
+
+[lang.en]
+name = "All Eyes On You"
+description = "Stop staring at me with them big ol' eyes!"
+condition = "View the Eyes event in Lightningtsuki's Room."

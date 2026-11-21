@@ -1,11 +1,12 @@
 [badge]
 map = 2415
 points = 15
-art = ""
+art = "emocore"
 
 [conditions]
 default = "M2415"
 
 [lang.en]
-name = "Spicy Muffin"
+name = "Falls Ballade"
+description = "Sugar, spice, and everything nice! Wait, are teleporters also an addition to the flavor?"
 condition = "Visit Muffin Spice World"

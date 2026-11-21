@@ -2,7 +2,7 @@
 animated = true
 map = 265
 points = 15
-art = ""
+art = "mokqz2"
 
 [conditions]
 requirements = "trombone_baddies_bar OR trombone_acoustic_lounge"
@@ -10,6 +10,6 @@ trombone_baddies_bar = "M265 X=57:63 Y=103:108 S64=ON"
 trombone_acoustic_lounge = "M3135 S64=ON"
 
 [lang.en]
-name = "Golden Instrument"
-description = "doot doot"
+name = "Silly Little Tunes"
+description = "The Goofy Urotsuki Band"
 condition = "Obtain the Trombone effect. If already obtained, return to where you have done so in the Baddies Bar or Acoustic Lounge."
