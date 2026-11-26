@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 56
+points = 15
+art = "Rollenets & Sylvonis"
+
+[conditions]
+default = "M56 S131=ON"
+
+[lang.en]
+name = "We buy balloons... We let them go"
+description = "The staircase slips and fades... From the elevator you smile and wave"
+condition = "Obtain the balloon memory, if you have already obtained it, return to Monochrome Building"

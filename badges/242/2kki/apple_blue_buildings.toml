@@ -1,0 +1,20 @@
+[badge]
+animated = true
+points = 15
+art = "w"
+
+[badge.map] 
+id = 3581
+x = 1
+y = 68
+
+[conditions]
+requirements = "apple_blue_buldings_1 OR apple_blue_buldings_2 OR apple_blue_buldings_3"
+apple_blue_buldings_1 = "M3581 E10 S124=OFF"
+apple_blue_buldings_2 = "M3581 E11 S124=OFF"
+apple_blue_buldings_3 = "M3581 E36 S124=OFF"
+
+[lang.en]
+name = "Good Apple"
+description = "\"I heard they made a song called Good Apple or something.\""
+condition = "Interact with the green apple in Perfect Blue buildings"
