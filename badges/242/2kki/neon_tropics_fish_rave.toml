@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4473
+points = 15
+art = "happysun"
+
+[conditions]
+default = "M4473 E216"
+
+[lang.en]
+name = "Ichthychoreology"
+description = "Fish friends on the dance floor!"
+condition = "See the Fish Rave dance event in Neon Tropics"

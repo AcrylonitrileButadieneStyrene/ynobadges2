@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4473
+points = 15
+art = "sunoka"
+
+[conditions]
+default = "M4473 X=93:93 Y=47:50"
+
+[lang.en]
+name = "Sea-MYK"
+# might add description later
+condition = "See the large sea creature in the top-right of Neon Tropics"

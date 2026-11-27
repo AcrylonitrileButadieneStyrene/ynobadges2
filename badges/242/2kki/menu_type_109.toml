@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4089
+points = 20
+art = "Catsalotl"
+
+[conditions]
+default = "M4089 S1065=ON"
+
+[lang.en]
+name = "Forever-Changing Symmetries"
+description = "\"Interact with the world and make it fractal out into time.\""
+condition = "Obtain Menu Type 109. If you have already unlocked it, return to Kaleidoscope."

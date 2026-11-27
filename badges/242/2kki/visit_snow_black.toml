@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2973
+points = 15
+art = "yukicao"
+
+[conditions]
+default = "M2973"
+
+[lang.en]
+name = "Snow, Black"
+description = "The snow falls and the wind blows."
+condition = "Visit Snow Black"

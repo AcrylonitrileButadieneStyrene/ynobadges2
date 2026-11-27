@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 2008
+points = 10
+art = "w"
+
+[conditions]
+default = "M2008"
+
+[lang.en]
+name = "I'm so happy!"
+description = "That I found Pastel Plains..."
+condition = "Visit Pastel Plains"

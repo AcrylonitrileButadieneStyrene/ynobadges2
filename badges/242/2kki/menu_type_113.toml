@@ -1,0 +1,13 @@
+[badge]
+animated = true
+map = 4471
+points = 20
+art = "punkitt"
+
+[conditions]
+default = "M4471 S4551=ON"
+
+[lang.en]
+name = "Finny Fun!"
+description = "It's always a great day for fishin'."
+condition = "Give the girl in Lighthouse Cascades a fish. If you have already done so, return to Lighthouse Cascades"
